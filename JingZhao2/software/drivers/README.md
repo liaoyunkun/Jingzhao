@@ -1,2 +1,2 @@
-- ib_hgrnic: kernel space device driver.
+- ib_hgrnic: kernel space device driver, compatible with Linux v5.3.0;
 - libhgrnic: user space device driver.
