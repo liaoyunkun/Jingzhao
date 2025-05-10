@@ -1,0 +1,6 @@
+ib_hgrnic is a low-level driver for Han Gu RNIC.
+
+The driver is compitable with ib_uverbs and ib_core in 
+Linux kernel. 
+
+Currently, ib_hgrnic can only support Kernel version 5.4.0

@@ -1,0 +1,61 @@
+[   53.847318] ib_hgrnic: loading out-of-tree module taints kernel.
+[   53.847348] ib_hgrnic: module verification failed: signature and/or required key missing - tainting kernel
+[   53.847958] ib_hgrnic: ICT InfiniBand HCA driver v1.0 (April 4, 2021)
+[   53.847958] ib_hgrnic: Initializing 0000:02:00.0
+[   53.847961] ib_hgrnic 0000:02:00.0: enabling device (0000 -> 0002)
+[   53.848058] ib_hgrnic: Start hgrnic_init_hca.
+[   53.848058] ib_hgrnic: Start QUERY ADAPTER.
+[   53.848058] 547
+[   53.848059] 554
+[   53.848059] Begin hgrnic_cmd_post
+[   53.848059] test go_bit
+[   53.848060] go bit clear
+[   53.848061] End hgrnic_cmd_post
+[   53.848064] 564
+[   53.848064] 570
+[   53.848065] ib_hgrnic: board_id: 0x0
+[   53.848065] ib_hgrnic: Start dev lim.
+[   53.848065] ib_hgrnic: Enter hgrnic_QUERY_DEV_LIM. 452efe000
+[   53.848066] Begin hgrnic_cmd_post
+[   53.848066] test go_bit
+[   53.848067] go bit clear
+[   53.848067] End hgrnic_cmd_post
+[   53.848071] ib_hgrnic: Get hgrnic_QUERY_DEV_LIM.
+[   53.848071] ib_hgrnic: dev lim outbox: 
+               0x0 0x0 0x0 0x0 
+               0x0 0x0 0x0 0x0
+               0x0 0x0 0x0 0x0
+               0x0 0x0 0x0 0x0
+[   53.848072] ib_hgrnic: resv_qp: 1
+[   53.848072] ib_hgrnic: resv_cq: 1
+[   53.848072] ib_hgrnic: resv_eq: 1
+[   53.848072] ib_hgrnic: resv_mtt: 1
+[   53.848072] ib_hgrnic: resv_pd: 1
+[   53.848072] ib_hgrnic: resv_lkey: 1
+[   53.848073] ib_hgrnic: max_qp_sz: 1
+[   53.848073] ib_hgrnic: max_cq_sz: 1
+[   53.848073] ib_hgrnic: max_qps: 1
+[   53.848073] ib_hgrnic: max_cqs: 1
+[   53.848073] ib_hgrnic: max_eqs: 1
+[   53.848074] ib_hgrnic: max_mpts: 1
+[   53.848074] ib_hgrnic: max_pds: 1
+[   53.848074] ib_hgrnic: max_gids: 1
+[   53.848074] ib_hgrnic: max_pkeys: 0
+[   53.848074] ib_hgrnic: max_mtt_seg: 0
+[   53.848075] ib_hgrnic: qpc_entry_sz: 0
+[   53.848075] ib_hgrnic: cqc_entry_sz: 0
+[   53.848075] ib_hgrnic: eqc_entry_sz: 0
+[   53.848075] ib_hgrnic: mpt_entry_sz: 0
+[   53.848075] ib_hgrnic: local_ca_ack_delay: 0
+[   53.848075] ib_hgrnic: max_mtu: 0
+[   53.848076] ib_hgrnic: max_port_width: 0
+[   53.848076] ib_hgrnic: max_vl: 0
+[   53.848076] ib_hgrnic: num_ports: 0
+[   53.848076] ib_hgrnic: min_page_sz: 1
+[   53.848076] ib_hgrnic: max_sg: 0
+[   53.848077] ib_hgrnic: max_desc_sz: 0
+[   53.848077] ib_hgrnic: max_sg_rq: 0
+[   53.848077] ib_hgrnic: max_desc_sz_rq: 0
+[   53.848077] ib_hgrnic: max_icm_sz: 0x0
+[   53.848078] ib_hgrnic 0000:02:00.0: Profile requires 0x1000 bytes; won't fit in 0x0 bytes of context memory.
+[   53.848119] ib_hgrnic: probe of 0000:02:00.0 failed with error -12

@@ -1,1 +1,2 @@
-Kernel-Space/User-Space Drivers.
+- ib_hgrnic: kernel space device driver.
+- libhgrnic: user space device driver.

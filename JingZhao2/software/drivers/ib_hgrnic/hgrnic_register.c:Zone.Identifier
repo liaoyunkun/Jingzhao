@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=http://ncsg.ac.cn:5000/?launchApp=SYNO.SDS.Drive.Application
+HostUrl=http://ncsg.ac.cn:5000/webapi/entry.cgi/ib_hgrnic.tar.gz?api=SYNO.SynologyDrive.Files&method=download&version=2&files=%5B%22id%3A804885899195228221%22%5D&force_download=true&json_error=true&_dc=1710744620768&SynoToken=I6RVI1eYCr1NI

@@ -1,0 +1,2 @@
+/home/hangu/HGRNIC/ib_hgrnic/hgrnic_main.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_cmd.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_icm.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_allocator.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_eq.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_pd.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_cq.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_mr.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_qp.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_register.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_provider.o /home/hangu/HGRNIC/ib_hgrnic/hgrnic_uar.o
+

@@ -1,0 +1,1140 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CMD_2ERR_QPEE	hgrnic_cmd.c	/^    CMD_2ERR_QPEE       = 0x1e,$/;"	e	enum:__anon14	file:
+CMD_CLOSE_HCA	hgrnic_cmd.c	/^    CMD_CLOSE_HCA       = 0x8,$/;"	e	enum:__anon14	file:
+CMD_CLOSE_IB	hgrnic_cmd.c	/^    CMD_CLOSE_IB        = 0xa,$/;"	e	enum:__anon14	file:
+CMD_CONF_SPECIAL_QP	hgrnic_cmd.c	/^    CMD_CONF_SPECIAL_QP = 0x23,$/;"	e	enum:__anon14	file:
+CMD_DIAG_RPRT	hgrnic_cmd.c	/^    CMD_DIAG_RPRT       = 0x30,$/;"	e	enum:__anon14	file:
+CMD_ERR2RST_QPEE	hgrnic_cmd.c	/^    CMD_ERR2RST_QPEE    = 0x21,$/;"	e	enum:__anon14	file:
+CMD_HW2SW_CQ	hgrnic_cmd.c	/^    CMD_HW2SW_CQ         = 0x17,$/;"	e	enum:__anon14	file:
+CMD_HW2SW_EQ	hgrnic_cmd.c	/^    CMD_HW2SW_EQ         = 0x14,$/;"	e	enum:__anon14	file:
+CMD_HW2SW_MPT	hgrnic_cmd.c	/^    CMD_HW2SW_MPT         = 0xf,$/;"	e	enum:__anon14	file:
+CMD_INIT2INIT_QPEE	hgrnic_cmd.c	/^    CMD_INIT2INIT_QPEE  = 0x2d,$/;"	e	enum:__anon14	file:
+CMD_INIT2RTR_QPEE	hgrnic_cmd.c	/^    CMD_INIT2RTR_QPEE   = 0x1a,$/;"	e	enum:__anon14	file:
+CMD_INIT_HCA	hgrnic_cmd.c	/^    CMD_INIT_HCA        = 0x7,$/;"	e	enum:__anon14	file:
+CMD_INIT_IB	hgrnic_cmd.c	/^    CMD_INIT_IB         = 0x9,$/;"	e	enum:__anon14	file:
+CMD_MAD_IFC	hgrnic_cmd.c	/^    CMD_MAD_IFC         = 0x24,$/;"	e	enum:__anon14	file:
+CMD_MAP_EQ	hgrnic_cmd.c	/^    CMD_MAP_EQ          = 0x12,$/;"	e	enum:__anon14	file:
+CMD_MAP_ICM	hgrnic_cmd.c	/^    CMD_MAP_ICM         = 0xffa,$/;"	e	enum:__anon14	file:
+CMD_MGID_HASH	hgrnic_cmd.c	/^    CMD_MGID_HASH       = 0x27,$/;"	e	enum:__anon14	file:
+CMD_NOP	hgrnic_cmd.c	/^    CMD_NOP             = 0x31,$/;"	e	enum:__anon14	file:
+CMD_POLL_TOKEN	hgrnic_cmd.c	20;"	d	file:
+CMD_QUERY_ADAPTER	hgrnic_cmd.c	/^    CMD_QUERY_ADAPTER   = 0x6,$/;"	e	enum:__anon14	file:
+CMD_QUERY_DEBUG_MSG	hgrnic_cmd.c	/^    CMD_QUERY_DEBUG_MSG = 0x2a,$/;"	e	enum:__anon14	file:
+CMD_QUERY_DEV_LIM	hgrnic_cmd.c	/^    CMD_QUERY_DEV_LIM   = 0x3,$/;"	e	enum:__anon14	file:
+CMD_QUERY_QPEE	hgrnic_cmd.c	/^    CMD_QUERY_QPEE      = 0x22,$/;"	e	enum:__anon14	file:
+CMD_READ_MGM	hgrnic_cmd.c	/^    CMD_READ_MGM        = 0x25,$/;"	e	enum:__anon14	file:
+CMD_RESIZE_CQ	hgrnic_cmd.c	/^    CMD_RESIZE_CQ       = 0x2c,$/;"	e	enum:__anon14	file:
+CMD_RST2INIT_QPEE	hgrnic_cmd.c	/^    CMD_RST2INIT_QPEE   = 0x19,$/;"	e	enum:__anon14	file:
+CMD_RTR2RTS_QPEE	hgrnic_cmd.c	/^    CMD_RTR2RTS_QPEE    = 0x1b,$/;"	e	enum:__anon14	file:
+CMD_RTS2RTS_QPEE	hgrnic_cmd.c	/^    CMD_RTS2RTS_QPEE    = 0x1c,$/;"	e	enum:__anon14	file:
+CMD_RTS2SQD_QPEE	hgrnic_cmd.c	/^    CMD_RTS2SQD_QPEE    = 0x1f,$/;"	e	enum:__anon14	file:
+CMD_SET_DEBUG_MSG	hgrnic_cmd.c	/^    CMD_SET_DEBUG_MSG   = 0x2b,$/;"	e	enum:__anon14	file:
+CMD_SET_IB	hgrnic_cmd.c	/^    CMD_SET_IB          = 0xc,$/;"	e	enum:__anon14	file:
+CMD_SQD2RTS_QPEE	hgrnic_cmd.c	/^    CMD_SQD2RTS_QPEE    = 0x20,$/;"	e	enum:__anon14	file:
+CMD_SQD2SQD_QPEE	hgrnic_cmd.c	/^    CMD_SQD2SQD_QPEE    = 0x38,$/;"	e	enum:__anon14	file:
+CMD_SQERR2RTS_QPEE	hgrnic_cmd.c	/^    CMD_SQERR2RTS_QPEE  = 0x1d,$/;"	e	enum:__anon14	file:
+CMD_SUSPEND_QPEE	hgrnic_cmd.c	/^    CMD_SUSPEND_QPEE    = 0x32,$/;"	e	enum:__anon14	file:
+CMD_SW2HW_CQ	hgrnic_cmd.c	/^    CMD_SW2HW_CQ         = 0x16,$/;"	e	enum:__anon14	file:
+CMD_SW2HW_EQ	hgrnic_cmd.c	/^    CMD_SW2HW_EQ         = 0x13,$/;"	e	enum:__anon14	file:
+CMD_SW2HW_MPT	hgrnic_cmd.c	/^    CMD_SW2HW_MPT         = 0xd,$/;"	e	enum:__anon14	file:
+CMD_TIME_CLASS_A	hgrnic_cmd.c	/^    CMD_TIME_CLASS_A = 60 * HZ,$/;"	e	enum:__anon15	file:
+CMD_TIME_CLASS_B	hgrnic_cmd.c	/^    CMD_TIME_CLASS_B = 60 * HZ,$/;"	e	enum:__anon15	file:
+CMD_TIME_CLASS_C	hgrnic_cmd.c	/^    CMD_TIME_CLASS_C = 60 * HZ,$/;"	e	enum:__anon15	file:
+CMD_TIME_CLASS_D	hgrnic_cmd.c	/^    CMD_TIME_CLASS_D = 60 * HZ$/;"	e	enum:__anon15	file:
+CMD_UNMAP_ICM	hgrnic_cmd.c	/^    CMD_UNMAP_ICM       = 0xff9,$/;"	e	enum:__anon14	file:
+CMD_UNSUSPEND_QPEE	hgrnic_cmd.c	/^    CMD_UNSUSPEND_QPEE  = 0x33,$/;"	e	enum:__anon14	file:
+CMD_WRITE_MGM	hgrnic_cmd.c	/^    CMD_WRITE_MGM       = 0x26,$/;"	e	enum:__anon14	file:
+CMD_WRITE_MTT	hgrnic_cmd.c	/^    CMD_WRITE_MTT       = 0x11,$/;"	e	enum:__anon14	file:
+CONFIG_INFINIBAND_HGRNIC_DEBUG	hgrnic_dev.h	40;"	d
+CQ_RESIZE_ALLOC	hgrnic_provider.h	/^        CQ_RESIZE_ALLOC,$/;"	e	enum:hgrnic_cq_resize::__anon8
+CQ_RESIZE_READY	hgrnic_provider.h	/^        CQ_RESIZE_READY,$/;"	e	enum:hgrnic_cq_resize::__anon8
+CQ_RESIZE_SWAPPED	hgrnic_provider.h	/^        CQ_RESIZE_SWAPPED$/;"	e	enum:hgrnic_cq_resize::__anon8
+CURRENT_PATH	Makefile	/^CURRENT_PATH := $(shell pwd)$/;"	m
+CXT_REGION	hgrnic_cmd.h	/^    CXT_REGION = 1,$/;"	e	enum:__anon10
+DEVICE_LID	hgrnic_provider.c	84;"	d	file:
+DEV_LIM_FLAG_ATOMIC	hgrnic_cmd.h	/^    DEV_LIM_FLAG_ATOMIC             = 1 << 18,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_AUTO_PATH_MIG	hgrnic_cmd.h	/^    DEV_LIM_FLAG_AUTO_PATH_MIG      = 1 << 17,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_BAD_PKEY_CNTR	hgrnic_cmd.h	/^    DEV_LIM_FLAG_BAD_PKEY_CNTR      = 1 << 8,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_BAD_QKEY_CNTR	hgrnic_cmd.h	/^    DEV_LIM_FLAG_BAD_QKEY_CNTR      = 1 << 9,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_IPOIB_CSUM	hgrnic_cmd.h	/^    DEV_LIM_FLAG_IPOIB_CSUM         = 1 << 7,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_MW	hgrnic_cmd.h	/^    DEV_LIM_FLAG_MW                 = 1 << 16,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_RAW_ETHER	hgrnic_cmd.h	/^    DEV_LIM_FLAG_RAW_ETHER          = 1 << 5,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_RAW_IPV6	hgrnic_cmd.h	/^    DEV_LIM_FLAG_RAW_IPV6           = 1 << 4,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_RAW_MULTI	hgrnic_cmd.h	/^    DEV_LIM_FLAG_RAW_MULTI          = 1 << 19,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_RC	hgrnic_cmd.h	/^    DEV_LIM_FLAG_RC                 = 1 << 0,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_RD	hgrnic_cmd.h	/^    DEV_LIM_FLAG_RD                 = 1 << 3,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_SRQ	hgrnic_cmd.h	/^    DEV_LIM_FLAG_SRQ                = 1 << 6,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_UC	hgrnic_cmd.h	/^    DEV_LIM_FLAG_UC                 = 1 << 1,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_UD	hgrnic_cmd.h	/^    DEV_LIM_FLAG_UD                 = 1 << 2,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_UD_AV_PORT_ENFORCE	hgrnic_cmd.h	/^    DEV_LIM_FLAG_UD_AV_PORT_ENFORCE = 1 << 20,$/;"	e	enum:__anon11
+DEV_LIM_FLAG_UD_MULTI	hgrnic_cmd.h	/^    DEV_LIM_FLAG_UD_MULTI           = 1 << 21,$/;"	e	enum:__anon11
+DRV_NAME	hgrnic_dev.h	33;"	d
+DRV_RELDATE	hgrnic_dev.h	36;"	d
+DRV_VERSION	hgrnic_dev.h	35;"	d
+GO_BIT_TIMEOUT	hgrnic_cmd.c	/^    GO_BIT_TIMEOUT = HZ * 10$/;"	e	enum:__anon16	file:
+HANGU_FW_VER	hgrnic_main.c	397;"	d	file:
+HANGU_HCA	hgrnic_dev.h	29;"	d
+HANGU_RNIC	hgrnic_dev.h	30;"	d
+HCA_E_BIT	hgrnic_cmd.c	/^    HCA_E_BIT              = 22,$/;"	e	enum:__anon13	file:
+HCR_GO_BIT	hgrnic_cmd.c	/^    HCR_GO_BIT             = 23$/;"	e	enum:__anon13	file:
+HCR_IN_MODIFIER_OFFSET	hgrnic_cmd.c	/^    HCR_IN_MODIFIER_OFFSET = 0x08,$/;"	e	enum:__anon13	file:
+HCR_IN_PARAM_OFFSET	hgrnic_cmd.c	/^    HCR_IN_PARAM_OFFSET    = 0x00,$/;"	e	enum:__anon13	file:
+HCR_OPMOD_SHIFT	hgrnic_cmd.c	/^    HCR_OPMOD_SHIFT        = 12,$/;"	e	enum:__anon13	file:
+HCR_OUT_PARAM_OFFSET	hgrnic_cmd.c	/^    HCR_OUT_PARAM_OFFSET   = 0x0c,$/;"	e	enum:__anon13	file:
+HCR_STATUS_OFFSET	hgrnic_cmd.c	/^    HCR_STATUS_OFFSET      = 0x18,$/;"	e	enum:__anon13	file:
+HCR_TOKEN_OFFSET	hgrnic_cmd.c	/^    HCR_TOKEN_OFFSET       = 0x14,$/;"	e	enum:__anon13	file:
+HGRNIC_ABI_USER_H	include/rdma/hgrnic-abi.h	27;"	d
+HGRNIC_ARBEL_CQ_DB_REQ_NOT	hgrnic_cq.c	110;"	d	file:
+HGRNIC_ARBEL_CQ_DB_REQ_NOT_MULT	hgrnic_cq.c	111;"	d	file:
+HGRNIC_ARBEL_CQ_DB_REQ_NOT_SOL	hgrnic_cq.c	109;"	d	file:
+HGRNIC_ARRAY_MASK	hgrnic_allocator.c	101;"	d	file:
+HGRNIC_ASYNC_EVENT_MASK	hgrnic_eq.c	69;"	d	file:
+HGRNIC_ATOMIC_BYTE_LEN	hgrnic_cq.c	/^    HGRNIC_ATOMIC_BYTE_LEN = 8$/;"	e	enum:__anon26	file:
+HGRNIC_AV_SIZE	hgrnic_dev.h	/^	HGRNIC_AV_SIZE         =  0x20,$/;"	e	enum:__anon19
+HGRNIC_CMD_EVENT_MASK	hgrnic_eq.c	84;"	d	file:
+HGRNIC_CMD_NUM_DBELL_DWORDS	hgrnic_dev.h	/^	HGRNIC_CMD_NUM_DBELL_DWORDS = 8$/;"	e	enum:__anon22
+HGRNIC_CMD_STAT_BAD_INDEX	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_INDEX      = 0x0a,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_NVMEM	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_NVMEM      = 0x0b,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_OP	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_OP 	      = 0x02,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_PARAM	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_PARAM      = 0x03,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_PKT	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_PKT 	      = 0x30,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_QPEE_STATE	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_QPEE_STATE = 0x10,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_RESOURCE	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_RESOURCE   = 0x05,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_RES_STATE	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_RES_STATE  = 0x09,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_SEG_PARAM	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_SEG_PARAM  = 0x20,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_SIZE	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_SIZE       = 0x40$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_BAD_SYS_STATE	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_BAD_SYS_STATE  = 0x04,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_DDR_MEM_ERR	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_DDR_MEM_ERR    = 0x07,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_EXCEED_LIM	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_EXCEED_LIM     = 0x08,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_INTERNAL_ERR	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_INTERNAL_ERR   = 0x01,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_LAM_NOT_PRE	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_LAM_NOT_PRE    = 0x22,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_OK	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_OK 	      = 0x00,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_REG_BOUND	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_REG_BOUND      = 0x21,$/;"	e	enum:__anon9
+HGRNIC_CMD_STAT_RESOURCE_BUSY	hgrnic_cmd.h	/^    HGRNIC_CMD_STAT_RESOURCE_BUSY  = 0x06,$/;"	e	enum:__anon9
+HGRNIC_CQ_CONTEXT_SIZE	hgrnic_dev.h	/^	HGRNIC_CQ_CONTEXT_SIZE =  0x40,$/;"	e	enum:__anon19
+HGRNIC_CQ_ENTRY_OWNER_HW	hgrnic_cq.c	101;"	d	file:
+HGRNIC_CQ_ENTRY_OWNER_SW	hgrnic_cq.c	100;"	d	file:
+HGRNIC_CQ_FLAG_OI	hgrnic_cq.c	43;"	d	file:
+HGRNIC_CQ_FLAG_TR	hgrnic_cq.c	42;"	d	file:
+HGRNIC_CQ_STATE_ARMED	hgrnic_cq.c	45;"	d	file:
+HGRNIC_CQ_STATE_ARMED_SOL	hgrnic_cq.c	46;"	d	file:
+HGRNIC_CQ_STATE_DISARMED	hgrnic_cq.c	44;"	d	file:
+HGRNIC_CQ_STATUS_OK	hgrnic_cq.c	39;"	d	file:
+HGRNIC_CQ_STATUS_OVERFLOW	hgrnic_cq.c	40;"	d	file:
+HGRNIC_CQ_STATUS_WRITE_FAIL	hgrnic_cq.c	41;"	d	file:
+HGRNIC_DECLARE_DOORBELL_LOCK	hgrnic_doorbell.h	19;"	d
+HGRNIC_DECLARE_DOORBELL_LOCK	hgrnic_doorbell.h	42;"	d
+HGRNIC_DEFAULT_NUM_CQ	hgrnic_main.c	39;"	d	file:
+HGRNIC_DEFAULT_NUM_MCG	hgrnic_main.c	40;"	d	file:
+HGRNIC_DEFAULT_NUM_MPT	hgrnic_main.c	41;"	d	file:
+HGRNIC_DEFAULT_NUM_MTT	hgrnic_main.c	42;"	d	file:
+HGRNIC_DEFAULT_NUM_QP	hgrnic_main.c	37;"	d	file:
+HGRNIC_DEFAULT_NUM_RESERVED_MTTS	hgrnic_main.c	44;"	d	file:
+HGRNIC_DEFAULT_NUM_UARC_SIZE	hgrnic_main.c	45;"	d	file:
+HGRNIC_DEFAULT_NUM_UDAV	hgrnic_main.c	43;"	d	file:
+HGRNIC_DEFAULT_RDB_PER_QP	hgrnic_main.c	38;"	d	file:
+HGRNIC_DEV_H	hgrnic_dev.h	9;"	d
+HGRNIC_EN_REG_BASE	hgrnic_iface.h	16;"	d
+HGRNIC_EN_REG_SIZE	hgrnic_iface.h	17;"	d
+HGRNIC_EQ_ASYNC	hgrnic_dev.h	/^	HGRNIC_EQ_ASYNC,$/;"	e	enum:__anon20
+HGRNIC_EQ_CMD	hgrnic_dev.h	/^	HGRNIC_EQ_CMD,$/;"	e	enum:__anon20
+HGRNIC_EQ_COMP	hgrnic_dev.h	/^	HGRNIC_EQ_COMP,$/;"	e	enum:__anon20
+HGRNIC_EQ_CONTEXT_SIZE	hgrnic_dev.h	/^	HGRNIC_EQ_CONTEXT_SIZE =  0x40,$/;"	e	enum:__anon19
+HGRNIC_EQ_ENTRY_OWNER_HW	hgrnic_eq.c	88;"	d	file:
+HGRNIC_EQ_ENTRY_OWNER_SW	hgrnic_eq.c	87;"	d	file:
+HGRNIC_EQ_ENTRY_SIZE	hgrnic_eq.c	/^	HGRNIC_EQ_ENTRY_SIZE = 0x20$/;"	e	enum:__anon34	file:
+HGRNIC_EQ_FLAG_OI	hgrnic_eq.c	45;"	d	file:
+HGRNIC_EQ_FLAG_TR	hgrnic_eq.c	44;"	d	file:
+HGRNIC_EQ_OWNER_HW	hgrnic_eq.c	43;"	d	file:
+HGRNIC_EQ_OWNER_SW	hgrnic_eq.c	42;"	d	file:
+HGRNIC_EQ_STATE_ARMED	hgrnic_eq.c	46;"	d	file:
+HGRNIC_EQ_STATE_FIRED	hgrnic_cq.c	47;"	d	file:
+HGRNIC_EQ_STATUS_OK	hgrnic_eq.c	41;"	d	file:
+HGRNIC_EVENT_TYPE_CMD	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_CMD                = 0x0a$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_COMM_EST	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_COMM_EST   	    = 0x02,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_COMP	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_COMP       	    = 0x00,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_CQ_ERROR	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_CQ_ERROR   	    = 0x04,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_ECC_DETECT	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_ECC_DETECT         = 0x0e,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_EEC_CATAS_ERROR	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_EEC_CATAS_ERROR    = 0x06,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_EQ_OVERFLOW	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_EQ_OVERFLOW        = 0x0f,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_LOCAL_CATAS_ERROR	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_LOCAL_CATAS_ERROR  = 0x08,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_PATH_MIG	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_PATH_MIG   	    = 0x01,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_PATH_MIG_FAILED	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_PATH_MIG_FAILED    = 0x07,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_PORT_CHANGE	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_PORT_CHANGE        = 0x09,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_SQ_DRAINED	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_SQ_DRAINED 	    = 0x03,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_SRQ_CATAS_ERROR	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_SRQ_CATAS_ERROR    = 0x12,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_SRQ_LIMIT	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_SRQ_LIMIT	    = 0x14,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_SRQ_QP_LAST_WQE	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_SRQ_QP_LAST_WQE    = 0x13,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_WQ_ACCESS_ERROR	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_WQ_ACCESS_ERROR    = 0x11,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_WQ_CATAS_ERROR	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_WQ_CATAS_ERROR     = 0x05,$/;"	e	enum:__anon35	file:
+HGRNIC_EVENT_TYPE_WQ_INVAL_REQ_ERROR	hgrnic_eq.c	/^	HGRNIC_EVENT_TYPE_WQ_INVAL_REQ_ERROR = 0x10,$/;"	e	enum:__anon35	file:
+HGRNIC_FLAG_PCIE	hgrnic_dev.h	/^	HGRNIC_FLAG_PCIE       = 1 << 1$/;"	e	enum:__anon17
+HGRNIC_GET	hgrnic_dev.h	294;"	d
+HGRNIC_GET_DOORBELL_LOCK	hgrnic_doorbell.h	21;"	d
+HGRNIC_GET_DOORBELL_LOCK	hgrnic_doorbell.h	44;"	d
+HGRNIC_HCR_BASE	hgrnic_iface.h	14;"	d
+HGRNIC_HCR_SIZE	hgrnic_iface.h	15;"	d
+HGRNIC_ICM_ALLOC_SIZE	hgrnic_icm.c	/^    HGRNIC_ICM_ALLOC_SIZE   = 1 << 18,$/;"	e	enum:__anon3	file:
+HGRNIC_ICM_CHUNK_LEN	hgrnic_icm.h	18;"	d
+HGRNIC_ICM_PAGE_SHIFT	hgrnic_icm.h	/^    HGRNIC_ICM_PAGE_SHIFT   = 12,$/;"	e	enum:__anon36
+HGRNIC_ICM_PAGE_SIZE	hgrnic_icm.h	/^    HGRNIC_ICM_PAGE_SIZE    = 1 << HGRNIC_ICM_PAGE_SHIFT$/;"	e	enum:__anon36
+HGRNIC_INIT_DOORBELL_LOCK	hgrnic_doorbell.h	20;"	d
+HGRNIC_INIT_DOORBELL_LOCK	hgrnic_doorbell.h	43;"	d
+HGRNIC_INVAL_LKEY	hgrnic_wqe.h	/^    HGRNIC_INVAL_LKEY           = 0x100,$/;"	e	enum:__anon25
+HGRNIC_MAILBOX_SIZE	hgrnic_cmd.h	15;"	d
+HGRNIC_MAX_PORTS	hgrnic_dev.h	/^	HGRNIC_MAX_PORTS = 1$/;"	e	enum:__anon18
+HGRNIC_MAX_WQES_PER_SEND_DB	hgrnic_wqe.h	/^    HGRNIC_MAX_WQES_PER_SEND_DB = 255$/;"	e	enum:__anon25
+HGRNIC_MGM_ENTRY_SIZE	hgrnic_dev.h	/^	HGRNIC_MGM_ENTRY_SIZE  = 0x100,$/;"	e	enum:__anon19
+HGRNIC_MPT_ENTRY_SIZE	hgrnic_dev.h	/^	HGRNIC_MPT_ENTRY_SIZE  =  0x40,$/;"	e	enum:__anon19
+HGRNIC_MPT_FLAG_ATOMIC	hgrnic_provider.h	14;"	d
+HGRNIC_MPT_FLAG_BIND_ENABLE	hgrnic_mr.c	35;"	d	file:
+HGRNIC_MPT_FLAG_LOCAL_READ	hgrnic_provider.h	18;"	d
+HGRNIC_MPT_FLAG_LOCAL_WRITE	hgrnic_provider.h	17;"	d
+HGRNIC_MPT_FLAG_MIO	hgrnic_mr.c	34;"	d	file:
+HGRNIC_MPT_FLAG_PHYSICAL	hgrnic_mr.c	36;"	d	file:
+HGRNIC_MPT_FLAG_REGION	hgrnic_mr.c	37;"	d	file:
+HGRNIC_MPT_FLAG_REMOTE_READ	hgrnic_provider.h	16;"	d
+HGRNIC_MPT_FLAG_REMOTE_WRITE	hgrnic_provider.h	15;"	d
+HGRNIC_MPT_FLAG_SW_OWNS	hgrnic_mr.c	33;"	d	file:
+HGRNIC_MPT_STATUS_HW	hgrnic_mr.c	42;"	d	file:
+HGRNIC_MPT_STATUS_SW	hgrnic_mr.c	41;"	d	file:
+HGRNIC_MR_DMASYNC	include/rdma/hgrnic-abi.h	58;"	d
+HGRNIC_MSIX_PND_BASE	hgrnic_iface.h	20;"	d
+HGRNIC_MSIX_PND_SIZE	hgrnic_iface.h	21;"	d
+HGRNIC_MSIX_TAB_BASE	hgrnic_iface.h	18;"	d
+HGRNIC_MSIX_TAB_SIZE	hgrnic_iface.h	19;"	d
+HGRNIC_MTT_FLAG_PRESENT	hgrnic_mr.c	39;"	d	file:
+HGRNIC_MTT_SEG_SIZE	hgrnic_dev.h	/^	HGRNIC_MTT_SEG_SIZE    =  0x40$/;"	e	enum:__anon19
+HGRNIC_NEXT_CQ_UPDATE	hgrnic_wqe.h	/^    HGRNIC_NEXT_CQ_UPDATE    = 1 << 3,$/;"	e	enum:__anon24
+HGRNIC_NEXT_DBD	hgrnic_wqe.h	/^    HGRNIC_NEXT_DBD          = 1 << 7,$/;"	e	enum:__anon24
+HGRNIC_NEXT_EVENT_GEN	hgrnic_wqe.h	/^    HGRNIC_NEXT_EVENT_GEN    = 1 << 2,$/;"	e	enum:__anon24
+HGRNIC_NEXT_FENCE	hgrnic_wqe.h	/^    HGRNIC_NEXT_FENCE        = 1 << 6,$/;"	e	enum:__anon24
+HGRNIC_NEXT_SOLICIT	hgrnic_wqe.h	/^    HGRNIC_NEXT_SOLICIT      = 1 << 1$/;"	e	enum:__anon24
+HGRNIC_NUM_ASYNC_EQE	hgrnic_eq.c	/^	HGRNIC_NUM_ASYNC_EQE = 0x80,$/;"	e	enum:__anon34	file:
+HGRNIC_NUM_CMD_EQE	hgrnic_eq.c	/^	HGRNIC_NUM_CMD_EQE   = 0x80,$/;"	e	enum:__anon34	file:
+HGRNIC_NUM_EQ	hgrnic_dev.h	/^	HGRNIC_NUM_EQ$/;"	e	enum:__anon20
+HGRNIC_NUM_EQS	hgrnic_icm.c	/^    HGRNIC_NUM_EQS = 32,$/;"	e	enum:__anon2	file:
+HGRNIC_NUM_PDS	hgrnic_icm.c	/^    HGRNIC_NUM_PDS = 1 << 15$/;"	e	enum:__anon2	file:
+HGRNIC_NUM_SPARE_EQE	hgrnic_eq.c	/^	HGRNIC_NUM_SPARE_EQE = 0x80,$/;"	e	enum:__anon34	file:
+HGRNIC_OPCODE_ATOMIC_CS	hgrnic_dev.h	/^    HGRNIC_OPCODE_ATOMIC_CS      = 0x11,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_ATOMIC_FA	hgrnic_dev.h	/^    HGRNIC_OPCODE_ATOMIC_FA      = 0x12,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_BIND_MW	hgrnic_dev.h	/^    HGRNIC_OPCODE_BIND_MW        = 0x18,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_NOP	hgrnic_dev.h	/^    HGRNIC_OPCODE_NOP            = 0x00,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_RDMA_READ	hgrnic_dev.h	/^    HGRNIC_OPCODE_RDMA_READ      = 0x10,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_RDMA_WRITE	hgrnic_dev.h	/^    HGRNIC_OPCODE_RDMA_WRITE     = 0x08,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_RDMA_WRITE_IMM	hgrnic_dev.h	/^    HGRNIC_OPCODE_RDMA_WRITE_IMM = 0x09,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_RECV_ERR	hgrnic_dev.h	/^    HGRNIC_OPCODE_RECV_ERR       = 0xfe,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_SEND	hgrnic_dev.h	/^    HGRNIC_OPCODE_SEND           = 0x0a,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_SEND_ERR	hgrnic_dev.h	/^    HGRNIC_OPCODE_SEND_ERR       = 0xff,$/;"	e	enum:__anon21
+HGRNIC_OPCODE_SEND_IMM	hgrnic_dev.h	/^    HGRNIC_OPCODE_SEND_IMM       = 0x0b,$/;"	e	enum:__anon21
+HGRNIC_PROVIDER_H	hgrnic_provider.h	9;"	d
+HGRNIC_PUT	hgrnic_dev.h	306;"	d
+HGRNIC_QP_CONTEXT_SIZE	hgrnic_dev.h	/^	HGRNIC_QP_CONTEXT_SIZE = 0x200,$/;"	e	enum:__anon19
+HGRNIC_QP_OPTPAR_ACK_TIMEOUT	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_ACK_TIMEOUT       = 1 << 14,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_ALT_ADDR_PATH	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_ALT_ADDR_PATH     = 1 << 0,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_ALT_RNR_RETRY	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_ALT_RNR_RETRY     = 1 << 13,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_PKEY_INDEX	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_PKEY_INDEX        = 1 << 4,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_PM_STATE	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_PM_STATE          = 1 << 10,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_PORT_NUM	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_PORT_NUM          = 1 << 11,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_PRIMARY_ADDR_PATH	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_PRIMARY_ADDR_PATH = 1 << 7,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_Q_KEY	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_Q_KEY             = 1 << 5,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_RAE	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_RAE               = 1 << 2,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_RETRY_COUNT	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_RETRY_COUNT       = 1 << 12,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_RNR_RETRY	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_RNR_RETRY         = 1 << 15,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_RNR_TIMEOUT	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_RNR_TIMEOUT       = 1 << 6,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_RRA_MAX	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_RRA_MAX           = 1 << 9,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_RRE	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_RRE               = 1 << 1,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_RWE	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_RWE               = 1 << 3,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_SCHED_QUEUE	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_SCHED_QUEUE       = 1 << 16$/;"	e	enum:__anon32	file:
+HGRNIC_QP_OPTPAR_SRA_MAX	hgrnic_qp.c	/^    HGRNIC_QP_OPTPAR_SRA_MAX           = 1 << 8,$/;"	e	enum:__anon32	file:
+HGRNIC_QP_STATE_DRAINING	hgrnic_qp.c	/^    HGRNIC_QP_STATE_DRAINING = 7$/;"	e	enum:__anon28	file:
+HGRNIC_QP_STATE_ERR	hgrnic_qp.c	/^    HGRNIC_QP_STATE_ERR  = 6,$/;"	e	enum:__anon28	file:
+HGRNIC_QP_STATE_INIT	hgrnic_qp.c	/^    HGRNIC_QP_STATE_INIT = 1,$/;"	e	enum:__anon28	file:
+HGRNIC_QP_STATE_RST	hgrnic_qp.c	/^    HGRNIC_QP_STATE_RST  = 0,$/;"	e	enum:__anon28	file:
+HGRNIC_QP_STATE_RTR	hgrnic_qp.c	/^    HGRNIC_QP_STATE_RTR  = 2,$/;"	e	enum:__anon28	file:
+HGRNIC_QP_STATE_RTS	hgrnic_qp.c	/^    HGRNIC_QP_STATE_RTS  = 3,$/;"	e	enum:__anon28	file:
+HGRNIC_QP_STATE_SQD	hgrnic_qp.c	/^    HGRNIC_QP_STATE_SQD  = 5,$/;"	e	enum:__anon28	file:
+HGRNIC_QP_STATE_SQE	hgrnic_qp.c	/^    HGRNIC_QP_STATE_SQE  = 4,$/;"	e	enum:__anon28	file:
+HGRNIC_QP_ST_RC	hgrnic_qp.c	/^    HGRNIC_QP_ST_RC 	= 0x0,$/;"	e	enum:__anon29	file:
+HGRNIC_QP_ST_RD	hgrnic_qp.c	/^    HGRNIC_QP_ST_RD 	= 0x2,$/;"	e	enum:__anon29	file:
+HGRNIC_QP_ST_RSV	hgrnic_qp.c	/^    HGRNIC_QP_ST_RSV = 0x7$/;"	e	enum:__anon29	file:
+HGRNIC_QP_ST_UC	hgrnic_qp.c	/^    HGRNIC_QP_ST_UC 	= 0x1,$/;"	e	enum:__anon29	file:
+HGRNIC_QP_ST_UD	hgrnic_qp.c	/^    HGRNIC_QP_ST_UD 	= 0x3,$/;"	e	enum:__anon29	file:
+HGRNIC_RATE_EIGHTH	hgrnic_qp.c	/^      HGRNIC_RATE_EIGHTH  = 2,$/;"	e	enum:__anon31	file:
+HGRNIC_RATE_FULL	hgrnic_qp.c	/^      HGRNIC_RATE_FULL    = 0,$/;"	e	enum:__anon31	file:
+HGRNIC_RATE_HALF	hgrnic_qp.c	/^      HGRNIC_RATE_HALF    = 3$/;"	e	enum:__anon31	file:
+HGRNIC_RATE_QUARTER	hgrnic_qp.c	/^      HGRNIC_RATE_QUARTER = 1,$/;"	e	enum:__anon31	file:
+HGRNIC_RDB_ENTRY_SIZE	hgrnic_dev.h	/^	HGRNIC_RDB_ENTRY_SIZE  =  0x20,$/;"	e	enum:__anon19
+HGRNIC_RES_CQ	hgrnic_icm.c	/^    HGRNIC_RES_CQ,$/;"	e	enum:__anon1	file:
+HGRNIC_RES_EQ	hgrnic_icm.c	/^    HGRNIC_RES_EQ,$/;"	e	enum:__anon1	file:
+HGRNIC_RES_MPT	hgrnic_icm.c	/^    HGRNIC_RES_MPT,$/;"	e	enum:__anon1	file:
+HGRNIC_RES_MTT	hgrnic_icm.c	/^    HGRNIC_RES_MTT,$/;"	e	enum:__anon1	file:
+HGRNIC_RES_NUM	hgrnic_icm.c	/^    HGRNIC_RES_NUM$/;"	e	enum:__anon1	file:
+HGRNIC_RES_QP	hgrnic_icm.c	/^    HGRNIC_RES_QP,$/;"	e	enum:__anon1	file:
+HGRNIC_SEND_DOORBELL	hgrnic_iface.h	25;"	d
+HGRNIC_SEND_DOORBELL_FENCE	hgrnic_qp.c	/^    HGRNIC_SEND_DOORBELL_FENCE = 1 << 5$/;"	e	enum:__anon30	file:
+HGRNIC_SRQ_EVENT_MASK	hgrnic_eq.c	81;"	d	file:
+HGRNIC_TABLE_CHUNK_SIZE	hgrnic_icm.c	/^    HGRNIC_TABLE_CHUNK_SIZE = 1 << 18$/;"	e	enum:__anon3	file:
+HGRNIC_TAVOR_CQ_DB_INC_CI	hgrnic_cq.c	103;"	d	file:
+HGRNIC_TAVOR_CQ_DB_REQ_NOT	hgrnic_cq.c	104;"	d	file:
+HGRNIC_TAVOR_CQ_DB_REQ_NOT_MULT	hgrnic_cq.c	107;"	d	file:
+HGRNIC_TAVOR_CQ_DB_REQ_NOT_SOL	hgrnic_cq.c	105;"	d	file:
+HGRNIC_TAVOR_CQ_DB_SET_CI	hgrnic_cq.c	106;"	d	file:
+HGRNIC_UVERBS_ABI_VERSION	include/rdma/hgrnic-abi.h	35;"	d
+HG_GID_SIZE	hgrnic_dev.h	38;"	d
+INIT_HCA_CQC_BASE_OFFSET	hgrnic_cmd.c	598;"	d	file:
+INIT_HCA_EQC_BASE_OFFSET	hgrnic_cmd.c	600;"	d	file:
+INIT_HCA_IN_SIZE	hgrnic_cmd.c	594;"	d	file:
+INIT_HCA_LOG_CQ_OFFSET	hgrnic_cmd.c	599;"	d	file:
+INIT_HCA_LOG_EQ_OFFSET	hgrnic_cmd.c	601;"	d	file:
+INIT_HCA_LOG_MPT_SZ_OFFSET	hgrnic_cmd.c	605;"	d	file:
+INIT_HCA_LOG_QP_OFFSET	hgrnic_cmd.c	597;"	d	file:
+INIT_HCA_MPT_BASE_OFFSET	hgrnic_cmd.c	604;"	d	file:
+INIT_HCA_MTT_BASE_OFFSET	hgrnic_cmd.c	606;"	d	file:
+INIT_HCA_QPC_BASE_OFFSET	hgrnic_cmd.c	596;"	d	file:
+INIT_HCA_QPC_OFFSET	hgrnic_cmd.c	595;"	d	file:
+INIT_HCA_TPT_OFFSET	hgrnic_cmd.c	603;"	d	file:
+INIT_IB_FLAGS_OFFSET	hgrnic_cmd.c	670;"	d	file:
+INIT_IB_FLAG_G0	hgrnic_cmd.c	673;"	d	file:
+INIT_IB_FLAG_NG	hgrnic_cmd.c	672;"	d	file:
+INIT_IB_FLAG_SIG	hgrnic_cmd.c	671;"	d	file:
+INIT_IB_GUID0_OFFSET	hgrnic_cmd.c	679;"	d	file:
+INIT_IB_IN_SIZE	hgrnic_cmd.c	669;"	d	file:
+INIT_IB_MAX_GID_OFFSET	hgrnic_cmd.c	677;"	d	file:
+INIT_IB_MAX_PKEY_OFFSET	hgrnic_cmd.c	678;"	d	file:
+INIT_IB_MTU_SHIFT	hgrnic_cmd.c	676;"	d	file:
+INIT_IB_NODE_GUID_OFFSET	hgrnic_cmd.c	680;"	d	file:
+INIT_IB_PORT_WIDTH_SHIFT	hgrnic_cmd.c	675;"	d	file:
+INIT_IB_SI_GUID_OFFSET	hgrnic_cmd.c	681;"	d	file:
+INIT_IB_VL_SHIFT	hgrnic_cmd.c	674;"	d	file:
+LINUX_KERNEL_PATH	Makefile	/^LINUX_KERNEL_PATH := \/lib\/modules\/$(shell uname -r)\/build$/;"	m
+M	Makefile	/^	make -C $(LINUX_KERNEL_PATH) M=$(CURRENT_PATH) modules$/;"	m
+MAD_IFC_BOX_SIZE	hgrnic_cmd.c	1163;"	d	file:
+MAD_IFC_GRH_OFFSET	hgrnic_cmd.c	1170;"	d	file:
+MAD_IFC_G_PATH_OFFSET	hgrnic_cmd.c	1167;"	d	file:
+MAD_IFC_MY_QPN_OFFSET	hgrnic_cmd.c	1164;"	d	file:
+MAD_IFC_PKEY_OFFSET	hgrnic_cmd.c	1169;"	d	file:
+MAD_IFC_RLID_OFFSET	hgrnic_cmd.c	1168;"	d	file:
+MAD_IFC_RQPN_OFFSET	hgrnic_cmd.c	1165;"	d	file:
+MAD_IFC_SL_OFFSET	hgrnic_cmd.c	1166;"	d	file:
+MAP_ICM_MAX_PAGE_NUM_LOG	hgrnic_cmd.c	782;"	d	file:
+NUM_TRANS	hgrnic_qp.c	/^enum { RC, UC, UD, RD, RSV, NUM_TRANS };$/;"	e	enum:__anon33	file:
+PCI_DEVICE_ID_ICT_HANGU_RNIC	hgrnic_dev.h	27;"	d
+PCI_VENDOR_ID_ICT	hgrnic_dev.h	26;"	d
+PFX	hgrnic_dev.h	34;"	d
+QUERY_ADAPTER_ID_OFFSET	hgrnic_cmd.c	548;"	d	file:
+QUERY_ADAPTER_OUT_SIZE	hgrnic_cmd.c	547;"	d	file:
+QUERY_DEV_LIM_ACK_DELAY_OFFSET	hgrnic_cmd.c	372;"	d	file:
+QUERY_DEV_LIM_CQC_ENTRY_SZ_OFFSET	hgrnic_cmd.c	367;"	d	file:
+QUERY_DEV_LIM_EQC_ENTRY_SZ_OFFSET	hgrnic_cmd.c	368;"	d	file:
+QUERY_DEV_LIM_MAX_CQ_OFFSET	hgrnic_cmd.c	356;"	d	file:
+QUERY_DEV_LIM_MAX_CQ_SZ_OFFSET	hgrnic_cmd.c	352;"	d	file:
+QUERY_DEV_LIM_MAX_DESC_SZ_OFFSET	hgrnic_cmd.c	379;"	d	file:
+QUERY_DEV_LIM_MAX_DESC_SZ_RQ_OFFSET	hgrnic_cmd.c	381;"	d	file:
+QUERY_DEV_LIM_MAX_EQ_OFFSET	hgrnic_cmd.c	357;"	d	file:
+QUERY_DEV_LIM_MAX_GID_OFFSET	hgrnic_cmd.c	360;"	d	file:
+QUERY_DEV_LIM_MAX_ICM_SZ_OFFSET	hgrnic_cmd.c	384;"	d	file:
+QUERY_DEV_LIM_MAX_MPT_OFFSET	hgrnic_cmd.c	358;"	d	file:
+QUERY_DEV_LIM_MAX_MTT_SEG_OFFSET	hgrnic_cmd.c	363;"	d	file:
+QUERY_DEV_LIM_MAX_PD_OFFSET	hgrnic_cmd.c	359;"	d	file:
+QUERY_DEV_LIM_MAX_PKEY_OFFSET	hgrnic_cmd.c	361;"	d	file:
+QUERY_DEV_LIM_MAX_QP_OFFSET	hgrnic_cmd.c	355;"	d	file:
+QUERY_DEV_LIM_MAX_QP_SZ_OFFSET	hgrnic_cmd.c	351;"	d	file:
+QUERY_DEV_LIM_MAX_SG_OFFSET	hgrnic_cmd.c	378;"	d	file:
+QUERY_DEV_LIM_MAX_SG_RQ_OFFSET	hgrnic_cmd.c	380;"	d	file:
+QUERY_DEV_LIM_MPT_ENTRY_SZ_OFFSET	hgrnic_cmd.c	369;"	d	file:
+QUERY_DEV_LIM_MTU_WIDTH_OFFSET	hgrnic_cmd.c	373;"	d	file:
+QUERY_DEV_LIM_OUT_SIZE	hgrnic_cmd.c	340;"	d	file:
+QUERY_DEV_LIM_PAGE_SZ_OFFSET	hgrnic_cmd.c	377;"	d	file:
+QUERY_DEV_LIM_QPC_ENTRY_SZ_OFFSET	hgrnic_cmd.c	366;"	d	file:
+QUERY_DEV_LIM_RSVD_CQ_OFFSET	hgrnic_cmd.c	344;"	d	file:
+QUERY_DEV_LIM_RSVD_EQ_OFFSET	hgrnic_cmd.c	345;"	d	file:
+QUERY_DEV_LIM_RSVD_LKEY_OFFSET	hgrnic_cmd.c	348;"	d	file:
+QUERY_DEV_LIM_RSVD_MTT_OFFSET	hgrnic_cmd.c	346;"	d	file:
+QUERY_DEV_LIM_RSVD_PD_OFFSET	hgrnic_cmd.c	347;"	d	file:
+QUERY_DEV_LIM_RSVD_QP_OFFSET	hgrnic_cmd.c	343;"	d	file:
+QUERY_DEV_LIM_VL_PORT_OFFSET	hgrnic_cmd.c	374;"	d	file:
+RC	hgrnic_qp.c	/^enum { RC, UC, UD, RD, RSV, NUM_TRANS };$/;"	e	enum:__anon33	file:
+RD	hgrnic_qp.c	/^enum { RC, UC, UD, RD, RSV, NUM_TRANS };$/;"	e	enum:__anon33	file:
+RDMA_DRIVER_BNXT_RE	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_BNXT_RE,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_CXGB3	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_CXGB3,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_CXGB4	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_CXGB4,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_EFA	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_EFA,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_HFI1	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_HFI1,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_HGRNIC	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^    RDMA_DRIVER_HGRNIC,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_HNS	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_HNS,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_I40IW	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_I40IW,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_MLX4	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_MLX4,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_MLX5	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_MLX5,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_MTHCA	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_MTHCA,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_NES	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_NES,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_OCRDMA	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_OCRDMA,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_QEDR	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_QEDR,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_QIB	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_QIB,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_RXE	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_RXE,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_SIW	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_SIW,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_UNKNOWN	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_UNKNOWN,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_USNIC	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_USNIC,$/;"	e	enum:rdma_driver_id
+RDMA_DRIVER_VMW_PVRDMA	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	RDMA_DRIVER_VMW_PVRDMA,$/;"	e	enum:rdma_driver_id
+RDMA_IOCTL_MAGIC	include/uapi/rdma/rdma_user_ioctl_cmds.h	40;"	d
+RDMA_USER_IOCTL_CMDS_H	include/uapi/rdma/rdma_user_ioctl_cmds.h	34;"	d
+RDMA_VERBS_IOCTL	include/uapi/rdma/rdma_user_ioctl_cmds.h	41;"	d
+RESIZE_CQ_IN_SIZE	hgrnic_cmd.c	1022;"	d	file:
+RESIZE_CQ_LKEY_OFFSET	hgrnic_cmd.c	1024;"	d	file:
+RESIZE_CQ_LOG_SIZE_OFFSET	hgrnic_cmd.c	1023;"	d	file:
+RSV	hgrnic_qp.c	/^enum { RC, UC, UD, RD, RSV, NUM_TRANS };$/;"	e	enum:__anon33	file:
+SET_IB_CAP_MASK_OFFSET	hgrnic_cmd.c	739;"	d	file:
+SET_IB_FLAGS_OFFSET	hgrnic_cmd.c	736;"	d	file:
+SET_IB_FLAG_RQK	hgrnic_cmd.c	738;"	d	file:
+SET_IB_FLAG_SIG	hgrnic_cmd.c	737;"	d	file:
+SET_IB_IN_SIZE	hgrnic_cmd.c	735;"	d	file:
+SET_IB_SI_GUID_OFFSET	hgrnic_cmd.c	740;"	d	file:
+SYNDROME_BAD_RESP_ERR	hgrnic_cq.c	/^    SYNDROME_BAD_RESP_ERR               = 0x10,$/;"	e	enum:__anon27	file:
+SYNDROME_INVAL_EECN_ERR	hgrnic_cq.c	/^    SYNDROME_INVAL_EECN_ERR             = 0x23,$/;"	e	enum:__anon27	file:
+SYNDROME_INVAL_EEC_STATE_ERR	hgrnic_cq.c	/^    SYNDROME_INVAL_EEC_STATE_ERR        = 0x24$/;"	e	enum:__anon27	file:
+SYNDROME_LOCAL_ACCESS_ERR	hgrnic_cq.c	/^    SYNDROME_LOCAL_ACCESS_ERR           = 0x11,$/;"	e	enum:__anon27	file:
+SYNDROME_LOCAL_EEC_OP_ERR	hgrnic_cq.c	/^    SYNDROME_LOCAL_EEC_OP_ERR           = 0x03,$/;"	e	enum:__anon27	file:
+SYNDROME_LOCAL_LENGTH_ERR	hgrnic_cq.c	/^    SYNDROME_LOCAL_LENGTH_ERR           = 0x01,$/;"	e	enum:__anon27	file:
+SYNDROME_LOCAL_PROT_ERR	hgrnic_cq.c	/^    SYNDROME_LOCAL_PROT_ERR             = 0x04,$/;"	e	enum:__anon27	file:
+SYNDROME_LOCAL_QP_OP_ERR	hgrnic_cq.c	/^    SYNDROME_LOCAL_QP_OP_ERR            = 0x02,$/;"	e	enum:__anon27	file:
+SYNDROME_LOCAL_RDD_VIOL_ERR	hgrnic_cq.c	/^    SYNDROME_LOCAL_RDD_VIOL_ERR         = 0x20,$/;"	e	enum:__anon27	file:
+SYNDROME_MW_BIND_ERR	hgrnic_cq.c	/^    SYNDROME_MW_BIND_ERR                = 0x06,$/;"	e	enum:__anon27	file:
+SYNDROME_REMOTE_ABORTED_ERR	hgrnic_cq.c	/^    SYNDROME_REMOTE_ABORTED_ERR         = 0x22,$/;"	e	enum:__anon27	file:
+SYNDROME_REMOTE_ACCESS_ERR	hgrnic_cq.c	/^    SYNDROME_REMOTE_ACCESS_ERR          = 0x13,$/;"	e	enum:__anon27	file:
+SYNDROME_REMOTE_INVAL_RD_REQ_ERR	hgrnic_cq.c	/^    SYNDROME_REMOTE_INVAL_RD_REQ_ERR    = 0x21,$/;"	e	enum:__anon27	file:
+SYNDROME_REMOTE_INVAL_REQ_ERR	hgrnic_cq.c	/^    SYNDROME_REMOTE_INVAL_REQ_ERR       = 0x12,$/;"	e	enum:__anon27	file:
+SYNDROME_REMOTE_OP_ERR	hgrnic_cq.c	/^    SYNDROME_REMOTE_OP_ERR              = 0x14,$/;"	e	enum:__anon27	file:
+SYNDROME_RETRY_EXC_ERR	hgrnic_cq.c	/^    SYNDROME_RETRY_EXC_ERR              = 0x15,$/;"	e	enum:__anon27	file:
+SYNDROME_RNR_RETRY_EXC_ERR	hgrnic_cq.c	/^    SYNDROME_RNR_RETRY_EXC_ERR          = 0x16,$/;"	e	enum:__anon27	file:
+SYNDROME_WR_FLUSH_ERR	hgrnic_cq.c	/^    SYNDROME_WR_FLUSH_ERR               = 0x05,$/;"	e	enum:__anon27	file:
+TPT_REGION	hgrnic_cmd.h	/^    TPT_REGION,$/;"	e	enum:__anon10
+UC	hgrnic_qp.c	/^enum { RC, UC, UD, RD, RSV, NUM_TRANS };$/;"	e	enum:__anon33	file:
+UD	hgrnic_qp.c	/^enum { RC, UC, UD, RD, RSV, NUM_TRANS };$/;"	e	enum:__anon33	file:
+UVERBS_ATTR_F_MANDATORY	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	UVERBS_ATTR_F_MANDATORY = 1U << 0,$/;"	e	enum:__anon4
+UVERBS_ATTR_F_VALID_OUTPUT	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	UVERBS_ATTR_F_VALID_OUTPUT = 1U << 1,$/;"	e	enum:__anon4
+__HGRNIC_CMD_H__	hgrnic_cmd.h	9;"	d
+__HGRNIC_EN_ABI_H__	hgrnic_en_abi.h	9;"	d
+__HGRNIC_ICM_H__	hgrnic_icm.h	9;"	d
+__HGRNIC_IFACE_H__	hgrnic_iface.h	9;"	d
+__HGRNIC_REGISTER_H__	hgrnic_register.h	9;"	d
+__HGRNIC_WQE_H__	hgrnic_wqe.h	9;"	d
+__hgrnic_alloc_mtt	hgrnic_mr.c	/^static struct hgrnic_mtt *__hgrnic_alloc_mtt (struct hgrnic_dev *dev, $/;"	f	file:
+__hgrnic_check_profile_val	hgrnic_main.c	/^static void __init __hgrnic_check_profile_val (const char *name, $/;"	f	file:
+__hgrnic_init_one	hgrnic_main.c	/^static int __hgrnic_init_one (struct pci_dev *pdev, int hca_type) {$/;"	f	file:
+__hgrnic_modify_qp	hgrnic_qp.c	/^static int __hgrnic_modify_qp (struct ib_qp *ibqp,$/;"	f	file:
+__hgrnic_remove_one	hgrnic_main.c	/^static void __hgrnic_remove_one (struct pci_dev *pdev) {$/;"	f	file:
+__hgrnic_restart_one	hgrnic_main.c	/^int __hgrnic_restart_one (struct pci_dev *pdev) {$/;"	f
+__hgrnic_write_mtt	hgrnic_mr.c	/^static int __hgrnic_write_mtt (struct hgrnic_dev *dev, struct hgrnic_mtt *mtt,$/;"	f	file:
+__packed	hgrnic_cq.c	/^} __packed;$/;"	v	typeref:struct:hgrnic_cq_context
+__packed	hgrnic_eq.c	/^} __packed;$/;"	v	typeref:struct:hgrnic_eq_context
+__packed	hgrnic_mr.c	/^} __packed;$/;"	v	typeref:struct:hgrnic_mpt_entry
+__packed	hgrnic_qp.c	/^} __packed;$/;"	v	typeref:struct:hgrnic_qp_context
+__packed	hgrnic_qp.c	/^} __packed;$/;"	v	typeref:struct:hgrnic_qp_param
+__packed	hgrnic_qp.c	/^} __packed;$/;"	v	typeref:struct:hgrnic_qp_path
+ackto	hgrnic_qp.c	/^    u8     ackto      ; \/* ack timeout, not used *\/$/;"	m	struct:hgrnic_qp_path	file:
+active	hgrnic_dev.h	/^    bool                  active;$/;"	m	struct:hgrnic_dev
+addr	hgrnic_wqe.h	/^    __le64 addr;$/;"	m	struct:hgrnic_data_unit
+alloc	hgrnic_dev.h	/^    struct hgrnic_alloc     alloc;$/;"	m	struct:hgrnic_qp_table	typeref:struct:hgrnic_qp_table::hgrnic_alloc
+alloc	hgrnic_dev.h	/^    struct hgrnic_alloc  alloc; \/* rescource number allocation *\/$/;"	m	struct:hgrnic_cq_table	typeref:struct:hgrnic_cq_table::hgrnic_alloc
+alloc	hgrnic_dev.h	/^    struct hgrnic_alloc alloc;$/;"	m	struct:hgrnic_eq_table	typeref:struct:hgrnic_eq_table::hgrnic_alloc
+alloc	hgrnic_dev.h	/^    struct hgrnic_alloc alloc;$/;"	m	struct:hgrnic_pd_table	typeref:struct:hgrnic_pd_table::hgrnic_alloc
+alloc	hgrnic_dev.h	/^    struct hgrnic_alloc alloc;$/;"	m	struct:hgrnic_uar_table	typeref:struct:hgrnic_uar_table::hgrnic_alloc
+arm_mask	hgrnic_dev.h	/^    u32                arm_mask;$/;"	m	struct:hgrnic_eq_table
+atomic_rd_en	hgrnic_provider.h	/^    u8                     atomic_rd_en;$/;"	m	struct:hgrnic_qp
+attr_data	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	} attr_data;$/;"	m	struct:ib_uverbs_attr	typeref:union:ib_uverbs_attr::__anon5
+attr_id	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u16 attr_id;		\/* command specific type attribute *\/$/;"	m	struct:ib_uverbs_attr
+attrs	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	struct ib_uverbs_attr  attrs[0];$/;"	m	struct:ib_uverbs_ioctl_hdr	typeref:struct:ib_uverbs_ioctl_hdr::ib_uverbs_attr
+bits	hgrnic_dev.h	/^    unsigned long **bits; \/\/ bitmap matrix$/;"	m	struct:hgrnic_buddy
+board_id	hgrnic_dev.h	/^    u64              board_id;$/;"	m	struct:hgrnic_dev
+board_id_show	hgrnic_provider.c	/^static ssize_t board_id_show(struct device *device,$/;"	f	file:
+buddy	hgrnic_provider.h	/^    struct hgrnic_buddy *buddy;$/;"	m	struct:hgrnic_mtt	typeref:struct:hgrnic_mtt::hgrnic_buddy
+buf	hgrnic_cmd.h	/^    void      *buf;$/;"	m	struct:hgrnic_mailbox
+buf	hgrnic_provider.h	/^    struct hgrnic_cq_buf	buf;$/;"	m	struct:hgrnic_cq_resize	typeref:struct:hgrnic_cq_resize::hgrnic_cq_buf
+buf	hgrnic_provider.h	/^    struct hgrnic_cq_buf     buf;$/;"	m	struct:hgrnic_cq	typeref:struct:hgrnic_cq::hgrnic_cq_buf
+buf	hgrnic_provider.h	/^    void *buf;                      \/* Vaddr  *\/$/;"	m	struct:hgrnic_buf_list
+byte_cnt	hgrnic_cq.c	/^    __le32 byte_cnt;$/;"	m	struct:hgrnic_cqe	file:
+byte_count	hgrnic_wqe.h	/^    __le32 byte_count;$/;"	m	struct:hgrnic_data_unit
+cap_mask	hgrnic_cmd.h	/^    u32 cap_mask;$/;"	m	struct:hgrnic_set_ib_param
+cap_mask_mutex	hgrnic_dev.h	/^    struct mutex cap_mask_mutex;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::mutex
+chunk	hgrnic_icm.h	/^    struct hgrnic_icm_chunk *chunk;$/;"	m	struct:hgrnic_icm_iter	typeref:struct:hgrnic_icm_iter::hgrnic_icm_chunk
+chunk_list	hgrnic_icm.h	/^    struct list_head chunk_list;$/;"	m	struct:hgrnic_icm	typeref:struct:hgrnic_icm::list_head
+clr_int	hgrnic_dev.h	/^    void __iomem      *clr_int;$/;"	m	struct:hgrnic_eq_table
+clr_mask	hgrnic_dev.h	/^    u32                clr_mask;$/;"	m	struct:hgrnic_eq_table
+cmd	hgrnic_dev.h	/^    struct hgrnic_cmd    cmd;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_cmd
+coherent	hgrnic_icm.h	/^    int               coherent;$/;"	m	struct:hgrnic_icm_table
+comp_eqn	hgrnic_cq.c	/^    __be32 comp_eqn;$/;"	m	struct:hgrnic_cq_context	file:
+compare	hgrnic_wqe.h	/^    __le64 compare;$/;"	m	struct:hgrnic_atomic_unit
+config_rdma	hgrnic_main.c	/^static int config_rdma = 1;$/;"	v	file:
+cons_index	hgrnic_provider.h	/^	u32                    cons_index;$/;"	m	struct:hgrnic_eq
+cons_index	hgrnic_provider.h	/^    u32          cons_index; \/* consumer index, point $/;"	m	struct:hgrnic_cq
+consumer_index	hgrnic_eq.c	/^	__be32 consumer_index;$/;"	m	struct:hgrnic_eq_context	file:
+context	hgrnic_qp.c	/^    struct hgrnic_qp_context context;$/;"	m	struct:hgrnic_qp_param	typeref:struct:hgrnic_qp_param::hgrnic_qp_context	file:
+context_lock	hgrnic_dev.h	/^	spinlock_t                context_lock;$/;"	m	struct:hgrnic_cmd
+convert_access	hgrnic_provider.h	/^static inline u32 convert_access(int acc)$/;"	f
+cq	hgrnic_dev.h	/^    struct hgrnic_array  cq   ;$/;"	m	struct:hgrnic_cq_table	typeref:struct:hgrnic_cq_table::hgrnic_array
+cq_table	hgrnic_dev.h	/^    struct hgrnic_cq_table  cq_table;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_cq_table
+cqc_base	hgrnic_cmd.h	/^    u64 cqc_base;$/;"	m	struct:hgrnic_init_hca_param
+cqc_entry_sz	hgrnic_cmd.h	/^    int cqc_entry_sz;$/;"	m	struct:hgrnic_dev_lim
+cqe	hgrnic_provider.h	/^    int                 cqe; \/* we actual allocate one $/;"	m	struct:hgrnic_cq_resize
+cqe_sw	hgrnic_cq.c	/^static inline struct hgrnic_cqe *cqe_sw(struct hgrnic_cqe *cqe)$/;"	f	file:
+cqn	hgrnic_cq.c	/^    __be32 cqn;$/;"	m	struct:hgrnic_cq_context	file:
+cqn	hgrnic_provider.h	/^    int          cqn;$/;"	m	struct:hgrnic_cq
+cqn	include/rdma/hgrnic-abi.h	/^    __u32 cqn;$/;"	m	struct:hgrnic_create_cq_resp
+cqn_rcv	hgrnic_qp.c	/^    __be32 cqn_rcv;$/;"	m	struct:hgrnic_qp_context	file:
+cqn_snd	hgrnic_qp.c	/^    __be32 cqn_snd;$/;"	m	struct:hgrnic_qp_context	file:
+data	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^		__aligned_u64 data;$/;"	m	union:ib_uverbs_attr::__anon7
+data_s64	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^		__s64 data_s64;$/;"	m	union:ib_uverbs_attr::__anon7
+db_cnt	hgrnic_cq.c	/^    __le16 db_cnt;$/;"	m	struct:hgrnic_err_cqe	file:
+dbell_map	hgrnic_dev.h	/^	void __iomem             *dbell_map;$/;"	m	struct:hgrnic_cmd
+dbell_offsets	hgrnic_dev.h	/^	u16                       dbell_offsets[HGRNIC_CMD_NUM_DBELL_DWORDS];$/;"	m	struct:hgrnic_cmd
+dev	hgrnic_provider.h	/^	struct hgrnic_dev      *dev;$/;"	m	struct:hgrnic_eq	typeref:struct:hgrnic_eq::hgrnic_dev
+direct	hgrnic_provider.h	/^    struct hgrnic_buf_list direct;$/;"	m	union:hgrnic_buf	typeref:struct:hgrnic_buf::hgrnic_buf_list
+dlid	hgrnic_provider.h	/^    u64          dlid;$/;"	m	struct:hgrnic_ah
+dlid	hgrnic_wqe.h	/^    __le16 dlid;$/;"	m	struct:hgrnic_ud_unit
+dma	hgrnic_cmd.h	/^    dma_addr_t dma;$/;"	m	struct:hgrnic_mailbox
+dmac_h	hgrnic_wqe.h	/^    __le32 dmac_h;$/;"	m	struct:hgrnic_ud_unit
+dqpn	hgrnic_wqe.h	/^    __le32 dqpn;$/;"	m	struct:hgrnic_ud_unit
+driver_id	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u32 driver_id;$/;"	m	struct:ib_uverbs_ioctl_hdr
+driver_mr	hgrnic_dev.h	/^    struct hgrnic_mr        driver_mr;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_mr
+driver_pd	hgrnic_dev.h	/^    struct hgrnic_pd        driver_pd;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_pd
+driver_uar	hgrnic_dev.h	/^    struct hgrnic_uar       driver_uar;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_uar
+dump_cqe	hgrnic_cq.c	/^static inline void dump_cqe(struct hgrnic_dev *dev, void *cqe_ptr)$/;"	f	file:
+ee_nds	hgrnic_wqe.h	/^    __le32 ee_nds;      \/* [31:8] next EE  [7] DBD [6] F [5:0] next WQE size *\/$/;"	m	struct:hgrnic_next_unit
+elem_id	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^			__u8 elem_id;$/;"	m	struct:ib_uverbs_attr::__anon5::__anon6
+endev	hgrnic_dev.h	/^    struct hgrnic_endev   *endev;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_endev
+entry_sz_log	hgrnic_provider.h	/^    int        entry_sz_log ;$/;"	m	struct:hgrnic_wq
+enum_data	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^		} enum_data;$/;"	m	union:ib_uverbs_attr::__anon5	typeref:struct:ib_uverbs_attr::__anon5::__anon6
+epsn	hgrnic_provider.h	/^    u32                     epsn;$/;"	m	struct:hgrnic_qp
+eq	hgrnic_dev.h	/^    struct hgrnic_eq    eq[HGRNIC_NUM_EQ];$/;"	m	struct:hgrnic_eq_table	typeref:struct:hgrnic_eq_table::hgrnic_eq
+eq_table	hgrnic_dev.h	/^    struct hgrnic_eq_table  eq_table;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_eq_table
+eqc_base	hgrnic_cmd.h	/^    u64 eqc_base;$/;"	m	struct:hgrnic_init_hca_param
+eqc_entry_sz	hgrnic_cmd.h	/^    int eqc_entry_sz;$/;"	m	struct:hgrnic_dev_lim
+eqn	hgrnic_provider.h	/^	int                    eqn;$/;"	m	struct:hgrnic_eq
+eqn_mask	hgrnic_provider.h	/^	u32                    eqn_mask;$/;"	m	struct:hgrnic_eq
+event_sem	hgrnic_dev.h	/^	struct semaphore 	  event_sem;$/;"	m	struct:hgrnic_cmd	typeref:struct:hgrnic_cmd::semaphore
+first_index	hgrnic_provider.h	/^    u32                 first_index; \/* MTT first index **\/$/;"	m	struct:hgrnic_mtt
+flags	hgrnic_cq.c	/^    __be32 flags;$/;"	m	struct:hgrnic_cq_context	file:
+flags	hgrnic_eq.c	/^	__be32 flags;$/;"	m	struct:hgrnic_eq_context	file:
+flags	hgrnic_main.c	/^    u32 flags;$/;"	m	struct:__anon12	file:
+flags	hgrnic_mr.c	/^    __be32 flags;$/;"	m	struct:hgrnic_mpt_entry	file:
+flags	hgrnic_qp.c	/^    __be32 flags;$/;"	m	struct:hgrnic_qp_context	file:
+flags	hgrnic_wqe.h	/^    __le32 flags;       \/* [3] CQ [2] Event [1] Solicit *\/$/;"	m	struct:hgrnic_next_unit
+flags	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u16 flags;		\/* combination of UVERBS_ATTR_F_XXXX *\/$/;"	m	struct:ib_uverbs_attr
+free_head	hgrnic_dev.h	/^	int                       free_head;$/;"	m	struct:hgrnic_cmd
+g_mlpath	hgrnic_cq.c	/^    u8     g_mlpath;$/;"	m	struct:hgrnic_cqe	file:
+g_mylmc	hgrnic_qp.c	/^    u8     g_mylmc    ; \/* not used$/;"	m	struct:hgrnic_qp_path	file:
+get_cq_refcount	hgrnic_cq.c	/^static inline int get_cq_refcount(struct hgrnic_dev *dev, struct hgrnic_cq *cq)$/;"	f	file:
+get_cqe	hgrnic_cq.c	/^static inline struct hgrnic_cqe *get_cqe(struct hgrnic_cq *cq, int entry)$/;"	f	file:
+get_cqe_from_buf	hgrnic_cq.c	/^static inline struct hgrnic_cqe *get_cqe_from_buf(struct hgrnic_cq_buf *buf,$/;"	f	file:
+get_qp_refcount	hgrnic_qp.c	/^static inline int get_qp_refcount(struct hgrnic_dev *dev, struct hgrnic_qp *qp)$/;"	f	file:
+get_wqe	hgrnic_qp.c	/^static void *get_wqe (struct hgrnic_wq wq, int n) {$/;"	f	file:
+gid	hgrnic_dev.h	/^    u8                    gid[HG_GID_SIZE];$/;"	m	struct:hgrnic_dev
+gid_cap	hgrnic_cmd.h	/^    u16 gid_cap;$/;"	m	struct:hgrnic_init_ib_param
+gid_table_len	hgrnic_dev.h	/^    int      gid_table_len;$/;"	m	struct:hgrnic_limits
+go_bit	hgrnic_cmd.c	/^static inline int go_bit (struct hgrnic_dev *dev) {$/;"	f	file:
+guid0	hgrnic_cmd.h	/^    u64 guid0;$/;"	m	struct:hgrnic_init_ib_param
+handle_error_cqe	hgrnic_cq.c	/^static void handle_error_cqe(struct hgrnic_dev *dev, struct hgrnic_cq *cq,$/;"	f	file:
+have_irq	hgrnic_provider.h	/^	int                    have_irq;$/;"	m	struct:hgrnic_eq
+hca_profile	hgrnic_main.c	/^static struct hgrnic_profile hca_profile = {$/;"	v	typeref:struct:hgrnic_profile	file:
+hca_type	hgrnic_dev.h	/^    int              hca_type;$/;"	m	struct:hgrnic_dev
+hca_type_show	hgrnic_provider.c	/^static ssize_t hca_type_show(struct device *device,$/;"	f	file:
+hcr	hgrnic_dev.h	/^    void __iomem    *hcr;$/;"	m	struct:hgrnic_dev
+hcr_mutex	hgrnic_dev.h	/^	struct mutex              hcr_mutex;$/;"	m	struct:hgrnic_cmd	typeref:struct:hgrnic_cmd::mutex
+head	hgrnic_provider.h	/^    unsigned   head     ; \/* never roll back, so it need to & (max - 1) when in use *\/$/;"	m	struct:hgrnic_wq
+header_buf	hgrnic_provider.h	/^	void           *header_buf;$/;"	m	struct:hgrnic_sqp
+header_buf_size	hgrnic_provider.h	/^	int             header_buf_size;$/;"	m	struct:hgrnic_sqp
+header_dma	hgrnic_provider.h	/^	dma_addr_t      header_dma;$/;"	m	struct:hgrnic_sqp
+hgdev	hgrnic_register.c	/^static struct hgrnic_dev* hgdev;$/;"	v	typeref:struct:hgrnic_dev	file:
+hgrnic_CLOSE_HCA	hgrnic_cmd.c	/^int hgrnic_CLOSE_HCA (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_CLOSE_IB	hgrnic_cmd.c	/^int hgrnic_CLOSE_IB (struct hgrnic_dev *dev, int port) {$/;"	f
+hgrnic_CONF_SPECIAL_QP	hgrnic_cmd.c	/^int hgrnic_CONF_SPECIAL_QP (struct hgrnic_dev *dev, int type, u32 qpn) {$/;"	f
+hgrnic_HW2SW_CQ	hgrnic_cmd.c	/^int hgrnic_HW2SW_CQ (struct hgrnic_dev *dev, int cq_num)$/;"	f
+hgrnic_HW2SW_EQ	hgrnic_cmd.c	/^int hgrnic_HW2SW_EQ (struct hgrnic_dev *dev, int eq_num) {$/;"	f
+hgrnic_HW2SW_MPT	hgrnic_cmd.c	/^int hgrnic_HW2SW_MPT (struct hgrnic_dev *dev, int mpt_index)$/;"	f
+hgrnic_INIT_HCA	hgrnic_cmd.c	/^int hgrnic_INIT_HCA (struct hgrnic_dev *mdev, struct hgrnic_init_hca_param *param)$/;"	f
+hgrnic_INIT_IB	hgrnic_cmd.c	/^int hgrnic_INIT_IB (struct hgrnic_dev *dev, struct hgrnic_init_ib_param *param, $/;"	f
+hgrnic_MAD_IFC	hgrnic_cmd.c	/^int hgrnic_MAD_IFC (struct hgrnic_dev *dev, int ignore_mkey, int ignore_bkey,$/;"	f
+hgrnic_MAP_EQ	hgrnic_cmd.c	/^int hgrnic_MAP_EQ (struct hgrnic_dev *dev, u64 event_mask, $/;"	f
+hgrnic_MAP_ICM	hgrnic_cmd.c	/^int hgrnic_MAP_ICM (struct hgrnic_dev *dev, struct hgrnic_icm *icm, $/;"	f
+hgrnic_MAP_ICM_page	hgrnic_cmd.c	/^int hgrnic_MAP_ICM_page (struct hgrnic_dev *dev, u64 dma_addr,$/;"	f
+hgrnic_MODIFY_QP	hgrnic_cmd.c	/^int hgrnic_MODIFY_QP (struct hgrnic_dev *dev, enum ib_qp_state cur, $/;"	f
+hgrnic_NOP	hgrnic_cmd.c	/^int hgrnic_NOP (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_QUERY_ADAPTER	hgrnic_cmd.c	/^int hgrnic_QUERY_ADAPTER (struct hgrnic_dev *dev, u64 *board_id) {$/;"	f
+hgrnic_QUERY_DEV_LIM	hgrnic_cmd.c	/^int hgrnic_QUERY_DEV_LIM (struct hgrnic_dev *dev, struct hgrnic_dev_lim *dev_lim) {$/;"	f
+hgrnic_QUERY_QP	hgrnic_cmd.c	/^int hgrnic_QUERY_QP (struct hgrnic_dev *dev, u32 num, $/;"	f
+hgrnic_RESIZE_CQ	hgrnic_cmd.c	/^int hgrnic_RESIZE_CQ (struct hgrnic_dev *dev, int cq_num, $/;"	f
+hgrnic_SET_IB	hgrnic_cmd.c	/^int hgrnic_SET_IB (struct hgrnic_dev *dev, struct hgrnic_set_ib_param *param,$/;"	f
+hgrnic_SW2HW_CQ	hgrnic_cmd.c	/^int hgrnic_SW2HW_CQ (struct hgrnic_dev *dev, $/;"	f
+hgrnic_SW2HW_EQ	hgrnic_cmd.c	/^int hgrnic_SW2HW_EQ (struct hgrnic_dev *dev, $/;"	f
+hgrnic_SW2HW_MPT	hgrnic_cmd.c	/^int hgrnic_SW2HW_MPT (struct hgrnic_dev *dev, $/;"	f
+hgrnic_UNMAP_ICM	hgrnic_cmd.c	/^int hgrnic_UNMAP_ICM (struct hgrnic_dev *dev, u64 virt, $/;"	f
+hgrnic_WRITE_MTT	hgrnic_cmd.c	/^int hgrnic_WRITE_MTT (struct hgrnic_dev *dev, $/;"	f
+hgrnic_ah	hgrnic_provider.h	/^struct hgrnic_ah {$/;"	s
+hgrnic_alloc	hgrnic_allocator.c	/^u32 hgrnic_alloc (struct hgrnic_alloc *alloc)$/;"	f
+hgrnic_alloc	hgrnic_dev.h	/^struct hgrnic_alloc {$/;"	s
+hgrnic_alloc_cleanup	hgrnic_allocator.c	/^void hgrnic_alloc_cleanup (struct hgrnic_alloc *alloc) {$/;"	f
+hgrnic_alloc_cq_buf	hgrnic_cq.c	/^int hgrnic_alloc_cq_buf(struct hgrnic_dev *dev, struct hgrnic_cq_buf *buf, $/;"	f
+hgrnic_alloc_icm	hgrnic_icm.c	/^struct hgrnic_icm *hgrnic_alloc_icm (struct hgrnic_dev *dev, int npages,$/;"	f
+hgrnic_alloc_icm_coherent	hgrnic_icm.c	/^static int hgrnic_alloc_icm_coherent (struct device *dev, $/;"	f	file:
+hgrnic_alloc_icm_pages	hgrnic_icm.c	/^static int hgrnic_alloc_icm_pages (struct scatterlist *mem, $/;"	f	file:
+hgrnic_alloc_icm_table	hgrnic_icm.c	/^struct hgrnic_icm_table *hgrnic_alloc_icm_table (struct hgrnic_dev *dev, $/;"	f
+hgrnic_alloc_init	hgrnic_allocator.c	/^int hgrnic_alloc_init (struct hgrnic_alloc *alloc, u32 num, u32 mask) {$/;"	f
+hgrnic_alloc_mailbox	hgrnic_cmd.c	/^struct hgrnic_mailbox *hgrnic_alloc_mailbox (struct hgrnic_dev *dev, $/;"	f
+hgrnic_alloc_mtt	hgrnic_mr.c	/^struct hgrnic_mtt *hgrnic_alloc_mtt (struct hgrnic_dev *dev, int size)$/;"	f
+hgrnic_alloc_mtt_range	hgrnic_mr.c	/^static u32 hgrnic_alloc_mtt_range (struct hgrnic_dev *dev, int order, $/;"	f	file:
+hgrnic_alloc_pd	hgrnic_provider.c	/^static int hgrnic_alloc_pd (struct ib_pd *ibpd, struct ib_udata *udata)$/;"	f	file:
+hgrnic_alloc_pd_resp	include/rdma/hgrnic-abi.h	/^struct hgrnic_alloc_pd_resp {$/;"	s
+hgrnic_alloc_qp	hgrnic_qp.c	/^int hgrnic_alloc_qp (struct hgrnic_dev *dev,$/;"	f
+hgrnic_alloc_qp_buf	hgrnic_qp.c	/^static int hgrnic_alloc_qp_buf (struct hgrnic_dev *dev,$/;"	f	file:
+hgrnic_alloc_resize_buf	hgrnic_provider.c	/^static int hgrnic_alloc_resize_buf(struct hgrnic_dev *dev, struct hgrnic_cq *cq,$/;"	f	file:
+hgrnic_alloc_ucontext	hgrnic_provider.c	/^static int hgrnic_alloc_ucontext(struct ib_ucontext *uctx,$/;"	f	file:
+hgrnic_alloc_ucontext_resp	include/rdma/hgrnic-abi.h	/^struct hgrnic_alloc_ucontext_resp {$/;"	s
+hgrnic_alloc_wqe_buf	hgrnic_qp.c	/^static int hgrnic_alloc_wqe_buf(struct hgrnic_dev *dev,$/;"	f	file:
+hgrnic_arm_cq	hgrnic_cq.c	/^int hgrnic_arm_cq(struct ib_cq *ibcq, enum ib_cq_notify_flags flags) {$/;"	f
+hgrnic_array	hgrnic_dev.h	/^struct hgrnic_array {$/;"	s
+hgrnic_array_cleanup	hgrnic_allocator.c	/^void hgrnic_array_cleanup(struct hgrnic_array *array, int nent)$/;"	f
+hgrnic_array_clear	hgrnic_allocator.c	/^void hgrnic_array_clear(struct hgrnic_array *array, int index)$/;"	f
+hgrnic_array_get	hgrnic_allocator.c	/^void *hgrnic_array_get(struct hgrnic_array *array, int index)$/;"	f
+hgrnic_array_init	hgrnic_allocator.c	/^int hgrnic_array_init (struct hgrnic_array *array, int nent)$/;"	f
+hgrnic_array_set	hgrnic_allocator.c	/^int hgrnic_array_set(struct hgrnic_array *array, int index, void *value)$/;"	f
+hgrnic_atomic_unit	hgrnic_wqe.h	/^struct hgrnic_atomic_unit {$/;"	s
+hgrnic_attr_group	hgrnic_provider.c	/^static const struct attribute_group hgrnic_attr_group = {$/;"	v	typeref:struct:attribute_group	file:
+hgrnic_buddy	hgrnic_dev.h	/^struct hgrnic_buddy {$/;"	s
+hgrnic_buddy_alloc	hgrnic_mr.c	/^static u32 hgrnic_buddy_alloc (struct hgrnic_buddy *buddy, int order)$/;"	f	file:
+hgrnic_buddy_cleanup	hgrnic_mr.c	/^static void hgrnic_buddy_cleanup (struct hgrnic_buddy *buddy)$/;"	f	file:
+hgrnic_buddy_free	hgrnic_mr.c	/^static void hgrnic_buddy_free(struct hgrnic_buddy *buddy, u32 seg, int order)$/;"	f	file:
+hgrnic_buddy_init	hgrnic_mr.c	/^static int hgrnic_buddy_init (struct hgrnic_buddy *buddy, int max_order)$/;"	f	file:
+hgrnic_buf	hgrnic_provider.h	/^union hgrnic_buf {$/;"	u
+hgrnic_buf_alloc	hgrnic_allocator.c	/^int hgrnic_buf_alloc(struct hgrnic_dev *dev, int size, $/;"	f
+hgrnic_buf_free	hgrnic_allocator.c	/^void hgrnic_buf_free(struct hgrnic_dev *dev, int size, union hgrnic_buf *buf,$/;"	f
+hgrnic_buf_list	hgrnic_provider.h	/^struct hgrnic_buf_list {$/;"	s
+hgrnic_check_profile_val	hgrnic_main.c	696;"	d	file:
+hgrnic_cleanup	hgrnic_main.c	/^module_exit(hgrnic_cleanup);$/;"	v
+hgrnic_cleanup	hgrnic_main.c	/^static void __exit hgrnic_cleanup (void) {$/;"	f	file:
+hgrnic_cleanup_cq_table	hgrnic_cq.c	/^void hgrnic_cleanup_cq_table(struct hgrnic_dev *dev) {$/;"	f
+hgrnic_cleanup_mr_table	hgrnic_mr.c	/^void hgrnic_cleanup_mr_table(struct hgrnic_dev *dev)$/;"	f
+hgrnic_cleanup_pd_table	hgrnic_pd.c	/^void hgrnic_cleanup_pd_table(struct hgrnic_dev *dev) {$/;"	f
+hgrnic_cleanup_qp_table	hgrnic_qp.c	/^void hgrnic_cleanup_qp_table(struct hgrnic_dev *dev)$/;"	f
+hgrnic_cleanup_uar_table	hgrnic_uar.c	/^void hgrnic_cleanup_uar_table (struct hgrnic_dev *dev)$/;"	f
+hgrnic_cmd	hgrnic_cmd.c	/^static int hgrnic_cmd(struct hgrnic_dev *dev, u64 in_param, u32 in_modifier,$/;"	f	file:
+hgrnic_cmd	hgrnic_dev.h	/^struct hgrnic_cmd {$/;"	s
+hgrnic_cmd_box	hgrnic_cmd.c	/^static int hgrnic_cmd_box (struct hgrnic_dev *dev, u64 in_param,$/;"	f	file:
+hgrnic_cmd_cleanup	hgrnic_cmd.c	/^void hgrnic_cmd_cleanup (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_cmd_init	hgrnic_cmd.c	/^int hgrnic_cmd_init (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_cmd_poll	hgrnic_cmd.c	/^static int hgrnic_cmd_poll (struct hgrnic_dev *dev, u64 in_param, $/;"	f	file:
+hgrnic_cmd_post	hgrnic_cmd.c	/^static int hgrnic_cmd_post (struct hgrnic_dev *dev, u64 in_param, u64 out_param,$/;"	f	file:
+hgrnic_cmd_post_hcr	hgrnic_cmd.c	/^static int hgrnic_cmd_post_hcr (struct hgrnic_dev *dev, u64 in_param, $/;"	f	file:
+hgrnic_cq	hgrnic_provider.h	/^struct hgrnic_cq {$/;"	s
+hgrnic_cq_buf	hgrnic_provider.h	/^struct hgrnic_cq_buf {$/;"	s
+hgrnic_cq_clean	hgrnic_cq.c	/^void hgrnic_cq_clean(struct hgrnic_dev *dev, struct hgrnic_cq *cq, u32 qpn)$/;"	f
+hgrnic_cq_context	hgrnic_cq.c	/^struct hgrnic_cq_context {$/;"	s	file:
+hgrnic_cq_resize	hgrnic_provider.h	/^struct hgrnic_cq_resize {$/;"	s
+hgrnic_cq_resize_copy_cqes	hgrnic_cq.c	/^void hgrnic_cq_resize_copy_cqes(struct hgrnic_cq *cq)$/;"	f
+hgrnic_cq_table	hgrnic_dev.h	/^struct hgrnic_cq_table {$/;"	s
+hgrnic_cqe	hgrnic_cq.c	/^struct hgrnic_cqe {$/;"	s	file:
+hgrnic_create_cq	hgrnic_provider.c	/^int hgrnic_create_cq(struct ib_cq *ibcq,$/;"	f
+hgrnic_create_cq	include/rdma/hgrnic-abi.h	/^struct hgrnic_create_cq {$/;"	s
+hgrnic_create_cq_resp	include/rdma/hgrnic-abi.h	/^struct hgrnic_create_cq_resp {$/;"	s
+hgrnic_create_qp	hgrnic_provider.c	/^struct ib_qp *hgrnic_create_qp (struct ib_pd *pd,$/;"	f
+hgrnic_create_qp	include/rdma/hgrnic-abi.h	/^struct hgrnic_create_qp {$/;"	s
+hgrnic_data_unit	hgrnic_wqe.h	/^struct hgrnic_data_unit {$/;"	s
+hgrnic_dbg	hgrnic_dev.h	44;"	d
+hgrnic_dbg	hgrnic_dev.h	54;"	d
+hgrnic_dealloc_pd	hgrnic_provider.c	/^static void hgrnic_dealloc_pd (struct ib_pd *pd, $/;"	f	file:
+hgrnic_dealloc_ucontext	hgrnic_provider.c	/^static void hgrnic_dealloc_ucontext(struct ib_ucontext *context)$/;"	f	file:
+hgrnic_dereg_mr	hgrnic_provider.c	/^static int hgrnic_dereg_mr(struct ib_mr *mr, struct ib_udata *udata)$/;"	f	file:
+hgrnic_destroy_cq	hgrnic_provider.c	/^static void hgrnic_destroy_cq(struct ib_cq *cq, struct ib_udata *udata)$/;"	f	file:
+hgrnic_destroy_qp	hgrnic_provider.c	/^static int hgrnic_destroy_qp(struct ib_qp *qp, struct ib_udata *udata)$/;"	f	file:
+hgrnic_dev	hgrnic_dev.h	/^struct hgrnic_dev {$/;"	s
+hgrnic_dev_attributes	hgrnic_provider.c	/^static struct attribute *hgrnic_dev_attributes[] = {$/;"	v	typeref:struct:attribute	file:
+hgrnic_dev_lim	hgrnic_cmd.h	/^struct hgrnic_dev_lim {$/;"	s
+hgrnic_dev_lim	hgrnic_main.c	/^static int hgrnic_dev_lim (struct hgrnic_dev *hgdev, struct hgrnic_dev_lim *dev_lim) {$/;"	f	file:
+hgrnic_dev_ops	hgrnic_provider.c	/^static const struct ib_device_ops hgrnic_dev_ops = {$/;"	v	typeref:struct:ib_device_ops	file:
+hgrnic_device_mutex	hgrnic_main.c	/^DEFINE_MUTEX(hgrnic_device_mutex);$/;"	v
+hgrnic_driver	hgrnic_main.c	/^static struct pci_driver hgrnic_driver = {$/;"	v	typeref:struct:pci_driver	file:
+hgrnic_dump	hgrnic_dev.h	49;"	d
+hgrnic_dump	hgrnic_dev.h	56;"	d
+hgrnic_endev	hgrnic_en_abi.h	/^struct hgrnic_endev {$/;"	s
+hgrnic_eq	hgrnic_provider.h	/^struct hgrnic_eq {$/;"	s
+hgrnic_eq_context	hgrnic_eq.c	/^struct hgrnic_eq_context {$/;"	s	file:
+hgrnic_eq_table	hgrnic_dev.h	/^struct hgrnic_eq_table {$/;"	s
+hgrnic_err	hgrnic_dev.h	61;"	d
+hgrnic_err_cqe	hgrnic_cq.c	/^struct hgrnic_err_cqe {$/;"	s	file:
+hgrnic_flags	hgrnic_dev.h	/^    unsigned long    hgrnic_flags;$/;"	m	struct:hgrnic_dev
+hgrnic_free	hgrnic_allocator.c	/^void hgrnic_free (struct hgrnic_alloc *alloc, u32 obj)$/;"	f
+hgrnic_free_cq	hgrnic_cq.c	/^void hgrnic_free_cq(struct hgrnic_dev *dev,$/;"	f
+hgrnic_free_cq_buf	hgrnic_cq.c	/^void hgrnic_free_cq_buf(struct hgrnic_dev *dev, struct hgrnic_cq_buf *buf, int cqe)$/;"	f
+hgrnic_free_icm	hgrnic_icm.c	/^void hgrnic_free_icm (struct hgrnic_dev *dev, $/;"	f
+hgrnic_free_icm_coherent	hgrnic_icm.c	/^static void hgrnic_free_icm_coherent (struct hgrnic_dev *dev, $/;"	f	file:
+hgrnic_free_icm_pages	hgrnic_icm.c	/^static void hgrnic_free_icm_pages (struct hgrnic_dev *dev, $/;"	f	file:
+hgrnic_free_icm_table	hgrnic_icm.c	/^void hgrnic_free_icm_table (struct hgrnic_dev *dev, $/;"	f
+hgrnic_free_icms	hgrnic_main.c	/^static void hgrnic_free_icms (struct hgrnic_dev *hgdev) {$/;"	f	file:
+hgrnic_free_mailbox	hgrnic_cmd.c	/^void hgrnic_free_mailbox (struct hgrnic_dev *dev, struct hgrnic_mailbox *mailbox)$/;"	f
+hgrnic_free_mr	hgrnic_mr.c	/^void hgrnic_free_mr(struct hgrnic_dev *dev, struct hgrnic_mr *mr)$/;"	f
+hgrnic_free_mtt	hgrnic_mr.c	/^void hgrnic_free_mtt (struct hgrnic_dev *dev, struct hgrnic_mtt *mtt)$/;"	f
+hgrnic_free_qp	hgrnic_qp.c	/^void hgrnic_free_qp(struct hgrnic_dev *dev,$/;"	f
+hgrnic_free_region	hgrnic_mr.c	/^static void hgrnic_free_region (struct hgrnic_dev *dev, u32 lkey)$/;"	f	file:
+hgrnic_free_wqe_buf	hgrnic_qp.c	/^static void hgrnic_free_wqe_buf(struct hgrnic_dev *dev,$/;"	f	file:
+hgrnic_get_dma_mr	hgrnic_provider.c	/^static struct ib_mr *hgrnic_get_dma_mr(struct ib_pd *pd, int acc)$/;"	f	file:
+hgrnic_hca_table	hgrnic_main.c	/^} hgrnic_hca_table[] = {$/;"	v	typeref:struct:__anon12	file:
+hgrnic_icm	hgrnic_icm.h	/^struct hgrnic_icm {$/;"	s
+hgrnic_icm_addr	hgrnic_icm.h	/^static inline dma_addr_t hgrnic_icm_addr (struct hgrnic_icm_iter *iter) {$/;"	f
+hgrnic_icm_chunk	hgrnic_icm.h	/^struct hgrnic_icm_chunk {$/;"	s
+hgrnic_icm_first	hgrnic_icm.h	/^static inline void hgrnic_icm_first (struct hgrnic_icm *icm,$/;"	f
+hgrnic_icm_iter	hgrnic_icm.h	/^struct hgrnic_icm_iter {$/;"	s
+hgrnic_icm_last	hgrnic_icm.h	/^static inline int hgrnic_icm_last (struct hgrnic_icm_iter *iter) {$/;"	f
+hgrnic_icm_next	hgrnic_icm.h	/^static inline void hgrnic_icm_next (struct hgrnic_icm_iter *iter) {$/;"	f
+hgrnic_icm_size	hgrnic_icm.h	/^static inline unsigned long hgrnic_icm_size ($/;"	f
+hgrnic_icm_table	hgrnic_icm.h	/^struct hgrnic_icm_table {$/;"	s
+hgrnic_info	hgrnic_dev.h	63;"	d
+hgrnic_init	hgrnic_main.c	/^module_init(hgrnic_init);$/;"	v
+hgrnic_init	hgrnic_main.c	/^static int __init hgrnic_init (void) {$/;"	f	file:
+hgrnic_init_cq	hgrnic_cq.c	/^int hgrnic_init_cq (struct hgrnic_dev *dev, int nent,$/;"	f
+hgrnic_init_cq_table	hgrnic_cq.c	/^int hgrnic_init_cq_table (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_init_en_register	hgrnic_register.c	/^int hgrnic_init_en_register (struct hgrnic_dev* dev)$/;"	f
+hgrnic_init_hca	hgrnic_main.c	/^static int hgrnic_init_hca (struct hgrnic_dev *hgdev) {$/;"	f	file:
+hgrnic_init_hca_param	hgrnic_cmd.h	/^struct hgrnic_init_hca_param {$/;"	s
+hgrnic_init_ib_param	hgrnic_cmd.h	/^struct hgrnic_init_ib_param {$/;"	s
+hgrnic_init_icm	hgrnic_main.c	/^static int hgrnic_init_icm (struct hgrnic_dev *hgdev, struct hgrnic_dev_lim *dev_lim,$/;"	f	file:
+hgrnic_init_mr_table	hgrnic_mr.c	/^int hgrnic_init_mr_table (struct hgrnic_dev *dev)$/;"	f
+hgrnic_init_one	hgrnic_main.c	/^static int hgrnic_init_one (struct pci_dev *pdev, const struct pci_device_id *id) {$/;"	f	file:
+hgrnic_init_pd_table	hgrnic_pd.c	/^int hgrnic_init_pd_table(struct hgrnic_dev *dev) {$/;"	f
+hgrnic_init_qp_table	hgrnic_qp.c	/^int hgrnic_init_qp_table (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_init_uar_table	hgrnic_uar.c	/^int hgrnic_init_uar_table (struct hgrnic_dev *dev)$/;"	f
+hgrnic_inline_unit	hgrnic_wqe.h	/^struct hgrnic_inline_unit {$/;"	s
+hgrnic_limits	hgrnic_dev.h	/^struct hgrnic_limits {$/;"	s
+hgrnic_mailbox	hgrnic_cmd.h	/^struct hgrnic_mailbox {$/;"	s
+hgrnic_make_profile	hgrnic_icm.c	/^s64 hgrnic_make_profile (struct hgrnic_dev *dev, $/;"	f
+hgrnic_map_eq_icm	hgrnic_eq.c	/^int hgrnic_map_eq_icm (struct hgrnic_dev *dev, u64 icm_virt) {$/;"	f
+hgrnic_max_data_size	hgrnic_qp.c	/^static int hgrnic_max_data_size (struct hgrnic_dev *dev, $/;"	f	file:
+hgrnic_mmap_uar	hgrnic_provider.c	/^static int hgrnic_mmap_uar(struct ib_ucontext *context,$/;"	f	file:
+hgrnic_modify_device	hgrnic_provider.c	/^static int hgrnic_modify_device (struct ib_device *ibdev, int mask, $/;"	f	file:
+hgrnic_modify_qp	hgrnic_qp.c	/^int hgrnic_modify_qp(struct ib_qp *ibqp, struct ib_qp_attr *attr, int attr_mask,$/;"	f
+hgrnic_mpt_entry	hgrnic_mr.c	/^struct hgrnic_mpt_entry {$/;"	s	file:
+hgrnic_mr	hgrnic_provider.h	/^struct hgrnic_mr {$/;"	s
+hgrnic_mr_alloc	hgrnic_mr.c	/^int hgrnic_mr_alloc (struct hgrnic_dev *dev, u32 pd, int buffer_size_shift,$/;"	f
+hgrnic_mr_alloc_notrans	hgrnic_mr.c	/^int hgrnic_mr_alloc_notrans (struct hgrnic_dev *dev, $/;"	f
+hgrnic_mr_alloc_phys	hgrnic_mr.c	/^int hgrnic_mr_alloc_phys (struct hgrnic_dev *dev, u32 pd,$/;"	f
+hgrnic_mr_table	hgrnic_dev.h	/^struct hgrnic_mr_table {$/;"	s
+hgrnic_mtt	hgrnic_provider.h	/^struct hgrnic_mtt {$/;"	s
+hgrnic_next_unit	hgrnic_wqe.h	/^struct hgrnic_next_unit {$/;"	s
+hgrnic_opcode	hgrnic_qp.c	/^static const u8 hgrnic_opcode[] = {$/;"	v	file:
+hgrnic_pci_table	hgrnic_main.c	/^static const struct pci_device_id hgrnic_pci_table[] = {$/;"	v	typeref:struct:pci_device_id	file:
+hgrnic_pd	hgrnic_provider.h	/^struct hgrnic_pd {$/;"	s
+hgrnic_pd_alloc	hgrnic_pd.c	/^int hgrnic_pd_alloc (struct hgrnic_dev *dev, $/;"	f
+hgrnic_pd_free	hgrnic_pd.c	/^void hgrnic_pd_free(struct hgrnic_dev *dev, struct hgrnic_pd *pd)$/;"	f
+hgrnic_pd_table	hgrnic_dev.h	/^struct hgrnic_pd_table {$/;"	s
+hgrnic_poll_cq	hgrnic_cq.c	/^int hgrnic_poll_cq(struct ib_cq *ibcq, int num_entries,$/;"	f
+hgrnic_poll_one	hgrnic_cq.c	/^static inline int hgrnic_poll_one(struct hgrnic_dev *dev,$/;"	f	file:
+hgrnic_port_immutable	hgrnic_provider.c	/^static int hgrnic_port_immutable(struct ib_device *ibdev, u8 port_num,$/;"	f	file:
+hgrnic_post_receive	hgrnic_qp.c	/^int hgrnic_post_receive(struct ib_qp *ibqp, const struct ib_recv_wr *wr,$/;"	f
+hgrnic_post_send	hgrnic_qp.c	/^int hgrnic_post_send (struct ib_qp *ibqp, const struct ib_send_wr *wr, $/;"	f
+hgrnic_profile	hgrnic_icm.h	/^struct hgrnic_profile {$/;"	s
+hgrnic_qp	hgrnic_provider.h	/^struct hgrnic_qp {$/;"	s
+hgrnic_qp_context	hgrnic_qp.c	/^struct hgrnic_qp_context {$/;"	s	file:
+hgrnic_qp_param	hgrnic_qp.c	/^struct hgrnic_qp_param {$/;"	s	file:
+hgrnic_qp_path	hgrnic_qp.c	/^struct hgrnic_qp_path {$/;"	s	file:
+hgrnic_qp_table	hgrnic_dev.h	/^struct hgrnic_qp_table {$/;"	s
+hgrnic_query_device	hgrnic_provider.c	/^static int hgrnic_query_device (struct ib_device *ibdev, $/;"	f	file:
+hgrnic_query_gid	hgrnic_provider.c	/^static int hgrnic_query_gid(struct ib_device *ibdev, u8 port,$/;"	f	file:
+hgrnic_query_pkey	hgrnic_provider.c	/^static int hgrnic_query_pkey(struct ib_device *ibdev,$/;"	f	file:
+hgrnic_query_port	hgrnic_provider.c	/^static int hgrnic_query_port (struct ib_device *ibdev, u8 port, $/;"	f	file:
+hgrnic_query_qp	hgrnic_qp.c	/^int hgrnic_query_qp(struct ib_qp *ibqp, struct ib_qp_attr *qp_attr, int qp_attr_mask,$/;"	f
+hgrnic_raddr_unit	hgrnic_wqe.h	/^struct hgrnic_raddr_unit {$/;"	s
+hgrnic_rate_to_ib	hgrnic_qp.c	/^enum ib_rate hgrnic_rate_to_ib(struct hgrnic_dev *dev, u8 hgrnic_rate, u8 port)$/;"	f
+hgrnic_reg_icm	hgrnic_icm.c	/^int hgrnic_reg_icm (struct hgrnic_dev *dev, $/;"	f
+hgrnic_reg_icm_range	hgrnic_icm.c	/^int hgrnic_reg_icm_range(struct hgrnic_dev *dev, $/;"	f
+hgrnic_reg_mr	include/rdma/hgrnic-abi.h	/^struct hgrnic_reg_mr {$/;"	s
+hgrnic_reg_user_mr	hgrnic_provider.c	/^struct ib_mr *hgrnic_reg_user_mr(struct ib_pd *pd, u64 start, $/;"	f
+hgrnic_register_device	hgrnic_provider.c	/^int hgrnic_register_device (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_register_en_driver	hgrnic_register.c	/^EXPORT_SYMBOL(hgrnic_register_en_driver);$/;"	v
+hgrnic_register_en_driver	hgrnic_register.c	/^int hgrnic_register_en_driver (struct hgrnic_endev *endev)$/;"	f
+hgrnic_remove_one	hgrnic_main.c	/^static void hgrnic_remove_one (struct pci_dev *pdev) {$/;"	f	file:
+hgrnic_resize_cq	hgrnic_provider.c	/^static int hgrnic_resize_cq(struct ib_cq *ibcq, int entries, $/;"	f	file:
+hgrnic_resize_cq	include/rdma/hgrnic-abi.h	/^struct hgrnic_resize_cq {$/;"	s
+hgrnic_send_dbell	hgrnic_wqe.h	/^static __always_inline void hgrnic_send_dbell(struct hgrnic_dev *dev, struct hgrnic_qp *qp, $/;"	f
+hgrnic_set_data_unit	hgrnic_wqe.h	/^static __always_inline void hgrnic_set_data_unit (struct hgrnic_data_unit *dunit,$/;"	f
+hgrnic_set_data_unit_inval	hgrnic_wqe.h	/^static __always_inline void hgrnic_set_data_unit_inval(struct hgrnic_data_unit *dunit)$/;"	f
+hgrnic_set_ib_param	hgrnic_cmd.h	/^struct hgrnic_set_ib_param {$/;"	s
+hgrnic_set_inline_unit	hgrnic_wqe.h	/^static __always_inline void hgrnic_set_inline_unit (struct hgrnic_inline_unit *unit,$/;"	f
+hgrnic_set_qp_entry_sz	hgrnic_qp.c	/^static int hgrnic_set_qp_entry_sz (struct hgrnic_dev *dev, struct hgrnic_qp *qp)$/;"	f	file:
+hgrnic_set_qp_size	hgrnic_qp.c	/^static int hgrnic_set_qp_size (struct hgrnic_dev *dev, $/;"	f	file:
+hgrnic_setup_hca	hgrnic_main.c	/^static int hgrnic_setup_hca (struct hgrnic_dev *dev) {$/;"	f	file:
+hgrnic_sqp	hgrnic_provider.h	/^struct hgrnic_sqp {$/;"	s
+hgrnic_status_to_errno	hgrnic_cmd.c	/^static int hgrnic_status_to_errno (u8 status)$/;"	f	file:
+hgrnic_tune_pci	hgrnic_main.c	/^static int hgrnic_tune_pci (struct hgrnic_dev *hgdev) {$/;"	f	file:
+hgrnic_uar	hgrnic_provider.h	/^struct hgrnic_uar {$/;"	s
+hgrnic_uar_alloc	hgrnic_uar.c	/^int hgrnic_uar_alloc (struct hgrnic_dev *dev, struct hgrnic_uar *uar)$/;"	f
+hgrnic_uar_free	hgrnic_uar.c	/^void hgrnic_uar_free (struct hgrnic_dev *dev, struct hgrnic_uar *uar)$/;"	f
+hgrnic_uar_table	hgrnic_dev.h	/^struct hgrnic_uar_table {$/;"	s
+hgrnic_ucontext	hgrnic_provider.h	/^struct hgrnic_ucontext {$/;"	s
+hgrnic_ud_unit	hgrnic_wqe.h	/^struct hgrnic_ud_unit {$/;"	s
+hgrnic_unmap_eq_icm	hgrnic_eq.c	/^void hgrnic_unmap_eq_icm (struct hgrnic_dev *dev) {$/;"	f
+hgrnic_unreg_icm	hgrnic_icm.c	/^void hgrnic_unreg_icm (struct hgrnic_dev *dev, $/;"	f
+hgrnic_unreg_icm_range	hgrnic_icm.c	/^void hgrnic_unreg_icm_range (struct hgrnic_dev *dev, $/;"	f
+hgrnic_unregister_device	hgrnic_provider.c	/^void hgrnic_unregister_device (struct hgrnic_dev *dev)$/;"	f
+hgrnic_validate_profile	hgrnic_main.c	/^static void __init hgrnic_validate_profile (void) {$/;"	f	file:
+hgrnic_version	hgrnic_main.c	/^static char hgrnic_version[] =$/;"	v	file:
+hgrnic_warn	hgrnic_dev.h	65;"	d
+hgrnic_wq	hgrnic_provider.h	/^struct hgrnic_wq {$/;"	s
+hgrnic_wq_overflow	hgrnic_qp.c	/^static inline int hgrnic_wq_overflow (struct hgrnic_wq *wq, int nreq,$/;"	f	file:
+hgrnic_wq_reset	hgrnic_qp.c	/^static void hgrnic_wq_reset(struct hgrnic_wq *wq)$/;"	f	file:
+hgrnic_write64	hgrnic_doorbell.h	/^static inline void hgrnic_write64(u32 hi, u32 lo, void __iomem *dest,$/;"	f
+hgrnic_write64_raw	hgrnic_doorbell.h	/^static inline void hgrnic_write64_raw(__be64 val, void __iomem *dest)$/;"	f
+hgrnic_write_mtt	hgrnic_mr.c	/^int hgrnic_write_mtt (struct hgrnic_dev *dev, struct hgrnic_mtt *mtt,$/;"	f
+hgrnic_write_mtt_size	hgrnic_mr.c	/^int hgrnic_write_mtt_size(struct hgrnic_dev *dev)$/;"	f
+hop_limit	hgrnic_qp.c	/^    u8     hop_limit  ; \/* not used *\/$/;"	m	struct:hgrnic_qp_path	file:
+hw_rev_show	hgrnic_provider.c	/^static ssize_t hw_rev_show(struct device *device,$/;"	f	file:
+ib_dev	hgrnic_dev.h	/^    struct ib_device      ib_dev;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::ib_device
+ib_hgrnic-objs	Makefile	/^ib_hgrnic-objs :=hgrnic_main.o hgrnic_cmd.o hgrnic_icm.o \\$/;"	m
+ib_uverbs_attr	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^struct ib_uverbs_attr {$/;"	s
+ib_uverbs_ioctl_hdr	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^struct ib_uverbs_ioctl_hdr {$/;"	s
+ibah	hgrnic_provider.h	/^    struct ib_ah ibah;$/;"	m	struct:hgrnic_ah	typeref:struct:hgrnic_ah::ib_ah
+ibcq	hgrnic_provider.h	/^    struct ib_cq ibcq; \/* we actual allocate one $/;"	m	struct:hgrnic_cq	typeref:struct:hgrnic_cq::ib_cq
+ibmr	hgrnic_provider.h	/^    struct ib_mr      ibmr;$/;"	m	struct:hgrnic_mr	typeref:struct:hgrnic_mr::ib_mr
+ibpd	hgrnic_provider.h	/^	struct ib_pd    ibpd;$/;"	m	struct:hgrnic_pd	typeref:struct:hgrnic_pd::ib_pd
+ibqp	hgrnic_provider.h	/^    struct ib_qp           ibqp;$/;"	m	struct:hgrnic_qp	typeref:struct:hgrnic_qp::ib_qp
+ibucontext	hgrnic_provider.h	/^    struct ib_ucontext          ibucontext;$/;"	m	struct:hgrnic_ucontext	typeref:struct:hgrnic_ucontext::ib_ucontext
+icm	hgrnic_icm.h	/^    struct hgrnic_icm       *icm;$/;"	m	struct:hgrnic_icm_iter	typeref:struct:hgrnic_icm_iter::hgrnic_icm
+icm	hgrnic_icm.h	/^    struct hgrnic_icm *icm[0]  ; \/* Address list for ICM space, $/;"	m	struct:hgrnic_icm_table	typeref:struct:hgrnic_icm_table::hgrnic_icm
+icm_dma	hgrnic_dev.h	/^    dma_addr_t         icm_dma; \/\/ bus addr of icm page$/;"	m	struct:hgrnic_eq_table
+icm_page	hgrnic_dev.h	/^    struct page       *icm_page;$/;"	m	struct:hgrnic_eq_table	typeref:struct:hgrnic_eq_table::page
+icm_virt	hgrnic_dev.h	/^    u64                icm_virt;$/;"	m	struct:hgrnic_eq_table
+imm	hgrnic_cq.c	/^    __le32 imm;$/;"	m	struct:hgrnic_cqe	file:
+imm	hgrnic_wqe.h	/^    __le32 imm;         \/* immediate data *\/$/;"	m	struct:hgrnic_next_unit
+index	hgrnic_provider.h	/^    int           index;$/;"	m	struct:hgrnic_uar
+intr	hgrnic_eq.c	/^	u8     intr;$/;"	m	struct:hgrnic_eq_context	file:
+irq_name	hgrnic_provider.h	/^	char		       irq_name[IB_DEVICE_NAME_MAX];$/;"	m	struct:hgrnic_eq
+is_direct	hgrnic_provider.h	/^    int                    is_direct;$/;"	m	struct:hgrnic_qp
+is_direct	hgrnic_provider.h	/^    int                 is_direct;$/;"	m	struct:hgrnic_cq_buf
+is_kernel	hgrnic_provider.h	/^    int                     is_kernel;$/;"	m	struct:hgrnic_cq
+is_send	hgrnic_cq.c	/^    u8     is_send;$/;"	m	struct:hgrnic_cqe	file:
+kar	hgrnic_dev.h	/^    void __iomem    *kar;$/;"	m	struct:hgrnic_dev
+key	hgrnic_mr.c	/^    __be32 key;$/;"	m	struct:hgrnic_mpt_entry	file:
+last	hgrnic_dev.h	/^    u32            last; \/* last allocated resource. *\/$/;"	m	struct:hgrnic_alloc
+last	hgrnic_provider.h	/^    void      *last     ;$/;"	m	struct:hgrnic_wq
+last_acked_psn	hgrnic_qp.c	/^    __be32 last_acked_psn;$/;"	m	struct:hgrnic_qp_context	file:
+last_cpl	hgrnic_provider.h	/^    unsigned   last_cpl ;$/;"	m	struct:hgrnic_wq
+latest_fw	hgrnic_main.c	/^    u64 latest_fw;$/;"	m	struct:__anon12	file:
+len	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u16 len;		\/* only for pointers and IDRs array *\/$/;"	m	struct:ib_uverbs_attr
+length	hgrnic_mr.c	/^    __be64 length;$/;"	m	struct:hgrnic_mpt_entry	file:
+length	hgrnic_wqe.h	/^    __le32 length;$/;"	m	struct:hgrnic_inline_unit
+length	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u16 length;$/;"	m	struct:ib_uverbs_ioctl_hdr
+limits	hgrnic_dev.h	/^    struct hgrnic_limits limits;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_limits
+list	hgrnic_icm.h	/^    struct list_head   list;$/;"	m	struct:hgrnic_icm_chunk	typeref:struct:hgrnic_icm_chunk::list_head
+lkey	hgrnic_cq.c	/^    __be32 lkey;$/;"	m	struct:hgrnic_cq_context	file:
+lkey	hgrnic_eq.c	/^	__be32 lkey;$/;"	m	struct:hgrnic_eq_context	file:
+lkey	hgrnic_mr.c	/^    __be32 lkey;$/;"	m	struct:hgrnic_mpt_entry	file:
+lkey	hgrnic_wqe.h	/^    __le32 lkey;$/;"	m	struct:hgrnic_data_unit
+lkey	include/rdma/hgrnic-abi.h	/^    __u32 lkey;$/;"	m	struct:hgrnic_create_cq
+lkey	include/rdma/hgrnic-abi.h	/^    __u32 lkey;$/;"	m	struct:hgrnic_resize_cq
+local_ca_ack_delay	hgrnic_cmd.h	/^    int local_ca_ack_delay;$/;"	m	struct:hgrnic_dev_lim
+local_ca_ack_delay	hgrnic_dev.h	/^    int      local_ca_ack_delay;$/;"	m	struct:hgrnic_limits
+local_qpn	hgrnic_qp.c	/^    __be32 local_qpn;$/;"	m	struct:hgrnic_qp_context	file:
+lock	hgrnic_dev.h	/^    spinlock_t              lock;$/;"	m	struct:hgrnic_qp_table
+lock	hgrnic_dev.h	/^    spinlock_t          lock ;$/;"	m	struct:hgrnic_cq_table
+lock	hgrnic_dev.h	/^    spinlock_t      lock;$/;"	m	struct:hgrnic_buddy
+lock	hgrnic_dev.h	/^    spinlock_t     lock;$/;"	m	struct:hgrnic_alloc
+lock	hgrnic_provider.h	/^    spinlock_t   lock;$/;"	m	struct:hgrnic_cq
+lock	hgrnic_provider.h	/^    spinlock_t lock     ;$/;"	m	struct:hgrnic_wq
+log_mpt_sz	hgrnic_cmd.h	/^    u8  log_mpt_sz;$/;"	m	struct:hgrnic_init_hca_param
+log_num_cqs	hgrnic_cmd.h	/^    u8  log_num_cqs;$/;"	m	struct:hgrnic_init_hca_param
+log_num_eqs	hgrnic_cmd.h	/^    u8  log_num_eqs;$/;"	m	struct:hgrnic_init_hca_param
+log_num_qps	hgrnic_cmd.h	/^    u8  log_num_qps;$/;"	m	struct:hgrnic_init_hca_param
+logsize	hgrnic_eq.c	/^	__be32 logsize;$/;"	m	struct:hgrnic_eq_context	file:
+logsize_usrpage	hgrnic_cq.c	/^    __be32 logsize_usrpage; \/* | 8-bit | 24-bit | *\/$/;"	m	struct:hgrnic_cq_context	file:
+lowmem	hgrnic_icm.h	/^    int               lowmem  ; \/* If this ICM space is in low memory (It seems that$/;"	m	struct:hgrnic_icm_table
+mask	hgrnic_dev.h	/^    u32            mask; \/* Maximum allowed resource number Mask,$/;"	m	struct:hgrnic_alloc
+max	hgrnic_dev.h	/^    u32            max;  \/* Maximum number of resources. *\/$/;"	m	struct:hgrnic_alloc
+max	hgrnic_provider.h	/^    int        max      ; \/\/ Supported maximum number of WQEs in WQ$/;"	m	struct:hgrnic_wq
+max_cmds	hgrnic_dev.h	/^	int              	  max_cmds;$/;"	m	struct:hgrnic_cmd
+max_cq_sz	hgrnic_cmd.h	/^    int max_cq_sz; \/\/ Supported max number of CQEs in a CQ$/;"	m	struct:hgrnic_dev_lim
+max_cqes	hgrnic_dev.h	/^    int      max_cqes;      \/* maximum number of cqe in one CQ *\/$/;"	m	struct:hgrnic_limits
+max_cqs	hgrnic_cmd.h	/^    int max_cqs;$/;"	m	struct:hgrnic_dev_lim
+max_desc_sz	hgrnic_cmd.h	/^    int max_desc_sz;$/;"	m	struct:hgrnic_dev_lim
+max_desc_sz	hgrnic_dev.h	/^    int	     max_desc_sz; \/\/ Supported maximum descriptor size$/;"	m	struct:hgrnic_limits
+max_eqs	hgrnic_cmd.h	/^    int max_eqs;$/;"	m	struct:hgrnic_dev_lim
+max_gids	hgrnic_cmd.h	/^    int max_gids;$/;"	m	struct:hgrnic_dev_lim
+max_gs	hgrnic_provider.h	/^    int        max_gs   ;$/;"	m	struct:hgrnic_wq
+max_icm_sz	hgrnic_cmd.h	/^    u64 max_icm_sz; \/\/ in byte$/;"	m	struct:hgrnic_dev_lim
+max_inline_data	hgrnic_provider.h	/^    int                    max_inline_data;$/;"	m	struct:hgrnic_qp
+max_mpts	hgrnic_cmd.h	/^    int max_mpts;$/;"	m	struct:hgrnic_dev_lim
+max_mtt_seg	hgrnic_cmd.h	/^    int max_mtt_seg;$/;"	m	struct:hgrnic_dev_lim
+max_mtu	hgrnic_cmd.h	/^    int max_mtu;$/;"	m	struct:hgrnic_dev_lim
+max_order	hgrnic_dev.h	/^    int             max_order;$/;"	m	struct:hgrnic_buddy
+max_pds	hgrnic_cmd.h	/^    int max_pds;$/;"	m	struct:hgrnic_dev_lim
+max_pkeys	hgrnic_cmd.h	/^    int max_pkeys;$/;"	m	struct:hgrnic_dev_lim
+max_port_width	hgrnic_cmd.h	/^    int max_port_width;$/;"	m	struct:hgrnic_dev_lim
+max_qp_sz	hgrnic_cmd.h	/^    int max_qp_sz; \/\/ Supported max number of WQEs in SQ (or RQ)$/;"	m	struct:hgrnic_dev_lim
+max_qps	hgrnic_cmd.h	/^    int max_qps;$/;"	m	struct:hgrnic_dev_lim
+max_sg	hgrnic_cmd.h	/^    int max_sg;$/;"	m	struct:hgrnic_dev_lim
+max_sg	hgrnic_dev.h	/^    int      max_sg;$/;"	m	struct:hgrnic_limits
+max_vl	hgrnic_cmd.h	/^    int max_vl;$/;"	m	struct:hgrnic_dev_lim
+max_wqes	hgrnic_dev.h	/^    int      max_wqes;    \/\/ Supported max number of WQEs in SQ (or RQ)$/;"	m	struct:hgrnic_limits
+mem	hgrnic_icm.h	/^    struct scatterlist mem[HGRNIC_ICM_CHUNK_LEN];$/;"	m	struct:hgrnic_icm_chunk	typeref:struct:hgrnic_icm_chunk::scatterlist
+memfree_rate_to_ib	hgrnic_qp.c	/^static enum ib_rate memfree_rate_to_ib(u8 hgrnic_rate, u8 port_rate)$/;"	f	file:
+method_id	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u16 method_id;$/;"	m	struct:ib_uverbs_ioctl_hdr
+mgid_index	hgrnic_qp.c	/^    u8     mgid_index ; \/* not used *\/$/;"	m	struct:hgrnic_qp_path	file:
+min_page_sz	hgrnic_cmd.h	/^    int min_page_sz;$/;"	m	struct:hgrnic_dev_lim
+min_rnr_timer	hgrnic_provider.h	/^    u8                      min_rnr_timer;$/;"	m	struct:hgrnic_qp
+mpt_alloc	hgrnic_dev.h	/^    struct hgrnic_alloc     mpt_alloc;$/;"	m	struct:hgrnic_mr_table	typeref:struct:hgrnic_mr_table::hgrnic_alloc
+mpt_base	hgrnic_cmd.h	/^    u64 mpt_base;$/;"	m	struct:hgrnic_init_hca_param
+mpt_base	hgrnic_dev.h	/^    u64                     mpt_base;$/;"	m	struct:hgrnic_mr_table
+mpt_entry_sz	hgrnic_cmd.h	/^    int mpt_entry_sz;$/;"	m	struct:hgrnic_dev_lim
+mpt_table	hgrnic_dev.h	/^    struct hgrnic_icm_table *mpt_table;$/;"	m	struct:hgrnic_mr_table	typeref:struct:hgrnic_mr_table::hgrnic_icm_table
+mr	hgrnic_provider.h	/^	struct hgrnic_mr        mr;$/;"	m	struct:hgrnic_eq	typeref:struct:hgrnic_eq::hgrnic_mr
+mr	hgrnic_provider.h	/^    struct hgrnic_mr       mr   ; \/* memory region allocated for work queue *\/$/;"	m	struct:hgrnic_wq	typeref:struct:hgrnic_wq::hgrnic_mr
+mr	hgrnic_provider.h	/^    struct hgrnic_mr     mr;$/;"	m	struct:hgrnic_cq_buf	typeref:struct:hgrnic_cq_buf::hgrnic_mr
+mr_attrs	include/rdma/hgrnic-abi.h	/^    __u32 mr_attrs;$/;"	m	struct:hgrnic_reg_mr
+mr_table	hgrnic_dev.h	/^    struct hgrnic_mr_table  mr_table;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_mr_table
+msi_x_entry	hgrnic_provider.h	/^	u16                    msi_x_entry;$/;"	m	struct:hgrnic_eq
+msi_x_vector	hgrnic_provider.h	/^	u16                    msi_x_vector;$/;"	m	struct:hgrnic_eq
+msix_pnd	hgrnic_en_abi.h	/^    void __iomem    *msix_pnd;$/;"	m	struct:hgrnic_endev
+msix_tab	hgrnic_en_abi.h	/^    void __iomem    *msix_tab;$/;"	m	struct:hgrnic_endev
+mtt	hgrnic_provider.h	/^    struct hgrnic_mtt *mtt;$/;"	m	struct:hgrnic_mr	typeref:struct:hgrnic_mr::hgrnic_mtt
+mtt_base	hgrnic_cmd.h	/^    u64 mtt_base;$/;"	m	struct:hgrnic_init_hca_param
+mtt_base	hgrnic_dev.h	/^    u64                     mtt_base;$/;"	m	struct:hgrnic_mr_table
+mtt_buddy	hgrnic_dev.h	/^    struct hgrnic_buddy     mtt_buddy;$/;"	m	struct:hgrnic_mr_table	typeref:struct:hgrnic_mr_table::hgrnic_buddy
+mtt_seg	hgrnic_mr.c	/^    __be64 mtt_seg;$/;"	m	struct:hgrnic_mpt_entry	file:
+mtt_seg_size	hgrnic_dev.h	/^    int	     mtt_seg_size; \/\/ unused now$/;"	m	struct:hgrnic_limits
+mtt_sz	hgrnic_mr.c	/^    __be32 mtt_sz;$/;"	m	struct:hgrnic_mpt_entry	file:
+mtt_table	hgrnic_dev.h	/^    struct hgrnic_icm_table *mtt_table;$/;"	m	struct:hgrnic_mr_table	typeref:struct:hgrnic_mr_table::hgrnic_icm_table
+mtu_cap	hgrnic_cmd.h	/^    int mtu_cap;$/;"	m	struct:hgrnic_init_ib_param
+mtu_cap	hgrnic_dev.h	/^    int      mtu_cap;$/;"	m	struct:hgrnic_limits
+mtu_msgmax	hgrnic_provider.h	/^    u8                      mtu_msgmax;$/;"	m	struct:hgrnic_qp
+mtu_msgmax	hgrnic_qp.c	/^    u8     mtu_msgmax;$/;"	m	struct:hgrnic_qp_context	file:
+mutex	hgrnic_icm.h	/^    struct mutex      mutex   ;$/;"	m	struct:hgrnic_icm_table	typeref:struct:hgrnic_icm_table::mutex
+mutex	hgrnic_provider.h	/^    struct mutex	       mutex;$/;"	m	struct:hgrnic_qp	typeref:struct:hgrnic_qp::mutex
+mutex	hgrnic_provider.h	/^    struct mutex      mutex;$/;"	m	struct:hgrnic_cq	typeref:struct:hgrnic_cq::mutex
+my_ee	hgrnic_cq.c	/^    __le32 my_ee;$/;"	m	struct:hgrnic_cqe	file:
+my_qpn	hgrnic_cq.c	/^    __le32 my_qpn;$/;"	m	struct:hgrnic_cqe	file:
+my_qpn	hgrnic_cq.c	/^    __le32 my_qpn;$/;"	m	struct:hgrnic_err_cqe	file:
+nda_nop	hgrnic_wqe.h	/^    __le32 nda_nop;      \/* [31:6] next WQE [4:0] next opcode *\/$/;"	m	struct:hgrnic_next_unit
+nent	hgrnic_provider.h	/^	int                    nent; \/\/ Number of EQs in this device (the n-th power of 2)$/;"	m	struct:hgrnic_eq
+next_cqe_sw	hgrnic_cq.c	/^static inline struct hgrnic_cqe *next_cqe_sw(struct hgrnic_cq *cq)$/;"	f	file:
+next_ind	hgrnic_provider.h	/^    unsigned   next_ind ;$/;"	m	struct:hgrnic_wq
+next_send_psn	hgrnic_qp.c	/^    __be32 next_send_psn;$/;"	m	struct:hgrnic_qp_context	file:
+node_guid	hgrnic_cmd.h	/^    u64 node_guid;$/;"	m	struct:hgrnic_init_ib_param
+npages	hgrnic_icm.h	/^    int                npages; \/* number of entries of sg list (before merge) *\/$/;"	m	struct:hgrnic_icm_chunk
+nsg	hgrnic_icm.h	/^    int                nsg;    \/* number of entries of sg list (after merge). *\/$/;"	m	struct:hgrnic_icm_chunk
+num_amgms	hgrnic_dev.h	/^    int      num_amgms;$/;"	m	struct:hgrnic_limits
+num_attrs	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u16 num_attrs;$/;"	m	struct:ib_uverbs_ioctl_hdr
+num_cq	hgrnic_icm.h	/^    int num_cq;$/;"	m	struct:hgrnic_profile
+num_cqs	hgrnic_dev.h	/^    int      num_cqs;$/;"	m	struct:hgrnic_limits
+num_eqs	hgrnic_dev.h	/^    int      num_eqs;$/;"	m	struct:hgrnic_limits
+num_free	hgrnic_dev.h	/^    int	       *num_free;$/;"	m	struct:hgrnic_buddy
+num_icm	hgrnic_icm.h	/^    int               num_icm ; \/* Number of chunks allocated for this resources in ICM. *\/$/;"	m	struct:hgrnic_icm_table
+num_mgms	hgrnic_dev.h	/^    int      num_mgms;$/;"	m	struct:hgrnic_limits
+num_mpt	hgrnic_icm.h	/^    int num_mpt;$/;"	m	struct:hgrnic_profile
+num_mpts	hgrnic_dev.h	/^    int      num_mpts;$/;"	m	struct:hgrnic_limits
+num_mtt	hgrnic_icm.h	/^    int num_mtt;$/;"	m	struct:hgrnic_profile
+num_mtt_segs	hgrnic_dev.h	/^    int      num_mtt_segs;$/;"	m	struct:hgrnic_limits
+num_obj	hgrnic_icm.h	/^    int               num_obj ; \/* Number of entries for this kind of resource.(in power of 2) *\/$/;"	m	struct:hgrnic_icm_table
+num_pds	hgrnic_dev.h	/^    int      num_pds;$/;"	m	struct:hgrnic_limits
+num_ports	hgrnic_cmd.h	/^    int num_ports;$/;"	m	struct:hgrnic_dev_lim
+num_ports	hgrnic_dev.h	/^    int      num_ports;$/;"	m	struct:hgrnic_limits
+num_qp	hgrnic_icm.h	/^    int num_qp;$/;"	m	struct:hgrnic_profile
+num_qps	hgrnic_dev.h	/^    int      num_qps;$/;"	m	struct:hgrnic_limits
+num_uars	hgrnic_dev.h	/^    int      num_uars;$/;"	m	struct:hgrnic_limits
+obj_size	hgrnic_icm.h	/^    int               obj_size; \/* Size of the resource (in bytes). *\/$/;"	m	struct:hgrnic_icm_table
+object_id	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u16 object_id;$/;"	m	struct:ib_uverbs_ioctl_hdr
+opcode	hgrnic_cq.c	/^    u8     opcode;$/;"	m	struct:hgrnic_cqe	file:
+opcode	hgrnic_cq.c	/^    u8     opcode;$/;"	m	struct:hgrnic_err_cqe	file:
+opt_param_mask	hgrnic_qp.c	/^    __be32 opt_param_mask;$/;"	m	struct:hgrnic_qp_param	file:
+order	hgrnic_provider.h	/^    int                 order; \/* Actual size in log allocated mtt. *\/$/;"	m	struct:hgrnic_mtt
+owner	hgrnic_cq.c	/^    u8     owner;$/;"	m	struct:hgrnic_cqe	file:
+owner	hgrnic_cq.c	/^    u8     owner;$/;"	m	struct:hgrnic_err_cqe	file:
+page	hgrnic_dev.h	/^        void    **page;$/;"	m	struct:hgrnic_array::__anon23
+page_idx	hgrnic_icm.h	/^    int                     page_idx;$/;"	m	struct:hgrnic_icm_iter
+page_list	hgrnic_dev.h	/^    } *page_list;$/;"	m	struct:hgrnic_array	typeref:struct:hgrnic_array::__anon23
+page_list	hgrnic_provider.h	/^	struct hgrnic_buf_list *page_list; \/\/ Allocated memory for Event Queue$/;"	m	struct:hgrnic_eq	typeref:struct:hgrnic_eq::hgrnic_buf_list
+page_list	hgrnic_provider.h	/^    struct hgrnic_buf_list *page_list;$/;"	m	union:hgrnic_buf	typeref:struct:hgrnic_buf::hgrnic_buf_list
+page_size	hgrnic_mr.c	/^    __be32 page_size;$/;"	m	struct:hgrnic_mpt_entry	file:
+page_size_cap	hgrnic_dev.h	/^    u32      page_size_cap;$/;"	m	struct:hgrnic_limits
+pd	hgrnic_cq.c	/^    __be32 pd;$/;"	m	struct:hgrnic_cq_context	file:
+pd	hgrnic_eq.c	/^	__be32 pd;$/;"	m	struct:hgrnic_eq_context	file:
+pd	hgrnic_mr.c	/^    __be32 pd;$/;"	m	struct:hgrnic_mpt_entry	file:
+pd	hgrnic_provider.h	/^    u32          pd  ; \/* PD for the UD *\/$/;"	m	struct:hgrnic_ah
+pd	hgrnic_qp.c	/^    __be32 pd;$/;"	m	struct:hgrnic_qp_context	file:
+pd_num	hgrnic_provider.h	/^	u32             pd_num;$/;"	m	struct:hgrnic_pd
+pd_table	hgrnic_dev.h	/^    struct hgrnic_pd_table  pd_table;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_pd_table
+pdev	hgrnic_dev.h	/^    struct pci_dev        *pdev ;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::pci_dev
+pdn	include/rdma/hgrnic-abi.h	/^    __u32 pdn;$/;"	m	struct:hgrnic_alloc_pd_resp
+pdn	include/rdma/hgrnic-abi.h	/^    __u32 pdn;$/;"	m	struct:hgrnic_create_cq
+pfn	hgrnic_provider.h	/^    unsigned long pfn;$/;"	m	struct:hgrnic_uar
+pkey_cap	hgrnic_cmd.h	/^    u16 pkey_cap;$/;"	m	struct:hgrnic_init_ib_param
+pkey_index	hgrnic_provider.h	/^	int             pkey_index;$/;"	m	struct:hgrnic_sqp
+pkey_table_len	hgrnic_dev.h	/^    int      pkey_table_len;$/;"	m	struct:hgrnic_limits
+poll_sem	hgrnic_dev.h	/^	struct semaphore 	  poll_sem;$/;"	m	struct:hgrnic_cmd	typeref:struct:hgrnic_cmd::semaphore
+pool	hgrnic_dev.h	/^	struct dma_pool          *pool;$/;"	m	struct:hgrnic_cmd	typeref:struct:hgrnic_cmd::dma_pool
+port	hgrnic_provider.h	/^    u32          port; \/* used port *\/$/;"	m	struct:hgrnic_ah
+port	hgrnic_provider.h	/^    u8                     port; \/* for SQP and memfree use only *\/$/;"	m	struct:hgrnic_qp
+port	hgrnic_wqe.h	/^    __le32 port;$/;"	m	struct:hgrnic_ud_unit
+port_num	hgrnic_provider.h	/^    u32                     port_num;$/;"	m	struct:hgrnic_qp
+port_pkey	hgrnic_qp.c	/^    __be32 port_pkey  ; \/* port number is larger than 0 *\/$/;"	m	struct:hgrnic_qp_path	file:
+port_width	hgrnic_cmd.h	/^    int port_width;$/;"	m	struct:hgrnic_init_ib_param
+port_width_cap	hgrnic_dev.h	/^    u8       port_width_cap;$/;"	m	struct:hgrnic_limits
+pri_path	hgrnic_qp.c	/^    struct hgrnic_qp_path pri_path;$/;"	m	struct:hgrnic_qp_context	typeref:struct:hgrnic_qp_context::hgrnic_qp_path	file:
+privileged	hgrnic_provider.h	/^	int             privileged;$/;"	m	struct:hgrnic_pd
+producer_index	hgrnic_eq.c	/^	__be32 producer_index;$/;"	m	struct:hgrnic_eq_context	file:
+psn	hgrnic_provider.h	/^    u32                     psn;$/;"	m	struct:hgrnic_qp
+qkey	hgrnic_provider.h	/^	u32             qkey;$/;"	m	struct:hgrnic_sqp
+qkey	hgrnic_qp.c	/^    __be32 qkey;            \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+qkey	hgrnic_wqe.h	/^    __le32 qkey;$/;"	m	struct:hgrnic_ud_unit
+qp	hgrnic_dev.h	/^    struct hgrnic_array     qp; \/\/ Used to find qp struct based on QPN$/;"	m	struct:hgrnic_qp_table	typeref:struct:hgrnic_qp_table::hgrnic_array
+qp	hgrnic_provider.h	/^	struct hgrnic_qp qp;$/;"	m	struct:hgrnic_sqp	typeref:struct:hgrnic_sqp::hgrnic_qp
+qp_tab_size	include/rdma/hgrnic-abi.h	/^    __u32 qp_tab_size;$/;"	m	struct:hgrnic_alloc_ucontext_resp
+qp_table	hgrnic_dev.h	/^    struct hgrnic_icm_table *qp_table;$/;"	m	struct:hgrnic_qp_table	typeref:struct:hgrnic_qp_table::hgrnic_icm_table
+qp_table	hgrnic_dev.h	/^    struct hgrnic_qp_table  qp_table;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_qp_table
+qpc_base	hgrnic_cmd.h	/^    u64 qpc_base;$/;"	m	struct:hgrnic_init_hca_param
+qpc_entry_sz	hgrnic_cmd.h	/^    int qpc_entry_sz;$/;"	m	struct:hgrnic_dev_lim
+qpn	hgrnic_provider.h	/^    u32                    qpn;$/;"	m	struct:hgrnic_qp
+que_size	hgrnic_provider.h	/^    int        que_size ; \/* que_size = max << entry_sz_log *\/$/;"	m	struct:hgrnic_wq
+queue	hgrnic_provider.h	/^    union hgrnic_buf       queue; \/* work queue *\/$/;"	m	struct:hgrnic_wq	typeref:union:hgrnic_wq::hgrnic_buf
+queue	hgrnic_provider.h	/^    union hgrnic_buf     queue;$/;"	m	struct:hgrnic_cq_buf	typeref:union:hgrnic_cq_buf::hgrnic_buf
+ra_buff_indx	hgrnic_qp.c	/^    __be32 ra_buff_indx;    \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+raddr	hgrnic_wqe.h	/^    __le64 raddr;$/;"	m	struct:hgrnic_raddr_unit
+rate	hgrnic_dev.h	/^    u8                    rate[HGRNIC_MAX_PORTS];$/;"	m	struct:hgrnic_dev
+rcv_wqe_base_l	hgrnic_qp.c	/^    __be32 rcv_wqe_base_l;  \/* Recv Queue lkey *\/$/;"	m	struct:hgrnic_qp_context	file:
+rcv_wqe_len	hgrnic_qp.c	/^    __be32 rcv_wqe_len;     \/* length of Send Queue *\/$/;"	m	struct:hgrnic_qp_context	file:
+rdb_base	hgrnic_dev.h	/^    u32                     rdb_base;$/;"	m	struct:hgrnic_qp_table
+rdb_shift	hgrnic_dev.h	/^    int                     rdb_shift;$/;"	m	struct:hgrnic_qp_table
+rdma_driver_id	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^enum rdma_driver_id {$/;"	g
+refcount	hgrnic_icm.h	/^    int              refcount;$/;"	m	struct:hgrnic_icm
+refcount	hgrnic_provider.h	/^    int                    refcount;$/;"	m	struct:hgrnic_qp
+refcount	hgrnic_provider.h	/^    int          refcount;$/;"	m	struct:hgrnic_cq
+reg	hgrnic_en_abi.h	/^    void __iomem    *reg;$/;"	m	struct:hgrnic_endev
+remote_qpn	hgrnic_provider.h	/^    u32                     remote_qpn;$/;"	m	struct:hgrnic_qp
+remote_qpn	hgrnic_qp.c	/^    __be32 remote_qpn;$/;"	m	struct:hgrnic_qp_context	file:
+reserved	hgrnic_cq.c	/^    u8     reserved;$/;"	m	struct:hgrnic_cqe	file:
+reserved	hgrnic_mr.c	/^    u32    reserved[2];$/;"	m	struct:hgrnic_mpt_entry	file:
+reserved	hgrnic_wqe.h	/^    u32    reserved;$/;"	m	struct:hgrnic_raddr_unit
+reserved	include/rdma/hgrnic-abi.h	/^    __u32 reserved;$/;"	m	struct:hgrnic_alloc_pd_resp
+reserved	include/rdma/hgrnic-abi.h	/^    __u32 reserved;$/;"	m	struct:hgrnic_alloc_ucontext_resp
+reserved	include/rdma/hgrnic-abi.h	/^    __u32 reserved;$/;"	m	struct:hgrnic_create_cq_resp
+reserved	include/rdma/hgrnic-abi.h	/^    __u32 reserved;$/;"	m	struct:hgrnic_reg_mr
+reserved	include/rdma/hgrnic-abi.h	/^    __u32 reserved;$/;"	m	struct:hgrnic_resize_cq
+reserved	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^			__u8 reserved;$/;"	m	struct:ib_uverbs_attr::__anon5::__anon6
+reserved	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^		__u16 reserved;$/;"	m	union:ib_uverbs_attr::__anon5
+reserved0	hgrnic_cq.c	/^    __be32 reserved0[4];$/;"	m	struct:hgrnic_cq_context	file:
+reserved1	hgrnic_cq.c	/^    __be32 reserved1[4];$/;"	m	struct:hgrnic_cq_context	file:
+reserved1	hgrnic_cq.c	/^    u32    reserved1[3];$/;"	m	struct:hgrnic_err_cqe	file:
+reserved1	hgrnic_eq.c	/^	u8     reserved1[7];$/;"	m	struct:hgrnic_eq_context	file:
+reserved1	hgrnic_qp.c	/^    __be32 reserved1[8];$/;"	m	struct:hgrnic_qp_context	file:
+reserved1	hgrnic_qp.c	/^    u32    reserved1;$/;"	m	struct:hgrnic_qp_param	file:
+reserved1	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__aligned_u64 reserved1;$/;"	m	struct:ib_uverbs_ioctl_hdr
+reserved2	hgrnic_cq.c	/^    u32    reserved2;$/;"	m	struct:hgrnic_err_cqe	file:
+reserved2	hgrnic_eq.c	/^	u32    reserved2[2];$/;"	m	struct:hgrnic_eq_context	file:
+reserved2	hgrnic_qp.c	/^    __be32 reserved2;$/;"	m	struct:hgrnic_qp_context	file:
+reserved2	include/uapi/rdma/rdma_user_ioctl_cmds.h	/^	__u32 reserved2;$/;"	m	struct:ib_uverbs_ioctl_hdr
+reserved3	hgrnic_cq.c	/^    u8     reserved3[2];$/;"	m	struct:hgrnic_err_cqe	file:
+reserved3	hgrnic_eq.c	/^	u32    reserved3[4];$/;"	m	struct:hgrnic_eq_context	file:
+reserved_cqs	hgrnic_cmd.h	/^    int reserved_cqs;$/;"	m	struct:hgrnic_dev_lim
+reserved_cqs	hgrnic_dev.h	/^    int      reserved_cqs;$/;"	m	struct:hgrnic_limits
+reserved_eqs	hgrnic_cmd.h	/^    int reserved_eqs;$/;"	m	struct:hgrnic_dev_lim
+reserved_eqs	hgrnic_dev.h	/^    int      reserved_eqs;$/;"	m	struct:hgrnic_limits
+reserved_lkey	hgrnic_cmd.h	/^    u32 reserved_lkey;$/;"	m	struct:hgrnic_dev_lim
+reserved_mcgs	hgrnic_dev.h	/^    int      reserved_mcgs;$/;"	m	struct:hgrnic_limits
+reserved_mrws	hgrnic_dev.h	/^    int      reserved_mrws;$/;"	m	struct:hgrnic_limits
+reserved_mtts	hgrnic_cmd.h	/^    int reserved_mtts;$/;"	m	struct:hgrnic_dev_lim
+reserved_mtts	hgrnic_dev.h	/^    int      reserved_mtts;$/;"	m	struct:hgrnic_limits
+reserved_pds	hgrnic_cmd.h	/^    int reserved_pds;$/;"	m	struct:hgrnic_dev_lim
+reserved_pds	hgrnic_dev.h	/^    int      reserved_pds;$/;"	m	struct:hgrnic_limits
+reserved_qps	hgrnic_cmd.h	/^    int reserved_qps;$/;"	m	struct:hgrnic_dev_lim
+reserved_qps	hgrnic_dev.h	/^    int      reserved_qps;$/;"	m	struct:hgrnic_limits
+reset_qkey_viol	hgrnic_cmd.h	/^    int reset_qkey_viol;$/;"	m	struct:hgrnic_set_ib_param
+resize_buf	hgrnic_provider.h	/^    struct hgrnic_cq_resize *resize_buf;$/;"	m	struct:hgrnic_cq	typeref:struct:hgrnic_cq::hgrnic_cq_resize
+resp_depth	hgrnic_provider.h	/^    u8                     resp_depth;$/;"	m	struct:hgrnic_qp
+rev_id	hgrnic_dev.h	/^    u32              rev_id;$/;"	m	struct:hgrnic_dev
+rgid	hgrnic_qp.c	/^    u8     rgid[16]   ; \/* not used *\/$/;"	m	struct:hgrnic_qp_path	file:
+rkey	hgrnic_wqe.h	/^    __le32 rkey;$/;"	m	struct:hgrnic_raddr_unit
+rlid	hgrnic_cq.c	/^    __le16 rlid;$/;"	m	struct:hgrnic_cqe	file:
+rlid	hgrnic_qp.c	/^    __be16 rlid       ; \/* not used *\/$/;"	m	struct:hgrnic_qp_path	file:
+rlkey_sched_queue	hgrnic_qp.c	/^    u8     rlkey_sched_queue; \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+rmsn	hgrnic_qp.c	/^    __be32 rmsn;            \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+rnr_nextrecvpsn	hgrnic_qp.c	/^    __be32 rnr_nextrecvpsn;$/;"	m	struct:hgrnic_qp_context	file:
+rnr_retry	hgrnic_qp.c	/^    u8     rnr_retry  ;$/;"	m	struct:hgrnic_qp_path	file:
+rq	hgrnic_provider.h	/^    struct hgrnic_wq        rq;$/;"	m	struct:hgrnic_qp	typeref:struct:hgrnic_qp::hgrnic_wq
+rq_entry_sz_log	hgrnic_qp.c	/^    u8     rq_entry_sz_log; \/* size of one entry in RQ in log format *\/$/;"	m	struct:hgrnic_qp_context	file:
+rq_lkey	include/rdma/hgrnic-abi.h	/^    __u32 rq_lkey;$/;"	m	struct:hgrnic_create_qp
+rq_wqe_counter	hgrnic_qp.c	/^    __be16 rq_wqe_counter; \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+rqpn	hgrnic_cq.c	/^    __le32 rqpn;$/;"	m	struct:hgrnic_cqe	file:
+rsvd1	hgrnic_wqe.h	/^    u32    rsvd1[4];$/;"	m	struct:hgrnic_ud_unit
+rsvd2	hgrnic_wqe.h	/^    u32    rsvd2[2];$/;"	m	struct:hgrnic_ud_unit
+send_psn	hgrnic_provider.h	/^	u32             send_psn;$/;"	m	struct:hgrnic_sqp
+set_atomic_seg	hgrnic_wqe.h	/^static __always_inline void set_atomic_seg(struct hgrnic_atomic_unit *aseg,$/;"	f
+set_cqe_hw	hgrnic_cq.c	/^static inline void set_cqe_hw(struct hgrnic_cqe *cqe)$/;"	f	file:
+set_guid0	hgrnic_cmd.h	/^    int set_guid0;$/;"	m	struct:hgrnic_init_ib_param
+set_node_guid	hgrnic_cmd.h	/^    int set_node_guid;$/;"	m	struct:hgrnic_init_ib_param
+set_raddr_unit	hgrnic_wqe.h	/^static __always_inline void set_raddr_unit(struct hgrnic_raddr_unit *runit,$/;"	f
+set_si_guid	hgrnic_cmd.h	/^    int set_si_guid;$/;"	m	struct:hgrnic_init_ib_param
+set_si_guid	hgrnic_cmd.h	/^    int set_si_guid;$/;"	m	struct:hgrnic_set_ib_param
+set_ud_unit	hgrnic_wqe.h	/^static __always_inline void set_ud_unit(struct hgrnic_ud_unit *uunit,$/;"	f
+si_guid	hgrnic_cmd.h	/^    u64 si_guid ;$/;"	m	struct:hgrnic_set_ib_param
+si_guid	hgrnic_cmd.h	/^    u64 si_guid;$/;"	m	struct:hgrnic_init_ib_param
+sl_ipok	hgrnic_cq.c	/^    u8     sl_ipok;$/;"	m	struct:hgrnic_cqe	file:
+sl_tclass_flowlabel	hgrnic_qp.c	/^    __be32 sl_tclass_flowlabel; \/* not used *\/$/;"	m	struct:hgrnic_qp_path	file:
+slid	hgrnic_provider.h	/^    u64          slid;$/;"	m	struct:hgrnic_ah
+slid	hgrnic_wqe.h	/^    __le16 slid;$/;"	m	struct:hgrnic_ud_unit
+smac_h	hgrnic_wqe.h	/^    __le32 smac_h;$/;"	m	struct:hgrnic_ud_unit
+snd_wqe_base_l	hgrnic_qp.c	/^    __be32 snd_wqe_base_l;  \/* Send Queue lkey *\/$/;"	m	struct:hgrnic_qp_context	file:
+snd_wqe_len	hgrnic_qp.c	/^    __be32 snd_wqe_len;     \/* length of Send Queue *\/$/;"	m	struct:hgrnic_qp_context	file:
+sq	hgrnic_provider.h	/^    struct hgrnic_wq        sq;$/;"	m	struct:hgrnic_qp	typeref:struct:hgrnic_qp::hgrnic_wq
+sq_entry_sz_log	hgrnic_qp.c	/^    u8     sq_entry_sz_log; \/* size of one entry in SQ in log format *\/$/;"	m	struct:hgrnic_qp_context	file:
+sq_lkey	include/rdma/hgrnic-abi.h	/^    __u32 sq_lkey;$/;"	m	struct:hgrnic_create_qp
+sq_wqe_counter	hgrnic_qp.c	/^    __be16 sq_wqe_counter; \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+sqp_start	hgrnic_dev.h	/^    int                     sqp_start; \/\/ start qpn of special qp$/;"	m	struct:hgrnic_qp_table
+ssn	hgrnic_qp.c	/^    __be32 ssn;             \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+start	hgrnic_cq.c	/^    __be64 start;$/;"	m	struct:hgrnic_cq_context	file:
+start	hgrnic_eq.c	/^	__be64 start;$/;"	m	struct:hgrnic_eq_context	file:
+start	hgrnic_mr.c	/^    __be64 start;$/;"	m	struct:hgrnic_mpt_entry	file:
+stat_rate_support	hgrnic_dev.h	/^    u16      stat_rate_support;$/;"	m	struct:hgrnic_limits
+state	hgrnic_provider.h	/^    u8                     state;$/;"	m	struct:hgrnic_qp
+state	hgrnic_provider.h	/^    } state;$/;"	m	struct:hgrnic_cq_resize	typeref:enum:hgrnic_cq_resize::__anon8
+static_rate	hgrnic_qp.c	/^    u8     static_rate; \/* maximum bandwidth, not used *\/$/;"	m	struct:hgrnic_qp_path	file:
+status_dump	hgrnic_dev.h	50;"	d
+status_dump	hgrnic_dev.h	57;"	d
+swap_add	hgrnic_wqe.h	/^    __le64 swap_add;$/;"	m	struct:hgrnic_atomic_unit
+syndrome	hgrnic_cq.c	/^    u8     syndrome;$/;"	m	struct:hgrnic_err_cqe	file:
+table	hgrnic_dev.h	/^    struct hgrnic_icm_table *table; \/* ICM space allocation *\/$/;"	m	struct:hgrnic_cq_table	typeref:struct:hgrnic_cq_table::hgrnic_icm_table
+table	hgrnic_dev.h	/^    unsigned long *table; \/* bitmap table *\/$/;"	m	struct:hgrnic_alloc
+tail	hgrnic_provider.h	/^    unsigned   tail     ; \/* never roll back, so it need to & (max - 1) when in use *\/$/;"	m	struct:hgrnic_wq
+to_hgah	hgrnic_provider.h	/^static inline struct hgrnic_ah *to_hgah(struct ib_ah *ibah)$/;"	f
+to_hgcq	hgrnic_provider.h	/^static inline struct hgrnic_cq *to_hgcq(struct ib_cq *ibcq) {$/;"	f
+to_hgdev	hgrnic_dev.h	/^static inline struct hgrnic_dev *to_hgdev(struct ib_device *ibdev) {$/;"	f
+to_hgmr	hgrnic_provider.h	/^static inline struct hgrnic_mr *to_hgmr(struct ib_mr *ibmr) {$/;"	f
+to_hgpd	hgrnic_provider.h	/^static inline struct hgrnic_pd *to_hgpd(struct ib_pd *ibpd) {$/;"	f
+to_hgqp	hgrnic_provider.h	/^static inline struct hgrnic_qp *to_hgqp(struct ib_qp *ibqp) {$/;"	f
+to_hgrnic_st	hgrnic_qp.c	/^static int to_hgrnic_st(int transport)$/;"	f	file:
+to_hgrnic_state	hgrnic_qp.c	/^static int to_hgrnic_state(enum ib_qp_state ib_state)$/;"	f	file:
+to_hgucontext	hgrnic_provider.h	/^static inline struct hgrnic_ucontext *to_hgucontext(struct ib_ucontext *ibucontext) {$/;"	f
+to_ib_mig_state	hgrnic_qp.c	/^static inline enum ib_mig_state to_ib_mig_state(int hgrnic_mig_state)$/;"	f	file:
+to_ib_qp_state	hgrnic_qp.c	/^static inline enum ib_qp_state to_ib_qp_state(int hgrnic_state)$/;"	f	file:
+to_rdma_ah_attr	hgrnic_qp.c	/^static void to_rdma_ah_attr(struct hgrnic_dev *dev,$/;"	f	file:
+token_mask	hgrnic_dev.h	/^	u16                       token_mask;$/;"	m	struct:hgrnic_cmd
+top	hgrnic_dev.h	/^    u32            top;  \/* prefix of resource number *\/$/;"	m	struct:hgrnic_alloc
+transport	hgrnic_provider.h	/^    u8                     transport; \/* transport type: RC, UD, UC *\/$/;"	m	struct:hgrnic_qp
+uar	hgrnic_provider.h	/^    struct hgrnic_uar            uar;$/;"	m	struct:hgrnic_ucontext	typeref:struct:hgrnic_ucontext::hgrnic_uar
+uar_table	hgrnic_dev.h	/^    struct hgrnic_uar_table uar_table;$/;"	m	struct:hgrnic_dev	typeref:struct:hgrnic_dev::hgrnic_uar_table
+ud_header	hgrnic_provider.h	/^	struct ib_ud_header ud_header;$/;"	m	struct:hgrnic_sqp	typeref:struct:hgrnic_sqp::ib_ud_header
+umem	hgrnic_provider.h	/^    struct ib_umem   *umem;$/;"	m	struct:hgrnic_mr	typeref:struct:hgrnic_mr::ib_umem
+used	hgrnic_dev.h	/^        int       used;$/;"	m	struct:hgrnic_array::__anon23
+usr_page	hgrnic_qp.c	/^    __be32 usr_page; \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+vendor_err	hgrnic_cq.c	/^    u8     vendor_err;$/;"	m	struct:hgrnic_err_cqe	file:
+virt	hgrnic_icm.h	/^    u64               virt    ; \/* start virtual address (ICM space) for this icm resource *\/$/;"	m	struct:hgrnic_icm_table
+vl_cap	hgrnic_cmd.h	/^    int vl_cap;$/;"	m	struct:hgrnic_init_ib_param
+vl_cap	hgrnic_dev.h	/^    int      vl_cap;$/;"	m	struct:hgrnic_limits
+wait	hgrnic_provider.h	/^    wait_queue_head_t      wait;$/;"	m	struct:hgrnic_qp
+wait	hgrnic_provider.h	/^    wait_queue_head_t wait;$/;"	m	struct:hgrnic_cq
+window_count	hgrnic_mr.c	/^    __be32 window_count;$/;"	m	struct:hgrnic_mpt_entry	file:
+window_count_limit	hgrnic_mr.c	/^    __be32 window_count_limit;$/;"	m	struct:hgrnic_mpt_entry	file:
+wqe	hgrnic_cq.c	/^    __le32 wqe; \/* wqe offset in WQ *\/$/;"	m	struct:hgrnic_cqe	file:
+wqe	hgrnic_cq.c	/^    __le32 wqe;$/;"	m	struct:hgrnic_err_cqe	file:
+wqe_base	hgrnic_qp.c	/^    __be32 wqe_base; \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+wqe_lkey	hgrnic_qp.c	/^    __be32 wqe_lkey; \/* not used *\/$/;"	m	struct:hgrnic_qp_context	file:
+wr_id	hgrnic_provider.h	/^    u64                   *wr_id; \/* work request id, used when pooling cqc *\/$/;"	m	struct:hgrnic_wq
