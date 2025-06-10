@@ -20,7 +20,7 @@ JingZhao2
 |   |---libhgrnic       # kernel-space driver
 |---verification
     |---bin             # verification configuration scripts
-    |---src             # source files of verification
+    |---src             # source files of verification framework
 ```
 
 ## RTL Simulation
