@@ -44,7 +44,7 @@ debug:
 
 # run command generates .log file without the waveform
 run:
-	./${OUTPUT} -uvmDebug +vpdfile+4KB.vpd +UVM_VERDI_TRACE=HIER +UVM_VERBOSITY=UVM_LOW +UVM_TESTNAME=${TEST_NAME} \
+	./${OUTPUT} -uvmDebug +vpdfile+wave.vpd +UVM_VERDI_TRACE=HIER +UVM_VERBOSITY=UVM_LOW +UVM_TESTNAME=${TEST_NAME} \
 				+HOST_NUM=2 \
 				+PROC_NUM=2 \
 				+DB_NUM=1 \
