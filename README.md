@@ -36,7 +36,7 @@ Compile the framework by `make com`. Then run the verification by `make run`. Th
 
 ## Gem5 Simulation
 
-To quickly evaluate the performance of a NIC hardware design before implemented in RTL, JingZhao provides a NIC simulator. The project is in directory `JingZhao2/simulator/RNIC_Simulator`. The simulator is written mainly in C++, based on Gem5.
+To quickly evaluate the performance of a NIC hardware design before implemented in RTL, JingZhao provides a NIC simulator. The project is in directory `JingZhao2/simulator/RNIC_Simulator`. The simulator is written mainly in C++, based on Gem5. For details, see the simulator submodule.
 
 ## LICENSE
 
