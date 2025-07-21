@@ -464,7 +464,7 @@ HWAccMRCtl_Thread_5_Inst
 
 SRAM_SDP_Template #(
     .RAM_WIDTH      (   `QP_NUM_LOG                 ),
-    .RAM_DEPTH      (   32                          )
+    .RAM_DEPTH      (   256                          )
 )
 ChannelQPNMappingTable_Inst
 (
@@ -481,7 +481,7 @@ ChannelQPNMappingTable_Inst
 
 SRAM_TDP_Template #(
     .RAM_WIDTH      (   192                         	),
-    .RAM_DEPTH      (   32                          )
+    .RAM_DEPTH      (   256                          )
 )
 MRReqStagedBuffer
 (
@@ -501,7 +501,7 @@ MRReqStagedBuffer
 
 SRAM_TDP_Template #(
     .RAM_WIDTH      (   32 + 12                             ),      //Size + Page offset
-    .RAM_DEPTH      (   32                          )
+    .RAM_DEPTH      (   256                          		)
 )
 PageOffsetStagedBuffer
 (

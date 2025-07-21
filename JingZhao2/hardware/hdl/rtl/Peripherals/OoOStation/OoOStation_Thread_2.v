@@ -398,6 +398,19 @@ assign reorder_buffer_dina = (cur_state == INIT_s) ? 'd0 :
 //-- reorder_buffer_addrb --
 assign reorder_buffer_addrb = (cur_state == GET_RESP_s && get_resp_valid) ? get_resp_data[`TAG_OFFSET] : 'd0;
 
+reg         [TAG_NUM_LOG - 1 : 0]       free_tag;
+always @(posedge clk or posedge rst) begin
+     if (rst) begin
+        free_tag <= 'd0;         
+     end
+     else if (cur_state == GET_RESP_s && get_resp_valid) begin
+         free_tag <= get_resp_data[`TAG_OFFSET];
+     end
+     else begin
+         free_tag <= free_tag;
+     end
+ end 
+
 //-- tag_fifo_wr_en --
 //-- tag_fifo_din --
 always @(posedge clk or posedge rst) begin
@@ -411,7 +424,7 @@ always @(posedge clk or posedge rst) begin
     end
     else if(cur_state == DEQUEUE_REQ_s && dequeue_req_valid && dequeue_req_ready && !bypass_mode) begin
         tag_fifo_wr_en <= 'd1;
-        tag_fifo_din <= tag_mapping_addrb_diff;
+        tag_fifo_din <= free_tag;
     end
     else begin
         tag_fifo_wr_en <= 'd0;

@@ -115,6 +115,33 @@ module OoOStation #(
 /*------------------------------------------- Input/Output Definition : End -----------------------------------------*/
 
 /*------------------------------------------- Local Variables Definition : Begin ------------------------------------*/
+wire        [OOO_CMD_HEAD_WIDTH - 1 : 0]        resource_req_head_balancer;
+wire        [OOO_RESP_HEAD_WIDTH - 1 : 0]		resource_resp_head_balancer;
+
+wire 		[`MAX_REQ_TAG_NUM_LOG - 1 : 0]		req_tag;
+wire 		[`MAX_REQ_TAG_NUM_LOG - 1 : 0]		resp_tag;
+
+wire 		[`MAX_REQ_TAG_NUM_LOG - 1 : 0]		req_tag_balancer;
+wire 		[`MAX_REQ_TAG_NUM_LOG - 1 : 0]		resp_tag_balancer;
+
+assign req_tag = resource_req_head_balancer[`MAX_REQ_TAG_NUM_LOG - 1 : 0];
+assign resp_tag = resource_resp_head[`MAX_REQ_TAG_NUM_LOG - 1 : 0];
+
+assign req_tag_balancer = (ID == 0) ? req_tag :
+						  (ID == 1) ? {'d0, 1'b1, req_tag[TAG_NUM_LOG - 1 : 0]} :
+						  (ID == 2) ? {'d0, 2'b10, req_tag[TAG_NUM_LOG - 1 : 0]} :
+						  (ID == 3) ? {'d0, 3'b11, req_tag[TAG_NUM_LOG - 1 : 0]} : req_tag;
+assign resp_tag_balancer = (ID == 0) ? resp_tag :
+						  (ID == 1) ? {'d0, resp_tag[TAG_NUM_LOG - 1 : 0]} :
+						  (ID == 2) ? {'d0, resp_tag[TAG_NUM_LOG - 1 : 0]} :
+						  (ID ==3) ? {'d0, resp_tag[TAG_NUM_LOG - 1 : 0]} : resp_tag;
+
+
+
+assign resource_req_head = {resource_req_head_balancer[OOO_CMD_HEAD_WIDTH - 1 : `MAX_REQ_TAG_NUM_LOG], req_tag_balancer};
+assign resource_resp_head_balancer = {resource_resp_head[OOO_RESP_HEAD_WIDTH - 1 : `MAX_REQ_TAG_NUM_LOG], resp_tag_balancer};
+
+
 wire                                                        tag_fifo_wr_en;
 wire            [TAG_NUM_LOG - 1 : 0]                       tag_fifo_din;
 wire                                                        tag_fifo_prog_full;  
@@ -333,7 +360,7 @@ OoOStation_Thread_1_Inst
     .ingress_ready              (   ingress_ready                   ),
 
     .resource_req_valid         (   resource_req_valid              ),
-    .resource_req_head          (   resource_req_head               ),
+    .resource_req_head          (   resource_req_head_balancer      ),
     .resource_req_data          (   resource_req_data               ),
     .resource_req_start         (   resource_req_start              ),
     .resource_req_last          (   resource_req_last               ),
@@ -407,7 +434,7 @@ OoOStation_Thread_2_Inst
     .rst                        (   rst                             ),
 
     .resource_resp_valid        (   resource_resp_valid             ),
-    .resource_resp_head         (   resource_resp_head              ),
+    .resource_resp_head         (   resource_resp_head_balancer     ),
     .resource_resp_data         (   resource_resp_data              ),
     .resource_resp_start        (   resource_resp_start             ),
     .resource_resp_last         (   resource_resp_last              ),

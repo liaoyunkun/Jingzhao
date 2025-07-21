@@ -110,6 +110,17 @@ generate
             .doutb      (       doutb_fake      )
         );
     end
+    else if(RAM_WIDTH == 128 && RAM_DEPTH == 32768) begin : GEN_BRAM_SDP_128W_32768D
+        BRAM_SDP_128w_32768d BRAM_SDP_128w_32768d_inst(
+            .clka       (       clk             ),
+            .wea        (       wea             ),
+            .addra      (       addra           ),
+            .dina       (       dina            ),
+            .clkb       (       clk             ),
+            .addrb      (       addrb           ),
+            .doutb      (       doutb_fake      )
+        );
+    end
     else if(RAM_WIDTH == 1 && RAM_DEPTH == 256) begin : GEN_BRAM_SDP_1W_256D
         BRAM_SDP_1w_256d BRAM_SDP_1w_256d_inst(
             .clka       (       clk             ),
@@ -211,6 +222,39 @@ generate
     end
     else if(RAM_WIDTH == 24 && RAM_DEPTH == 256) begin : GEN_BRAM_SDP_24W_256D
         BRAM_SDP_24w_256d BRAM_SDP_24w_256d_inst(
+            .clka       (       clk             ),
+            .wea        (       wea             ),
+            .addra      (       addra           ),
+            .dina       (       dina            ),
+            .clkb       (       clk             ),
+            .addrb      (       addrb           ),
+            .doutb      (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 416 && RAM_DEPTH == 256) begin : GEN_BRAM_SDP_416W_256D
+        BRAM_SDP_416w_256d BRAM_SDP_416w_256d_inst(
+            .clka       (       clk             ),
+            .wea        (       wea             ),
+            .addra      (       addra           ),
+            .dina       (       dina            ),
+            .clkb       (       clk             ),
+            .addrb      (       addrb           ),
+            .doutb      (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 8 && RAM_DEPTH == 256) begin : GEN_BRAM_SDP_8W_256D
+        BRAM_SDP_8w_256d BRAM_SDP_8w_256d_inst(
+            .clka       (       clk             ),
+            .wea        (       wea             ),
+            .addra      (       addra           ),
+            .dina       (       dina            ),
+            .clkb       (       clk             ),
+            .addrb      (       addrb           ),
+            .doutb      (       doutb_fake      )
+        );
+    end 
+    else if(RAM_WIDTH == 128 && RAM_DEPTH == 256) begin : GEN_BRAM_SDP_128W_256D
+        BRAM_SDP_128w_256d BRAM_SDP_128w_256d_inst(
             .clka       (       clk             ),
             .wea        (       wea             ),
             .addra      (       addra           ),

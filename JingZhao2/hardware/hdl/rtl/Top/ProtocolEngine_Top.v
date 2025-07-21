@@ -973,7 +973,6 @@ RPCSubsystem_Inst
     .clk                                    (           user_clk                                     ),
     .rst                                    (           user_rst                                     ),
 
-    // interface with QueueSubsystem begin
     .TX_REQ_sub_wqe_valid                   (           TX_REQ_sub_wqe_valid                    ),
     .TX_REQ_sub_wqe_meta                    (           TX_REQ_sub_wqe_meta                     ),
     .TX_REQ_sub_wqe_ready                   (           TX_REQ_sub_wqe_ready                    ),
@@ -1053,10 +1052,6 @@ RPCSubsystem_Inst
     .RX_RESP_eq_resp_valid                  (           RX_RESP_eq_resp_valid                   ),
     .RX_RESP_eq_resp_head                   (           RX_RESP_eq_resp_head                    ),
     .RX_RESP_eq_resp_ready                  (           RX_RESP_eq_resp_ready                   ),
-
-    // interface with QueueSubsystem end
-
-    // interface with ResMgtSubsystem begin
 
     .TX_REQ_fetch_cxt_ingress_valid         (           TX_REQ_fetch_cxt_ingress_valid          ),
     .TX_REQ_fetch_cxt_ingress_head          (           TX_REQ_fetch_cxt_ingress_head           ),
@@ -1141,7 +1136,6 @@ RPCSubsystem_Inst
     .RX_REQ_fetch_mr_egress_start           (           RX_REQ_fetch_mr_egress_start            ),
     .RX_REQ_fetch_mr_egress_last            (           RX_REQ_fetch_mr_egress_last             ),
     .RX_REQ_fetch_mr_egress_ready           (           RX_REQ_fetch_mr_egress_ready            ),
-    // interface with ResMgtSubsystem end
 
     .TX_REQ_dma_wr_req_valid                (           TX_REQ_dma_wr_req_valid                 ),
     .TX_REQ_dma_wr_req_last                 (           TX_REQ_dma_wr_req_last                  ),

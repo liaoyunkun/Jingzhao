@@ -182,7 +182,7 @@ ReqMissFIFO_Inst
 
 SRAM_TDP_Template #(
     .RAM_WIDTH      (   REORDER_BUFFER_WIDTH                    ),
-    .RAM_DEPTH      (   32                             )
+    .RAM_DEPTH      (   256                                     )
 )
 ReorderBuffer
 (

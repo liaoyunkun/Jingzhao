@@ -85,19 +85,6 @@ else if (DATAWIDTH == 257 && ADDRWIDTH == 9) begin:W257_D512  // DMA, uhddpsram,
     );
 
 end // DATAWIDTH == 257 && ADDRWIDTH == 9
-else if (DATAWIDTH == 257 && ADDRWIDTH == 10) begin:W257_D1024  // DMA, uhddpsram, 1, reorder_buf
-
-    pcieifc_sd_sram_257W_1024D pcieifc_sd_sram_257W_1024D_inst(
-        .clka(clk),    // input wire clka
-        .wea(wea),      // input wire [0 : 0] wea
-        .addra(addra),  // input wire [5 : 0] addra
-        .dina(dina),    // input wire [268 : 0] dina
-        .clkb(clk),    // input wire clkb
-        .addrb(addrb),  // input wire [5 : 0] addrb
-        .doutb(doutb)  // output wire [268 : 0] doutb
-    );
-
-end // DATAWIDTH == 257 && ADDRWIDTH == 10
 else if (DATAWIDTH == 1 && ADDRWIDTH == 13) begin:W1_D8192 // PIO, uhddpsram, 1, armed_cq_table
 
        pcieifc_sd_sram_1W_256D pcieifc_sd_sram_1W_256D_inst(

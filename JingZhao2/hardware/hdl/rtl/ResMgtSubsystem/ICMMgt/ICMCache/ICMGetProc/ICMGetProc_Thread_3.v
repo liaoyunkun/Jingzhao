@@ -85,6 +85,7 @@ wire        [COUNT_MAX_LOG - 1 : 0]                             count_index;
 wire        [COUNT_MAX_LOG - 1 : 0]                             count_collected;
 
 reg    [COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH + 1 - 1 : 0]    get_rsp_head_diff;
+reg    [CACHE_ENTRY_WIDTH - 1 : 0]                                                                      get_rsp_data_diff;
 /*------------------------------------------- Local Variables Definition : End --------------------------------------*/
 
 /*------------------------------------------- Submodules Instatiation : Begin ---------------------------------------*/
@@ -146,10 +147,12 @@ end
 
 /*------------------------------------------- Variables Decode : Begin ----------------------------------------------*/
 //-- cache_hit --
-assign cache_hit = (cur_state == IDLE_s && get_rsp_valid) ? get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] == 1'b1 : 'd0; 
+assign cache_hit = (cur_state == IDLE_s && get_rsp_valid) ? get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] == 1'b1 : 
+                    (cur_state != IDLE_s) ? get_rsp_head_diff[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] == 1'b1 : 'd0; 
 
 //-- cache_miss --
-assign cache_miss = (cur_state == IDLE_s && get_rsp_valid) ? get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] == 1'b0 : 'd0;
+assign cache_miss = (cur_state == IDLE_s && get_rsp_valid) ? get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] == 1'b0 : 
+                    (cur_state != IDLE_s) ? get_rsp_head_diff[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] == 1'b0 : 'd0;
 
 //-- dma_addr --
 assign dma_addr = (cur_state == DMA_s) ? get_rsp_head_diff[PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : ICM_ADDR_WIDTH] : 'd0;
@@ -158,17 +161,21 @@ assign dma_addr = (cur_state == DMA_s) ? get_rsp_head_diff[PHYSICAL_ADDR_WIDTH +
 assign dma_len = (cur_state == DMA_s) ? CACHE_ENTRY_WIDTH / 8 : 'd0;
 
 //-- req_tag --
-assign req_tag = get_rsp_head[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH];
+assign req_tag = (cur_state == IDLE_s && get_rsp_valid) ? get_rsp_head[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] :
+                    (cur_state != IDLE_s) ? get_rsp_head_diff[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 'd0;
 
 //-- count_max --
 //-- count_index --
 //-- count_collected --
-assign count_index = get_rsp_head[COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH];
-assign count_max = get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH];
+assign count_index = (cur_state == IDLE_s && get_rsp_valid) ? get_rsp_head[COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] :
+                    (cur_state != IDLE_s) ? get_rsp_head_diff[COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 'd0;
+assign count_max = (cur_state == IDLE_s && get_rsp_valid) ? get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] :
+                    (cur_state != IDLE_s) ? get_rsp_head_diff[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 'd0;
 assign count_collected = reorder_buffer_dout[REORDER_BUFFER_WIDTH - 1 : REORDER_BUFFER_WIDTH - COUNT_MAX_LOG];
 
 //-- get_rsp_ready --
-assign get_rsp_ready = (cur_state == HIT_s && !req_hit_prog_full) || (cur_state == MISS_s && !req_miss_prog_full);
+// assign get_rsp_ready = (cur_state == HIT_s && !req_hit_prog_full) || (cur_state == MISS_s && !req_miss_prog_full);
+assign get_rsp_ready = (cur_state == IDLE_s) ? 'd1 : 'd0;
 
 //-- reorder_buffer_wen --
 //-- reorder_buffer_addr --
@@ -181,7 +188,7 @@ always @(*) begin
         reorder_buffer_wen = 'd0;
         reorder_buffer_addr = req_tag;        
     end
-    else if(cur_state == HIT_s) begin
+    else if(cur_state == HIT_s && !req_hit_prog_full) begin
         reorder_buffer_wen = 'd1;
         reorder_buffer_addr = req_tag;
     end
@@ -196,20 +203,20 @@ always @(*) begin
     if(rst) begin
         reorder_buffer_din = 'd0;
     end
-    else if(cur_state == HIT_s) begin
+    else if(cur_state == HIT_s && !req_hit_prog_full) begin
         if(ICM_CACHE_TYPE == `CACHE_TYPE_MTT) begin
             if(count_index == 0) begin
-                reorder_buffer_din = {count_collected + 'd1, reorder_buffer_dout[CACHE_ENTRY_WIDTH * 2 - 1 : CACHE_ENTRY_WIDTH], get_rsp_data};
+                reorder_buffer_din = {count_collected + 'd1, reorder_buffer_dout[CACHE_ENTRY_WIDTH * 2 - 1 : CACHE_ENTRY_WIDTH], get_rsp_data_diff};
             end
             else if(count_index == 1) begin
-                reorder_buffer_din = {count_collected + 'd1, get_rsp_data, reorder_buffer_dout[CACHE_ENTRY_WIDTH - 1 : 0]};
+                reorder_buffer_din = {count_collected + 'd1, get_rsp_data_diff, reorder_buffer_dout[CACHE_ENTRY_WIDTH - 1 : 0]};
             end
             else begin
                 reorder_buffer_din = 'd0;
             end
         end
         else if(ICM_CACHE_TYPE == `CACHE_TYPE_QPC || ICM_CACHE_TYPE == `CACHE_TYPE_CQC || ICM_CACHE_TYPE == `CACHE_TYPE_EQC || ICM_CACHE_TYPE == `CACHE_TYPE_MPT) begin
-            reorder_buffer_din = {count_collected + 'd1, get_rsp_data};
+            reorder_buffer_din = {count_collected + 'd1, get_rsp_data_diff};
         end
         else begin
             reorder_buffer_din = 'd0;
@@ -232,23 +239,27 @@ assign dma_rd_req_last = (cur_state == DMA_s) ? 'd1 : 'd0;
 //-- req_hit_wr_en --
 //-- req_hit_din --
 assign req_hit_wr_en = (cur_state == HIT_s && !req_hit_prog_full) ? 'd1 : 'd0;
-assign req_hit_din = (cur_state == HIT_s && !req_hit_prog_full) ? get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : 0] : 'd0;
+assign req_hit_din = (cur_state == HIT_s && !req_hit_prog_full) ? get_rsp_head_diff[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : 0] : 'd0;
 
 //-- req_miss_wr_en --
 //-- req_miss_din --
 assign req_miss_wr_en = (cur_state == MISS_s && !req_miss_prog_full) ? 'd1 : 'd0;
-assign req_miss_din = (cur_state == MISS_s && !req_miss_prog_full) ? get_rsp_head[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : 0] : 'd0;
+assign req_miss_din = (cur_state == MISS_s && !req_miss_prog_full) ? get_rsp_head_diff[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : 0] : 'd0;
 
 //-- get_rsp_head_diff --
+//-- get_rsp_data_diff --
 always @(posedge clk or posedge rst) begin
     if (rst) begin
         get_rsp_head_diff <= 'd0;
+        get_rsp_data_diff <= 'd0;
     end
     else if (cur_state == IDLE_s && get_rsp_valid) begin
         get_rsp_head_diff <= get_rsp_head;
+        get_rsp_data_diff <= get_rsp_data;
     end
     else begin
         get_rsp_head_diff <= get_rsp_head_diff;
+        get_rsp_data_diff <= get_rsp_data_diff;
     end
 end
 /*------------------------------------------- Variables Decode : Begin ----------------------------------------------*/

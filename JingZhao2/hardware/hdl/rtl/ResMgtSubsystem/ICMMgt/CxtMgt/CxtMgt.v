@@ -782,7 +782,7 @@ EQC_ICMLookupArbiter_Inst
 AXISArbiter
 #(
     .HEAD_WIDTH                     (   `COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + `PHY_SPACE_ADDR_WIDTH + `ICM_SPACE_ADDR_WIDTH   ),
-    .DATA_WIDTH                     (   1   )
+    .DATA_WIDTH                     (   8   )
 )
 QPCGetReqArbiter_Inst
 (

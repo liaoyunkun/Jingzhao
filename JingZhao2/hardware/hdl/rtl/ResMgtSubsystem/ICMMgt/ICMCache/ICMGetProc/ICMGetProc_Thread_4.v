@@ -170,20 +170,20 @@ assign req_miss_rd_en = (cur_state == SET_s && (count_collected < count_max && c
 assign count_collected = (cur_state != IDLE_s) ? reorder_buffer_dout[REORDER_BUFFER_WIDTH - 1 : REORDER_BUFFER_WIDTH - COUNT_MAX_LOG] : 'd0;
 
 //-- count_max --
-assign count_max = (cur_state == IDLE_s && req_miss_empty && !req_hit_empty) ? req_hit_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
-                   (cur_state == IDLE_s && !req_miss_empty && icm_entry_rsp_valid) ? req_miss_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
+assign count_max = (cur_state == IDLE_s && !req_miss_empty && icm_entry_rsp_valid) ? req_miss_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
+                    (cur_state == IDLE_s && !req_hit_empty) ? req_hit_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
                    is_miss_proc ? req_miss_dout[COUNT_MAX_LOG * 2+ `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] :
                    is_hit_proc ? req_hit_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 'd0; 
 
 //-- count_index =-- 
-assign count_index = (cur_state == IDLE_s && req_miss_empty && !req_hit_empty) ? req_hit_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
-                     (cur_state == IDLE_s && !req_miss_empty && icm_entry_rsp_valid) ? req_miss_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
+assign count_index = (cur_state == IDLE_s && !req_miss_empty && icm_entry_rsp_valid) ? req_miss_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
+                        (cur_state == IDLE_s && !req_hit_empty) ? req_hit_dout[COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
                      is_miss_proc ? req_miss_dout[COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] :
                      is_hit_proc ? req_hit_dout[COUNT_MAX_LOG + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 'd0; 
 
 //-- req_tag --
-assign req_tag = (cur_state == IDLE_s && req_miss_empty && !req_hit_empty) ? req_hit_dout[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
-                   (cur_state == IDLE_s && !req_miss_empty && icm_entry_rsp_valid) ? req_miss_dout[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
+assign req_tag = (cur_state == IDLE_s && !req_miss_empty && icm_entry_rsp_valid) ? req_miss_dout[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
+                    (cur_state == IDLE_s && !req_hit_empty) ? req_hit_dout[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 
                    is_miss_proc ? req_miss_dout[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] :
                    is_hit_proc ? req_hit_dout[`MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH] : 'd0;
 
@@ -195,7 +195,7 @@ always @(posedge clk or posedge rst) begin
     else if(cur_state == IDLE_s && !req_miss_empty && icm_entry_rsp_valid) begin        //Miss Req has higher priority
         is_hit_proc <= 'd0;
     end
-    else if(cur_state == IDLE_s && req_miss_empty && !req_hit_empty) begin
+    else if(cur_state == IDLE_s && !req_hit_empty) begin
         is_hit_proc <= 'd1;
     end
     else begin

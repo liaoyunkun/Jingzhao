@@ -42,7 +42,7 @@ module ICMBuffer_Get_Thread
 
 //Cache Get Req Interface
     input   wire                                                                                                get_req_valid,
-    input   wire    [COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : 0]        get_req_head,
+    input   wire    [COUNT_MAX_LOG * 2 + `MAX_REQ_TAG_NUM_LOG + PHYSICAL_ADDR_WIDTH + ICM_ADDR_WIDTH - 1 : 0]   get_req_head,
     output  wire                                                                                                get_req_ready,
 
 //Cache Get Resp Interface
@@ -160,7 +160,7 @@ assign cache_tag = cache_addr[CACHE_TAG_WIDTH + CACHE_SET_NUM_LOG + CACHE_OFFSET
 assign cache_set = cache_addr[CACHE_SET_NUM_LOG + CACHE_OFFSET_WIDTH - 1 : CACHE_OFFSET_WIDTH];  
 
 //-- get_req_ready --
-assign get_req_ready = (cur_state == RSP_s);
+assign get_req_ready = (cur_state == IDLE_s) ? 'd1 : 'd0;
 
 //-- get_rsp_valid --
 //-- get_rsp_head --
