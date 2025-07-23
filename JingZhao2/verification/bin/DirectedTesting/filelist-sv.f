@@ -10,14 +10,12 @@
 ../../../src/vrf_HTN/sv/common/hca_addr_table.sv
 ../../../src/vrf_HTN/sv/common/hca_fifo.sv
 ../../../src/vrf_HTN/sv/common/hca_memory.sv
-../../../src/vrf_HTN/sv/common/hca_event_generator.sv
 ../../../src/vrf_HTN/sv/common/hca_virt_addr.sv
 ../../../src/vrf_HTN/sv/common/hca_comp_queue.sv
 ../../../src/vrf_HTN/sv/common/hca_queue_pair.sv
 ../../../src/vrf_HTN/sv/common/hca_queue_list.sv
 ../../../src/vrf_HTN/sv/common/hca_icm_vaddr.sv
 ../../../src/vrf_HTN/sv/common/hca_mem_info.sv
-../../../src/vrf_HTN/sv/common/hca_global_comp.sv
 
 ../../../src/vrf_HTN/sv/master/hca_master_sequencer.sv
 ../../../src/vrf_HTN/sv/master/hca_master_monitor.sv
