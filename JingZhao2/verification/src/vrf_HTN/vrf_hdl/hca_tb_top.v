@@ -218,6 +218,7 @@ module hca_tb_top #(
         # `AFTER_RST_DELAY;
         `uvm_info("NOTICE", "verification enabled...", UVM_LOW)
         hca_if_a.veri_en      <= 1'b1;
+        hca_if_a.clock_count  <= 0;
     end
 
     initial begin
@@ -232,6 +233,7 @@ module hca_tb_top #(
         # `AFTER_RST_DELAY;
         `uvm_info("NOTICE", "verification enabled...", UVM_LOW);
         hca_if_b.veri_en      <= 1'b1;
+        hca_if_b.clock_count  <= 0;
     end
 
     initial begin
@@ -313,6 +315,14 @@ reg         clk_td;
 always @(posedge hca_if_a.sys_clk or negedge hca_if_a.sys_clk) begin
     clk_td <= #1 hca_if_a.sys_clk;
 end 
+
+always @ (posedge hca_if_a.sys_clk) begin
+    hca_if_a.clock_count = hca_if_a.clock_count++;
+end
+
+always @ (posedge hca_if_b.sys_clk) begin
+    hca_if_b.clock_count = hca_if_b.clock_count++;
+end
 
    // initial begin
    //     $fsdbDumpvars(0, hca_tb_top);

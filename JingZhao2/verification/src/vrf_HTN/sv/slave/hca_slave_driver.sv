@@ -36,6 +36,8 @@ class hca_slave_driver extends uvm_driver #(hca_pcie_item);
 
     hca_pcie_item resp_item;
 
+    hca_pcie_item pcie_in_flight_queue[$];
+
     `uvm_component_utils_begin(hca_slave_driver)
     `uvm_component_utils_end
 
@@ -70,16 +72,28 @@ class hca_slave_driver extends uvm_driver #(hca_pcie_item);
         phase.raise_objection(this);
         `uvm_info("NOTICE", {"run_phase begin in ", get_full_name()}, UVM_LOW);
         @ (posedge v_if.veri_en);
-        forever begin
-            @ (posedge v_if.pcie_clk);
-            seq_item_port.get_next_item(resp_item);
-            if (resp_item.item_type == GLOBAL_STOP) begin
-                `uvm_info("NOTICE", "global stop item received by slave driver!", UVM_LOW);
+        fork
+            forever begin
+                @ (posedge v_if.pcie_clk);
+                seq_item_port.get_next_item(resp_item);
+                if (resp_item.item_type == GLOBAL_STOP) begin
+                    `uvm_info("NOTICE", "global stop item received by slave driver!", UVM_LOW);
+                    seq_item_port.item_done();
+                    break;
+                end
                 seq_item_port.item_done();
-                break;
+                resp_item.receiving_clock_count = v_if.clock_count;
+                pcie_in_flight_queue.push_back(resp_item);
             end
-            drive_resp_item(resp_item);
-            seq_item_port.item_done();
+            forever begin
+                @ (posedge v_if.pcie_clk);
+                if (pcie_in_flight_queue.size() > 0) begin
+                    if (pcie_in_flight_queue[0].receiving_clock_count + `PCIE_LATENCY > v_if.clock_count) begin
+                        resp_item = pcie_in_flight_queue.pop_front();
+                        drive_resp_item(resp_item);
+                    end
+                end
+            end
         end
         `uvm_info("NOTICE", "slave driver run_phase end!", UVM_LOW);
         phase.drop_objection(this);

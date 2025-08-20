@@ -33,6 +33,7 @@ class hca_slave_monitor extends uvm_monitor;
     hca_pcie_item item_to_scb;
     hca_pcie_item item_to_sqr;
     hca_pcie_item probe_item_to_scb;
+    hca_pcie_item pcie_in_flight_queue[$];
     virtual hca_interface vif;
     uvm_analysis_port #(hca_pcie_item) seq_port; // to sequencer
     uvm_analysis_port #(hca_pcie_item) port2scb; // duv data
@@ -66,13 +67,12 @@ class hca_slave_monitor extends uvm_monitor;
         end
         item_to_sqr = hca_pcie_item::type_id::create("item_to_sqr", this);
         item_to_scb = hca_pcie_item::type_id::create("item_to_scb", this);
-        // probe_item_to_scb = hca_pcie_item::type_id::create("probe_item_to_scb", this);
+        item_to_sqr_mbx = hca_pcie_item::type_id::create("item_to_sqr_mbx", this);
         seq_port = new("seq_port", this);
         port2scb = new("port2scb", this);
         mon2seq_mbx = new();
         uvm_config_db#(mailbox)::set(uvm_root::get(), "*", "mon2seq_mbx", mon2seq_mbx);
             `uvm_info("NOTICE", "global stop mailbox send finished!", UVM_LOW);
-        // port2scb_probe = new("port2scb_probe", this);
     endfunction: build_phase
 
     //------------------------------------------------------------------------------
@@ -95,11 +95,7 @@ class hca_slave_monitor extends uvm_monitor;
                 bit [3:0] first_be;
                 bit [3:0] last_be;
                 hca_pcie_item item_to_sqr_mbx;
-                item_to_sqr = hca_pcie_item::type_id::create("item_to_sqr", this);
-                item_to_scb = hca_pcie_item::type_id::create("item_to_scb", this);
-                item_to_sqr_mbx = hca_pcie_item::type_id::create("item_to_sqr_mbx", this);
                 while (1) begin
-                    // `uvm_info("NOTICE", "detecting rq_tvalid and global stop in slave monitor!", UVM_LOW);
                     @ (posedge vif.pcie_clk);
                     if (vif.s_axis_rq_tvalid == 1 || vif.global_stop == 1) begin
                         break;
@@ -113,7 +109,6 @@ class hca_slave_monitor extends uvm_monitor;
                     received_item.item_type = GLOBAL_STOP;
                     seq_port.write(received_item);
                     `uvm_info("GLB_STOP_INFO", "global stop item sent to slave sequencer!", UVM_LOW);
-                    // port2scb
                     break;
                 end
 
@@ -225,12 +220,6 @@ class hca_slave_monitor extends uvm_monitor;
                             while (1) begin
                                 @ (posedge vif.pcie_clk);
                                 if (vif.s_axis_rq_tvalid == 1) begin
-                                    // if (vif.s_axis_rq_tlast == 1) begin
-                                    //     `uvm_fatal("RQ_ERR", "WR rq_tlast error, should NOT be 1!");
-                                    // end
-                                    // else begin
-                                    //     break;
-                                    // end
                                     break;
                                 end
                             end
@@ -250,11 +239,8 @@ class hca_slave_monitor extends uvm_monitor;
                     `uvm_fatal("RQ_ERR", $sformatf("RQ type error, rq_tdata: %h", vif.s_axis_rq_tdata));
                 end
 
-                // send received item to slave sequence
-                item_to_sqr.copy(received_item);
-                seq_port.write(item_to_sqr);
-                item_to_sqr_mbx.copy(received_item);
-                mon2seq_mbx.put(item_to_sqr_mbx);
+                received_item.receiving_clock_count = vif.clock_count;
+                pcie_in_flight_queue.push_back(received_item);
 
                 // if received item does not fall into icm space, send item to scoreboard
                 if (send2scb(received_item.rq_addr) == 1) begin
@@ -263,20 +249,26 @@ class hca_slave_monitor extends uvm_monitor;
                             hca_pcie_item item_to_scb_cqe;
                             item_to_scb_cqe = hca_pcie_item::type_id::create("item_to_scb_cqe", this);
                             item_to_scb_cqe.copy(received_item);
-                            // for (int i = 0; i < `CQE2SCB_GAP; i++) begin
-                            //     @(posedge vif.pcie_clk);
-                            // end
                             port2scb.write(item_to_scb_cqe);
-                            // item_to_scb = hca_pcie_item::type_id::create("item_to_scb", this);
-                            // item_to_scb.copy(received_item);
-                            // // vif.s_axis_rq_tready = 0;
-                            // for (int i = 0; i < `CQE2SCB_GAP; i++) begin
-                            //     @(posedge vif.pcie_clk);
-                            // end
-                            // // vif.s_axis_rq_tready = 1;
-                            // port2scb.write(item_to_scb);
                         end
                     join_none
+                end
+            end
+
+            // if the first item in the waiting queue has been pending for `PCIE_LATENCY, send it to the sequencer
+            begin
+                while (1) begin
+                    @ (posedge vif.pcie_clk);
+                    if (pcie_in_flight_queue.size() > 0) begin
+                        if (pcie_in_flight_queue[0].receiving_clock_count + `PCIE_LATENCY > vif.clock_count) begin
+                            // send received item to slave sequence
+                            received_item = pcie_in_flight_queue.pop_front();
+                            item_to_sqr.copy(received_item);
+                            seq_port.write(item_to_sqr);
+                            item_to_sqr_mbx.copy(received_item);
+                            mon2seq_mbx.put(item_to_sqr_mbx);
+                        end
+                    end
                 end
             end
 
@@ -294,7 +286,6 @@ class hca_slave_monitor extends uvm_monitor;
                     else begin
                         heartbeat++;
                         if (heartbeat > `BREAKTIME) begin
-                            // `uvm_fatal("AREYOUDEAD?", "Too long no rq_tvalid!");
                             hca_pcie_item item_to_scb;
                             item_to_scb = hca_pcie_item::type_id::create("item_to_scb", this);
                             item_to_scb.item_type = INTR;
@@ -304,24 +295,6 @@ class hca_slave_monitor extends uvm_monitor;
                     end
                 end
             end
-
-            // begin
-            //     while (1) begin
-            //         @ (posedge vif.pcie_clk);
-            //         if (vif.global_stop == 1) begin
-            //             break;
-            //         end
-            //         if (vif.s_axis_rq_tvalid == 1) begin
-            //             heartbeat = 0;
-            //         end
-            //         else begin
-            //             heartbeat++;
-            //             if (heartbeat > `BREAKTIME) begin
-            //                 `uvm_fatal("AREYOUDEAD?", "Too long no rq_tvalid!");
-            //             end
-            //         end
-            //     end
-            // end
         join
         `uvm_info("NOTICE", "\033[47;40mslave monitor run_phase stop!\033[0m", UVM_LOW);
         phase.drop_objection(this);
