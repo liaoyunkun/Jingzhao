@@ -94,7 +94,7 @@ class hca_slave_driver extends uvm_driver #(hca_pcie_item);
                     end
                 end
             end
-        end
+        join_any
         `uvm_info("NOTICE", "slave driver run_phase end!", UVM_LOW);
         phase.drop_objection(this);
     endtask: run_phase

@@ -32,6 +32,7 @@ class hca_slave_monitor extends uvm_monitor;
     hca_pcie_item received_item;
     hca_pcie_item item_to_scb;
     hca_pcie_item item_to_sqr;
+    hca_pcie_item item_to_sqr_mbx;
     hca_pcie_item probe_item_to_scb;
     hca_pcie_item pcie_in_flight_queue[$];
     virtual hca_interface vif;
@@ -268,6 +269,9 @@ class hca_slave_monitor extends uvm_monitor;
                             item_to_sqr_mbx.copy(received_item);
                             mon2seq_mbx.put(item_to_sqr_mbx);
                         end
+                    end
+                    if (vif.global_stop == 1) begin
+                        break;
                     end
                 end
             end
