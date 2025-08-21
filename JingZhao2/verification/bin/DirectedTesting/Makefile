@@ -29,10 +29,10 @@ debug:
 				+HOST_NUM=2 \
 				+PROC_NUM=2 \
 				+DB_NUM=1 \
-				+SG_NUM=2 \
-				+DATA_CNT=32769 \
+				+SG_NUM=1 \
+				+DATA_CNT=10 \
 				+DATA_UNIT=B \
-				+RC_QP_NUM=18 \
+				+RC_QP_NUM=2 \
 				+UC_QP_NUM=0 \
 				+UD_QP_NUM=0 \
 				+WRITE_WQE_NUM=1 \
@@ -55,9 +55,9 @@ run:
 				+UC_QP_NUM=0 \
 				+UD_QP_NUM=0 \
 				+WRITE_WQE_NUM=1 \
-				+READ_WQE_NUM=1 \
-				+SEND_WQE_NUM=1 \
-				+RECV_WQE_NUM=1 \
+				+READ_WQE_NUM=0 \
+				+SEND_WQE_NUM=0 \
+				+RECV_WQE_NUM=0 \
                 +CASEID=949 \
 				-l run.log 
 

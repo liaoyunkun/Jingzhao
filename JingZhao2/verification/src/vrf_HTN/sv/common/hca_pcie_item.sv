@@ -164,6 +164,8 @@ class hca_pcie_item extends uvm_sequence_item;
     bit               [`ADDR_WIDTH-1 : 0]       mpt_base;
     bit               [`ADDR_WIDTH-1 : 0]       mtt_base;
 
+    bit               [63           : 0]        receiving_clock_count;
+
     // bit                                         is_init_hca_resp;
 
     bool                                        ig_rq_addr;
@@ -245,6 +247,8 @@ class hca_pcie_item extends uvm_sequence_item;
         `uvm_field_int(mpt_base,            UVM_DEFAULT|UVM_HEX|UVM_NOCOMPARE|UVM_NOPRINT)
         `uvm_field_int(mtt_base,            UVM_DEFAULT|UVM_HEX|UVM_NOCOMPARE|UVM_NOPRINT)
         `uvm_field_int(num_mtt,             UVM_DEFAULT|UVM_HEX|UVM_NOCOMPARE|UVM_NOPRINT)
+
+        `uvm_field_int(receiving_clock_count, UVM_DEFAULT|UVM_HEX|UVM_NOCOMPARE|UVM_NOPRINT)
 
         `uvm_field_enum(bool, ig_rq_addr,            UVM_DEFAULT|UVM_HEX|UVM_NOCOMPARE|UVM_NOPRINT)
         `uvm_field_enum(bool, ig_rq_addr_type,       UVM_DEFAULT|UVM_HEX|UVM_NOCOMPARE|UVM_NOPRINT)

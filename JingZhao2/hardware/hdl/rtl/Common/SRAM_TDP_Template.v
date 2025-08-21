@@ -90,6 +90,102 @@ generate
             .doutb  (       doutb_fake      )
         );
     end
+    else if(RAM_WIDTH == 143 && RAM_DEPTH == 2) begin : GEN_BRAM_TDP_143W_2D  //Test cache miss case, CQC CACHE_SET_NUM = 2
+        BRAM_TDP_143w_2d BRAM_TDP_143w_2d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 102 && RAM_DEPTH == 2) begin : GEN_BRAM_TDP_102W_2D  //Test cache miss case, EQC CACHE_SET_NUM = 2
+        BRAM_TDP_102w_2d BRAM_TDP_102w_2d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 431 && RAM_DEPTH == 2) begin : GEN_BRAM_TDP_431W_2D  //Test cache miss case, QPC CACHE_SET_NUM = 2
+        BRAM_TDP_431w_2d BRAM_TDP_431w_2d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 1 && RAM_DEPTH == 2) begin : GEN_BRAM_TDP_1W_2D  //Test cache miss case, LRU Table
+        BRAM_TDP_1w_2d BRAM_TDP_1w_2d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 2 && RAM_DEPTH == 128) begin : GEN_BRAM_TDP_2W_128D
+        BRAM_TDP_2w_128d BRAM_TDP_2w_128d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 8 && RAM_DEPTH == 128) begin : GEN_BRAM_TDP_8W_128D
+        BRAM_TDP_8w_128d BRAM_TDP_8w_128d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
     else if(RAM_WIDTH == 1 && RAM_DEPTH == 512) begin : GEN_BRAM_TDP_1W_512D
         BRAM_TDP_1w_512d BRAM_TDP_1w_512d_Inst(
             .clka   (       clk             ),
@@ -556,6 +652,102 @@ generate
     end
     else if(RAM_WIDTH == 352 && RAM_DEPTH == 32) begin : GEN_BRAM_TDP_352W_32D
         BRAM_TDP_352w_32d BRAM_TDP_352w_32d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 192 && RAM_DEPTH == 256) begin : GEN_BRAM_TDP_192W_256D
+        BRAM_TDP_192w_256d BRAM_TDP_192w_256d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 44 && RAM_DEPTH == 256) begin : GEN_BRAM_TDP_44W_256D
+        BRAM_TDP_44w_256d BRAM_TDP_44w_256d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 322 && RAM_DEPTH == 256) begin : GEN_BRAM_TDP_322W_256D
+        BRAM_TDP_322w_256d BRAM_TDP_322w_256d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 130 && RAM_DEPTH == 256) begin : GEN_BRAM_TDP_130W_256D
+        BRAM_TDP_130w_256d BRAM_TDP_130w_256d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 98 && RAM_DEPTH == 256) begin : GEN_BRAM_TDP_98W_256D
+        BRAM_TDP_98w_256d BRAM_TDP_98w_256d_Inst(
+            .clka   (       clk             ),
+            .rsta   (       rst             ),
+            .wea    (       wea             ),
+            .addra  (       addra           ),
+            .dina   (       dina            ),
+            .douta  (       douta_fake      ),
+            .clkb   (       clk             ),
+            .rstb   (       rst             ),
+            .web    (       web             ),
+            .addrb  (       addrb           ),
+            .dinb   (       dinb            ),
+            .doutb  (       doutb_fake      )
+        );
+    end
+    else if(RAM_WIDTH == 418 && RAM_DEPTH == 256) begin : GEN_BRAM_TDP_418W_256D
+        BRAM_TDP_418w_256d BRAM_TDP_418w_256d_Inst(
             .clka   (       clk             ),
             .rsta   (       rst             ),
             .wea    (       wea             ),

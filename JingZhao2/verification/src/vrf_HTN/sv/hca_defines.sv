@@ -148,6 +148,7 @@
 `define PCIE_CLK_PERIOD                 10  // nanosecond
 `define RDMA_CLK_PERIOD                 10  // nanosecond
 `define BREAKTIME                       5000
+`define PCIE_LATENCY                    300 // nanosecond
 
 ////////////////////////////////////////////////////////////
 // code

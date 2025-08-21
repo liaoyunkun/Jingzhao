@@ -23,20 +23,26 @@
 `define 	MAX_OOO_SLOT_NUM 					`MAX_DMQ_SLOT_NUM 	
 `define 	MAX_OOO_SLOT_NUM_LOG				`MAX_DMQ_SLOT_NUM_LOG
 
-`define 	MAX_DB_SLOT_NUM 					16384
+`define 	MAX_DB_SLOT_NUM 					16384 	//Dynamic Buffer(DB)
 `define 	MAX_DB_SLOT_NUM_LOG 				16
 /*-------------------------------------------------- QP Property Parameters : End -----------------------------------------------*/		
 
 /*----------------------------------------------------- ICMCache Parameters : Begin --------------------------------------------------*/
 `define 	PAGE_SIZE 								4096
 
-`define 	CACHE_SET_NUM_QPC						256
-`define 	CACHE_SET_NUM_CQC 						256
-`define 	CACHE_SET_NUM_EQC						16
-`define 	CACHE_SET_NUM_MPT						512
-//`define 	CACHE_SET_NUM_MPT 						2
-`define 	CACHE_SET_NUM_MTT						4096
-//`define 	CACHE_SET_NUM_MTT 						2 		//Test cache miss case
+//Normal Mode
+//`define 	CACHE_SET_NUM_QPC						256
+//`define 	CACHE_SET_NUM_CQC 						256
+//`define 	CACHE_SET_NUM_EQC						16
+//`define 	CACHE_SET_NUM_MPT						512
+//`define 	CACHE_SET_NUM_MTT						4096
+
+//100% cache miss mode
+`define 	CACHE_SET_NUM_QPC						2
+`define 	CACHE_SET_NUM_CQC 						2
+`define 	CACHE_SET_NUM_EQC						2
+`define 	CACHE_SET_NUM_MPT 						2	
+`define 	CACHE_SET_NUM_MTT 						2
 
 `define 	CACHE_TYPE_QPC							1
 `define 	CACHE_TYPE_CQC 							2
@@ -103,8 +109,8 @@
 `define 	COUNT_MAX 							2
 `define 	COUNT_MAX_LOG 						2
 
-`define 	REQ_TAG_NUM 						4
-`define 	REQ_TAG_NUM_LOG 					2
+`define 	REQ_TAG_NUM 						32
+`define 	REQ_TAG_NUM_LOG 					5
 /*----------------------------------------------------- ICMCache Parameters : End ----------------------------------------------------*/
 
 /*----------------------------------------------------- WQE Unit Filed Offset : End --------------------------------------------------*/
@@ -234,10 +240,10 @@
 /*-------------------------------------------------------- QueueSubsystem Parameters : Begin ------------------------------------*/
 `define 	SQ_META_WIDTH 										544
 
-`define 	SQ_CACHE_CELL_NUM 									16
-`define 	SQ_CACHE_CELL_NUM_LOG 								4
-`define 	SQ_CACHE_SLOT_NUM 									64
-`define 	SQ_CACHE_SLOT_NUM_LOG								6
+`define 	SQ_CACHE_CELL_NUM 									128
+`define 	SQ_CACHE_CELL_NUM_LOG 								7
+`define 	SQ_CACHE_SLOT_NUM 									256
+`define 	SQ_CACHE_SLOT_NUM_LOG								8
 
 `define 	RQ_CACHE_CELL_NUM 									`SQ_CACHE_CELL_NUM 		
 `define 	RQ_CACHE_CELL_NUM_LOG 								`SQ_CACHE_CELL_NUM_LOG 	

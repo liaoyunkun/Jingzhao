@@ -487,7 +487,7 @@ HWAccCMCtl_Thread_6_Inst
 
 SRAM_SDP_Template #(
     .RAM_WIDTH      (   `CACHE_ENTRY_WIDTH_QPC      ),
-    .RAM_DEPTH      (   32                          )
+    .RAM_DEPTH      (   256                          )
 )
 QPCStagedBuffer_Inst
 (
@@ -504,7 +504,7 @@ QPCStagedBuffer_Inst
 
 SRAM_SDP_Template #(
     .RAM_WIDTH      (   `CACHE_ENTRY_WIDTH_CQC      ),
-    .RAM_DEPTH      (   32                          )
+    .RAM_DEPTH      (   256                          )
 )
 CQCStagedBuffer_Inst
 (
@@ -521,7 +521,7 @@ CQCStagedBuffer_Inst
 
 SRAM_SDP_Template #(
     .RAM_WIDTH      (   `QP_NUM_LOG                 ),
-    .RAM_DEPTH      (   32    )       //Tag per channel * 4 channels
+    .RAM_DEPTH      (   256    )       //Tag per channel * 4 channels
 )
 TagQPNMappingTable_Inst
 (

@@ -39,7 +39,6 @@ class hca_config_sequence extends uvm_sequence #(hca_pcie_item);
     hca_fifo #(.width(256)) data_fifo;
     string seq_name;
 
-    // hca_event_generator event_generator;
     mailbox cmd_done;
 
     // addr temp_virt_addr;

@@ -133,17 +133,18 @@ end
 always @(*) begin
     case(cur_state)
         IDLE_s:         if(dma_rd_rsp_valid) begin
-                            next_state = COLLECT_s;
+                            // next_state = COLLECT_s;
+                            next_state = RSP_s;
                         end
                         else begin
                             next_state = IDLE_s;
                         end
-        COLLECT_s:      if(dma_rd_rsp_valid && piece_count == piece_num) begin
-                            next_state = RSP_s;
-                        end
-                        else begin
-                            next_state = COLLECT_s;
-                        end
+        // COLLECT_s:      if(dma_rd_rsp_valid && piece_count == piece_num) begin
+        //                     next_state = RSP_s;
+        //                 end
+        //                 else begin
+        //                     next_state = COLLECT_s;
+        //                 end
         RSP_s:          if(icm_entry_rsp_valid && icm_entry_rsp_ready) begin
                             next_state = IDLE_s;
                         end
@@ -351,14 +352,18 @@ assign physical_address = dma_rd_rsp_data[63:0];
 // endgenerate
 
 //-- dma_rd_rsp_ready --
-assign dma_rd_rsp_ready = (cur_state == COLLECT_s) ? 'd1 : 'd0;
+// assign dma_rd_rsp_ready = (cur_state == COLLECT_s) ? 'd1 : 'd0;
+assign dma_rd_rsp_ready = (cur_state == IDLE_s) ? 'd1 : 'd0;
 
 //-- icm_entry_rsp_data --
 always @(posedge clk or posedge rst) begin
     if (rst) begin
         icm_entry_rsp_data <= 'd0;        
     end
-    else if (cur_state == COLLECT_s && dma_rd_rsp_valid) begin
+    // else if (cur_state == COLLECT_s && dma_rd_rsp_valid) begin
+    //     icm_entry_rsp_data <= dma_rd_rsp_data;
+    // end
+    else if (cur_state == IDLE_s && dma_rd_rsp_valid) begin
         icm_entry_rsp_data <= dma_rd_rsp_data;
     end
     else begin

@@ -33,10 +33,10 @@ module WQEFetch
 //Interface with WQECache
     //Interface with Cache Buffer
     output  reg                                                            	cache_buffer_wea,
-    output  reg    	[log2b(CACHE_CELL_NUM * CACHE_SLOT_NUM - 1) - 1 : 0]                        	cache_buffer_addra,
+    output  reg    	[log2b(CACHE_CELL_NUM * CACHE_SLOT_NUM - 1) - 1 : 0]    cache_buffer_addra,
     output  reg    	[`WQE_SEG_WIDTH - 1 : 0]                                cache_buffer_dina,
 
-    output  wire   	[log2b(CACHE_CELL_NUM * CACHE_SLOT_NUM - 1) - 1 : 0]                        	cache_buffer_addrb,
+    output  wire   	[log2b(CACHE_CELL_NUM * CACHE_SLOT_NUM - 1) - 1 : 0]    cache_buffer_addrb,
     input   wire   	[`WQE_SEG_WIDTH - 1 : 0]                                cache_buffer_doutb,
 
     //Interface with Cache Owned Table
@@ -96,7 +96,12 @@ module WQEFetch
 /*------------------------------------------- Local Macros Definition : End -----------------------------------------*/
 
 /*------------------------------------------- Local Variables Definition : Begin ------------------------------------*/
-reg    	[`SQ_META_WIDTH - 1 : 0]                                meta_data_diff;
+wire                                                            meta_valid_out;
+wire    [`SQ_META_WIDTH - 1 : 0]                                meta_data_out;
+wire                                                            meta_ready_out;
+
+
+reg    	[`SQ_META_WIDTH - 1 : 0]                                meta_data_out_diff;
 
 reg                                                             gather_req_wr_en;
 reg     [`DMA_LENGTH_WIDTH * 2 + `DMA_ADDR_WIDTH - 1 : 0]       gather_req_din;
@@ -145,6 +150,32 @@ reg                                                             judge_count;
 /*------------------------------------------- Local Variables Definition : End --------------------------------------*/
 
 /*------------------------------------------- Submodules Instatiation : Begin ---------------------------------------*/
+wire            meta_prog_full;
+wire            meta_empty;
+
+assign meta_ready = !meta_prog_full;
+assign meta_valid_out = !meta_empty;
+
+SyncFIFO_Template #(
+    .FIFO_TYPE   (1),
+    .FIFO_WIDTH  (`SQ_META_WIDTH),
+    .FIFO_DEPTH  (4096)
+)
+SQMetaFIFO_Inst
+(
+    .clk(clk),
+    .rst(rst),
+
+    .wr_en(meta_valid),
+    .din(meta_data),
+    .prog_full(meta_prog_full),
+    .rd_en(meta_ready_out),
+    .dout(meta_data_out),
+    .empty(meta_empty)
+);
+
+
+
 GatherData GatherData_Inst(
     .clk                        (   clk                         ),
     .rst                        (   rst                         ),
@@ -209,7 +240,7 @@ end
 
 always @(*) begin
     case(cur_state)
-        IDLE_s:         if(meta_valid) begin
+        IDLE_s:         if(meta_valid_out) begin
                             next_state = JUDGE_s;
                         end
                         else begin
@@ -255,16 +286,16 @@ assign next_wqe_size = cache_buffer_doutb[`NEXT_WQE_SIZE_OFFSET];
 assign next_wqe_addr = cache_buffer_doutb[`NEXT_WQE_ADDR_OFFSET];
 assign next_wqe_valid = cache_buffer_doutb[`NEXT_WQE_VALID_OFFSET];
 
-//-- meta_data_diff --
+//-- meta_data_out_diff --
 always @(posedge clk or posedge rst) begin
 	if (rst) begin
-		meta_data_diff <= 'd0;		
+		meta_data_out_diff <= 'd0;		
 	end
-	else if (cur_state == IDLE_s && meta_valid) begin
-		meta_data_diff <= meta_data;
+	else if (cur_state == IDLE_s && meta_valid_out) begin
+		meta_data_out_diff <= meta_data_out;
 	end
 	else begin
-		meta_data_diff <= meta_data_diff;
+		meta_data_out_diff <= meta_data_out_diff;
 	end
 end
 
@@ -288,16 +319,16 @@ always @(posedge clk or posedge rst) begin
         mr_size_1 <= 'd0;
         mr_pte_1 <= 'd0;
     end
-    else if(cur_state == IDLE_s && meta_valid) begin
-    	cell_index <= meta_data[`CELL_INDEX_OFFSET];
-        local_qpn <= meta_data[`LOCAL_QPN_OFFSET];
+    else if(cur_state == IDLE_s && meta_valid_out) begin
+    	cell_index <= meta_data_out[`CELL_INDEX_OFFSET];
+        local_qpn <= meta_data_out[`LOCAL_QPN_OFFSET];
 
-        mr_valid_0 <= meta_data[`MR_VALID_0_OFFSET];
-        mr_valid_1 <= meta_data[`MR_VALID_1_OFFSET];
-        mr_size_0 <= meta_data[`MR_SIZE_0_OFFSET];
-        mr_pte_0 <= meta_data[`MR_PTE_0_OFFSET];
-        mr_size_1 <= meta_data[`MR_SIZE_1_OFFSET];
-        mr_pte_1 <= meta_data[`MR_PTE_1_OFFSET];
+        mr_valid_0 <= meta_data_out[`MR_VALID_0_OFFSET];
+        mr_valid_1 <= meta_data_out[`MR_VALID_1_OFFSET];
+        mr_size_0 <= meta_data_out[`MR_SIZE_0_OFFSET];
+        mr_pte_0 <= meta_data_out[`MR_PTE_0_OFFSET];
+        mr_size_1 <= meta_data_out[`MR_SIZE_1_OFFSET];
+        mr_pte_1 <= meta_data_out[`MR_PTE_1_OFFSET];
     end
     else begin
     	cell_index <= cell_index;
@@ -317,7 +348,7 @@ always @(posedge clk or posedge rst) begin
     if (rst) begin
         dma_req_count <= 'd0;        
     end
-    else if (cur_state == IDLE_s && meta_valid) begin
+    else if (cur_state == IDLE_s && meta_valid_out) begin
         dma_req_count <= 'd1;
     end
     else if(cur_state == DMA_REQ_s && !gather_req_prog_full) begin
@@ -333,8 +364,8 @@ always @(posedge clk or posedge rst) begin
     if (rst) begin
         dma_req_total <= 'd0;        
     end
-    else if (cur_state == IDLE_s && meta_valid) begin
-        if(meta_data[`MR_RESP_VALID_0_OFFSET] == `PAGE_VALID && meta_data[`MR_RESP_VALID_1_OFFSET] == `PAGE_VALID) begin
+    else if (cur_state == IDLE_s && meta_valid_out) begin
+        if(meta_data_out[`MR_RESP_VALID_0_OFFSET] == `PAGE_VALID && meta_data_out[`MR_RESP_VALID_1_OFFSET] == `PAGE_VALID) begin
             dma_req_total <= 'd2;
         end
         else begin
@@ -374,7 +405,7 @@ always @(posedge clk or posedge rst) begin
 end
 
 //-- cache_valid -- Cahce entry is valid and current cache entry is owned by current qp. CACHE_CELL_NUM must be less than QP_NUM
-assign cache_valid = cache_owned_dout[`QP_NUM_LOG - CACHE_CELL_NUM_LOG] && (cache_owned_dout[`QP_NUM_LOG - CACHE_CELL_NUM_LOG - 1 : 0] == local_qpn[`QP_NUM_LOG - 1 : 4]);
+assign cache_valid = cache_owned_dout[`QP_NUM_LOG - CACHE_CELL_NUM_LOG] && (cache_owned_dout[`QP_NUM_LOG - CACHE_CELL_NUM_LOG - 1 : 0] == local_qpn[`QP_NUM_LOG - 1 : CACHE_CELL_NUM_LOG]);
 
 //-- cache_slot_wr_count --
 always @(posedge clk or posedge rst) begin
@@ -466,15 +497,15 @@ always @(*) begin
 		cache_owned_addr = 'd0;
 		cache_owned_din = 'd0;
 	end
-	else if(cur_state == IDLE_s && meta_valid) begin
+	else if(cur_state == IDLE_s && meta_valid_out) begin
 		cache_owned_wen = 'd0;
-		cache_owned_addr = meta_data[`CELL_INDEX_OFFSET];
+		cache_owned_addr = meta_data_out[`CELL_INDEX_OFFSET];
 		cache_owned_din = 'd0;
 	end
 	else if(cur_state == DMA_RSP_s && cache_slot_wr_count == cache_slot_wr_total && wqe_seg_valid) begin
 		cache_owned_wen = 'd1;
 		cache_owned_addr = cell_index;
-		cache_owned_din = {'d1, local_qpn[`QP_NUM_LOG - 1 : 4]};
+		cache_owned_din = {'d1, local_qpn[`QP_NUM_LOG - 1 : CACHE_CELL_NUM_LOG]};
 	end
 	else begin
 		cache_owned_wen = 'd0;
@@ -487,7 +518,7 @@ end
 //-- cache_offset_addr --
 //-- cache_offset_din --
 assign cache_offset_wen = (cur_state == DMA_REQ_s) ? 'd1 : 'd0;
-assign cache_offset_addr = (cur_state == IDLE_s && meta_valid) ? meta_data[`CELL_INDEX_OFFSET] :
+assign cache_offset_addr = (cur_state == IDLE_s && meta_valid_out) ? meta_data_out[`CELL_INDEX_OFFSET] :
                                 (cur_state == DMA_REQ_s) ? local_qpn[`CELL_INDEX_OFFSET] : local_qpn[`CELL_INDEX_OFFSET];
 assign cache_offset_din = (cur_state == DMA_REQ_s) ? 'd0 : 'd0;
 
@@ -535,14 +566,14 @@ end
 //-- wqe_start --
 //-- wqe_last --
 assign wqe_valid = (cur_state == FETCH_WQE_s) ? 'd1 : 'd0;
-assign wqe_head = (cur_state == FETCH_WQE_s) ? meta_data_diff[`WQE_PARSER_META_WIDTH - 1 : 0] : 'd0;
+assign wqe_head = (cur_state == FETCH_WQE_s) ? meta_data_out_diff[`WQE_PARSER_META_WIDTH - 1 : 0] : 'd0;
 assign wqe_data = (cur_state == FETCH_WQE_s) ? cache_buffer_doutb : 'd0; 
 assign wqe_start = (cur_state == FETCH_WQE_s) ? (wqe_fetch_count == 'd1) : 'd0;
 assign wqe_last = (cur_state == FETCH_WQE_s) ? (wqe_fetch_count == wqe_fetch_total) : 'd0;
 
 
-//-- meta_ready --
-assign meta_ready = (cur_state == IDLE_s) ? 'd1 : 'd0;
+//-- meta_ready_out --
+assign meta_ready_out = (cur_state == IDLE_s) ? 'd1 : 'd0;
 
 //-- size_valid --
 assign size_valid = (cur_state != IDLE_s);

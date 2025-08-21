@@ -129,7 +129,7 @@ end
 /* -------- Index file update{end}-------- */
 
 /* --------Store related logic{begin}-------- */
-assign full = (cnt[store_tag] == 8);
+assign full = (cnt[store_tag] == 16);
 
 assign store_rdy = !full;
 /* --------Store related logic{end}-------- */

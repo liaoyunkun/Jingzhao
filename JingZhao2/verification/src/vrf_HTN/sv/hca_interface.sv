@@ -146,8 +146,10 @@ interface hca_interface #(
     //----------------------------------------------------------------------------------------------------------------//
     //  Configuration (CFG) Interface                                                                                 //
     //----------------------------------------------------------------------------------------------------------------//
-    logic                              [2:0]     cfg_max_payload;
-    logic                              [2:0]     cfg_max_read_req;
+    logic                               [2:0]     cfg_max_payload;
+    logic                               [2:0]     cfg_max_read_req;
+
+    logic                               [63:0]      clock_count;
 
     initial begin
         $printtimescale;

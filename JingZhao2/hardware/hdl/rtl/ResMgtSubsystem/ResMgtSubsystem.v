@@ -655,11 +655,13 @@ ICMMgt ICMMgt_Inst(
     .mtt_dma_wr_req_ready				(			MTT_dma_wr_req_ready			)
 );
 
-OoOStation 
+OoOBalancer 
  #(
 
  	.ID                         (  1                              ),
     
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `CXT_CMD_HEAD_WIDTH             ),
@@ -711,9 +713,12 @@ SQ_Cxt_OoO_Inst(
     .egress_ready                       (           SQ_fetch_cxt_egress_ready      )
 );
 
-OoOStation 
+OoOBalancer 
  #(
      	.ID                         ( 2                              ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `CXT_CMD_HEAD_WIDTH             ),
@@ -765,9 +770,12 @@ TX_REQ_Cxt_OoO_Inst(
     .egress_ready                       (           TX_REQ_fetch_cxt_egress_ready    	 )
 );
 
-OoOStation 
+OoOBalancer 
  #(
      	.ID                         (  3                             ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `CXT_CMD_HEAD_WIDTH             ),
@@ -819,9 +827,12 @@ RX_REQ_Cxt_OoO_Inst(
     .egress_ready                       (           RX_REQ_fetch_cxt_egress_ready    		)
 );
 
-OoOStation 
+OoOBalancer 
  #(
      	.ID                         (  4                              ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `CXT_CMD_HEAD_WIDTH             ),
@@ -873,9 +884,12 @@ RX_RESP_Cxt_OoO_Inst(
     .egress_ready                       (           RX_RESP_fetch_cxt_egress_ready    	 	)
 );
 
-OoOStation 
+OoOBalancer 
  #(
  	 	.ID                         ( 5                              ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `MR_CMD_HEAD_WIDTH             ),
@@ -927,9 +941,12 @@ SQ_MR_OoO_Inst(
     .egress_ready                       (           SQ_fetch_mr_egress_ready    	 )
 );
 
-OoOStation 
+OoOBalancer 
  #(
  	 	.ID                         (  6                              ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `MR_CMD_HEAD_WIDTH             ),
@@ -981,9 +998,12 @@ RQ_MR_OoO_Inst(
     .egress_ready                       (           RQ_fetch_mr_egress_ready    	 )
 );
 
-OoOStation 
+OoOBalancer 
  #(
      	.ID                         (  7                             ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `MR_CMD_HEAD_WIDTH             ),
@@ -1035,9 +1055,12 @@ TX_REQ_MR_OoO_Inst(
     .egress_ready                       (           TX_REQ_fetch_mr_egress_ready    	 )
 );
 
-OoOStation
+OoOBalancer
  #(
      	.ID                         (  8                             ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `MR_CMD_HEAD_WIDTH             ),
@@ -1089,9 +1112,12 @@ RX_REQ_MR_OoO_Inst(
     .egress_ready                       (           RX_REQ_fetch_mr_egress_ready    	 )
 );
 
-OoOStation 
+OoOBalancer 
  #(
      	.ID                         (  9                             ),
+
+    .OOO_STATION_NUM            (   4                             ),
+
     .TAG_NUM                            (           `REQ_TAG_NUM            ),
 
     .RESOURCE_CMD_HEAD_WIDTH            (           `MR_CMD_HEAD_WIDTH             ),

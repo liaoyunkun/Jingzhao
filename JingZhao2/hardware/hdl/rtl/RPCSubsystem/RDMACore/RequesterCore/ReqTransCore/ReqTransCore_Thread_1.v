@@ -45,6 +45,8 @@ module ReqTransCore_Thread_1
 /*------------------------------------------- Local Variables Definition : Begin ------------------------------------*/
 wire            [`INGRESS_COMMON_HEAD_WIDTH - 1 : 0]            ingress_common_head;
 wire            [`MAX_OOO_SLOT_NUM_LOG - 1 :0]                                          ingress_slot_count;
+
+reg    [`WQE_META_WIDTH - 1 : 0]                               sub_wqe_meta_diff;
 /*------------------------------------------- Local Variables Definition : End --------------------------------------*/
 
 /*------------------------------------------- Submodules Instatiation : Begin ---------------------------------------*/
@@ -87,8 +89,21 @@ end
 /*------------------------------------------- State Machine Definition : End ----------------------------------------*/
 
 /*------------------------------------------- Variables Decode : Begin ----------------------------------------------*/
+//-- sub_wqe_meta_diff --
+always @(posedge clk or posedge rst) begin
+    if (rst) begin
+        sub_wqe_meta_diff <= 'd0;
+    end
+    else if (cur_state == IDLE_s && sub_wqe_valid) begin
+        sub_wqe_meta_diff <= sub_wqe_meta;
+    end
+    else begin
+        sub_wqe_meta_diff <= sub_wqe_meta_diff;
+    end
+end
+
 wire 		[`QP_NUM_LOG - 1 : 0]					qpn_data;
-assign qpn_data = sub_wqe_meta[`LOCAL_QPN_OFFSET];
+assign qpn_data = (cur_state == IDLE_s && sub_wqe_valid) ? sub_wqe_meta[`LOCAL_QPN_OFFSET] : sub_wqe_meta_diff[`LOCAL_QPN_OFFSET];
 
 wire        [`MAX_QP_NUM_LOG - 1 : 0]               queue_index;
 assign queue_index = {'d0, qpn_data[`QP_NUM_LOG - 1 : 0]};
@@ -105,12 +120,12 @@ assign ingress_slot_count = 'd1;
 //-- fetch_cxt_ingress_last --
 assign fetch_cxt_ingress_valid = (cur_state == FETCH_CXT_s) ? 'd1 : 'd0;
 assign fetch_cxt_ingress_head = (cur_state == FETCH_CXT_s) ? {qpn_data[`QP_NUM_LOG - 1 : 0], `CXT_READ, ingress_common_head} : 'd0;
-assign fetch_cxt_ingress_data = (cur_state == FETCH_CXT_s) ? sub_wqe_meta : 'd0;
+assign fetch_cxt_ingress_data = (cur_state == FETCH_CXT_s) ? sub_wqe_meta_diff : 'd0;
 assign fetch_cxt_ingress_start = (cur_state == FETCH_CXT_s) ? 'd1 : 'd0;
 assign fetch_cxt_ingress_last = (cur_state == FETCH_CXT_s) ? 'd1 : 'd0;
 
 //-- sub_wqe_ready --
-assign sub_wqe_ready = (cur_state == FETCH_CXT_s) ? fetch_cxt_ingress_ready : 'd0;
+assign sub_wqe_ready = (cur_state == IDLE_s) ? 'd1 : 'd0;
 /*------------------------------------------- Variables Decode : End ----------------------------------------------*/
 
 /*------------------------------------------- Local Macros Undef : Begin --------------------------------------------*/

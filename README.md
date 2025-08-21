@@ -1,7 +1,7 @@
 # JingZhao: An Open-Source Framework for Rapid NIC Prototyping
 
 JingZhao is an open-sourced framework for NIC prototyping, which could be leveraged to
-rapidly implement and verify a domain-specific NIC. JingZhao is the first open-source RDMA NIC solution completely compatible to the standard OFED communication library. The RNIC was also taped out using TSMC's 28nm process to validate our design.
+rapidly implement and verify a domain-specific NIC. JingZhao is developed by Institute of Computing Technology, Chinese Academy of Sciences, and is the first open-source RDMA NIC solution completely compatible to the standard OFED communication library. The RNIC was also taped out using TSMC's 28nm process to validate our design.
 
 For design considerations and principles in detail, see [our paper](https://arxiv.org/pdf/2410.08476).
 
@@ -36,7 +36,7 @@ Compile the framework by `make com`. Then run the verification by `make run`. Th
 
 ## Gem5 Simulation
 
-To quickly evaluate the performance of a NIC hardware design before implemented in RTL, JingZhao provides a NIC simulator. The project is in directory `JingZhao2/simulator/RNIC_Simulator`. The simulator is written mainly in C++, based on Gem5.
+To quickly evaluate the performance of a NIC hardware design before implemented in RTL, JingZhao provides a NIC simulator. The project is in directory `JingZhao2/simulator/RNIC_Simulator`. The simulator is written mainly in C++, based on Gem5. For details, see the simulator submodule.
 
 ## LICENSE
 

@@ -53,10 +53,76 @@ module AXISArbiter
 
 /*------------------------------------------- Local Variables Definition : Begin ------------------------------------*/
 reg 							last_sch;
+
+wire														st_in_axis_valid_a;
+wire	[HEAD_WIDTH - 1 : 0]		                        st_in_axis_head_a;
+wire	[DATA_WIDTH - 1 : 0]						        st_in_axis_data_a;
+wire 														st_in_axis_start_a;
+wire														st_in_axis_last_a;
+wire  														st_in_axis_ready_a;
+
+wire														st_in_axis_valid_b;
+wire	[HEAD_WIDTH - 1 : 0]		                        st_in_axis_head_b;
+wire	[DATA_WIDTH - 1 : 0]						        st_in_axis_data_b;
+wire 														st_in_axis_start_b;
+wire														st_in_axis_last_b;
+wire  														st_in_axis_ready_b;
+
 /*------------------------------------------- Local Variables Definition : End --------------------------------------*/
 
 
 /*------------------------------------------- Submodules Instatiation : Begin ---------------------------------------*/
+stream_reg #(
+    .TUSER_WIDTH(   HEAD_WIDTH  		),
+    .TDATA_WIDTH(   DATA_WIDTH          )
+)
+st_reg_a
+(
+    .clk            ( 	clk  				),
+    .rst_n          ( 	~rst  				),
+
+    .axis_tvalid    (	in_axis_valid_a 	),
+    .axis_tlast     (	in_axis_last_a 		),
+    .axis_tuser     (	in_axis_head_a 		),
+    .axis_tdata     (	in_axis_data_a 		),
+    .axis_tready    (	in_axis_ready_a 	),
+    .axis_tstart    (	in_axis_start_a 	),
+    .axis_tkeep     (  	'd0 				),
+
+    .in_reg_tvalid  (   st_in_axis_valid_a 	),
+    .in_reg_tlast   (   st_in_axis_last_a 	),
+    .in_reg_tuser   (   st_in_axis_head_a 	),
+    .in_reg_tdata   (   st_in_axis_data_a 	),
+    .in_reg_tkeep   (    					),
+    .in_reg_tstart  (   st_in_axis_start_a 	),
+    .in_reg_tready  (   st_in_axis_ready_a 	)
+);
+
+stream_reg #(
+    .TUSER_WIDTH	(   HEAD_WIDTH  		),
+    .TDATA_WIDTH	(   DATA_WIDTH          )
+)
+st_reg_b
+(
+    .clk            ( 	clk  				),
+    .rst_n          ( 	~rst  				),
+
+    .axis_tvalid    (	in_axis_valid_b 	),
+    .axis_tlast     (	in_axis_last_b 		),
+    .axis_tuser     (	in_axis_head_b 		),
+    .axis_tdata     (	in_axis_data_b 		),
+    .axis_tready    (	in_axis_ready_b 	),
+    .axis_tstart    (	in_axis_start_b 	),
+    .axis_tkeep     (  	'd0 				),
+
+    .in_reg_tvalid  (   st_in_axis_valid_b 	),
+    .in_reg_tlast   (   st_in_axis_last_b 	),
+    .in_reg_tuser   (   st_in_axis_head_b 	),
+    .in_reg_tdata   (   st_in_axis_data_b 	),
+    .in_reg_tkeep   (    					),
+    .in_reg_tstart  (   st_in_axis_start_b 	),
+    .in_reg_tready  (   st_in_axis_ready_b 	)
+);
 /*------------------------------------------- Submodules Instatiation : End -----------------------------------------*/
 
 
@@ -80,10 +146,10 @@ end
 always @(*) begin
 	case(ARBIT_IDLE_s)
 		ARBIT_IDLE_s:		if(last_sch == `CHANNEL_B) begin
-								if(in_axis_valid_a) begin
+								if(st_in_axis_valid_a) begin
 									arbit_next_state = ARBIT_CHNL_A_s;	
 								end
-								else if(in_axis_valid_b) begin
+								else if(st_in_axis_valid_b) begin
 									arbit_next_state = ARBIT_CHNL_B_s;
 								end
 								else begin
@@ -91,10 +157,10 @@ always @(*) begin
 								end
 							end
 							else if(last_sch == `CHANNEL_A) begin
-								if(in_axis_valid_b) begin
+								if(st_in_axis_valid_b) begin
 									arbit_next_state = ARBIT_CHNL_B_s;	
 								end
-								else if(in_axis_valid_a) begin
+								else if(st_in_axis_valid_a) begin
 									arbit_next_state = ARBIT_CHNL_A_s;
 								end
 								else begin
@@ -104,8 +170,8 @@ always @(*) begin
 							else begin
 								arbit_next_state = ARBIT_IDLE_s;
 							end
-		ARBIT_CHNL_A_s:		if(in_axis_last_a && out_axis_ready) begin
-								if(in_axis_valid_b) begin
+		ARBIT_CHNL_A_s:		if(st_in_axis_last_a && out_axis_ready) begin
+								if(st_in_axis_valid_b) begin
 									arbit_next_state = ARBIT_CHNL_B_s;
 								end
 								else begin
@@ -115,8 +181,8 @@ always @(*) begin
 							else begin
 								arbit_next_state = ARBIT_IDLE_s;
 							end
-		ARBIT_CHNL_B_s:		if(in_axis_last_b && out_axis_ready) begin
-								if(in_axis_valid_a) begin
+		ARBIT_CHNL_B_s:		if(st_in_axis_last_b && out_axis_ready) begin
+								if(st_in_axis_valid_a) begin
 									arbit_next_state = ARBIT_CHNL_A_s;
 								end
 								else begin
@@ -154,22 +220,22 @@ end
 //out_axis_data --
 //out_axis_start --
 //out_axis_last --
-assign out_axis_valid = (arbit_cur_state == ARBIT_CHNL_A_s) ? in_axis_valid_a : 
-						(arbit_cur_state == ARBIT_CHNL_B_s) ? in_axis_valid_b : 'd0;
-assign out_axis_head = (arbit_cur_state == ARBIT_CHNL_A_s) ? in_axis_head_a : 
-						(arbit_cur_state == ARBIT_CHNL_B_s) ? in_axis_head_b : 'd0;
-assign out_axis_data = (arbit_cur_state == ARBIT_CHNL_A_s) ? in_axis_data_a : 
-						(arbit_cur_state == ARBIT_CHNL_B_s) ? in_axis_data_b : 'd0;
-assign out_axis_start = (arbit_cur_state == ARBIT_CHNL_A_s) ? in_axis_start_a : 
-						(arbit_cur_state == ARBIT_CHNL_B_s) ? in_axis_start_b : 'd0;
-assign out_axis_last = (arbit_cur_state == ARBIT_CHNL_A_s) ? in_axis_last_a : 
-						(arbit_cur_state == ARBIT_CHNL_B_s) ? in_axis_last_b : 'd0;
+assign out_axis_valid = (arbit_cur_state == ARBIT_CHNL_A_s) ? st_in_axis_valid_a : 
+						(arbit_cur_state == ARBIT_CHNL_B_s) ? st_in_axis_valid_b : 'd0;
+assign out_axis_head = (arbit_cur_state == ARBIT_CHNL_A_s) ? st_in_axis_head_a : 
+						(arbit_cur_state == ARBIT_CHNL_B_s) ? st_in_axis_head_b : 'd0;
+assign out_axis_data = (arbit_cur_state == ARBIT_CHNL_A_s) ? st_in_axis_data_a : 
+						(arbit_cur_state == ARBIT_CHNL_B_s) ? st_in_axis_data_b : 'd0;
+assign out_axis_start = (arbit_cur_state == ARBIT_CHNL_A_s) ? st_in_axis_start_a : 
+						(arbit_cur_state == ARBIT_CHNL_B_s) ? st_in_axis_start_b : 'd0;
+assign out_axis_last = (arbit_cur_state == ARBIT_CHNL_A_s) ? st_in_axis_last_a : 
+						(arbit_cur_state == ARBIT_CHNL_B_s) ? st_in_axis_last_b : 'd0;
 
-//-- in_axis_ready_a --
-assign in_axis_ready_a = (arbit_cur_state == ARBIT_CHNL_A_s) ? out_axis_ready : 'd0;
+//-- st_in_axis_ready_a --
+assign st_in_axis_ready_a = (arbit_cur_state == ARBIT_CHNL_A_s) ? out_axis_ready : 'd0;
 
-//-- in_axis_ready_b --
-assign in_axis_ready_b = (arbit_cur_state == ARBIT_CHNL_B_s) ? out_axis_ready : 'd0;
+//-- st_in_axis_ready_b --
+assign st_in_axis_ready_b = (arbit_cur_state == ARBIT_CHNL_B_s) ? out_axis_ready : 'd0;
 
 /*------------------------------------------- Variables Decode : End ------------------------------------------------*/
 
